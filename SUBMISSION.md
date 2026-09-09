@@ -31,7 +31,12 @@ Built a SpotifyCares Twitter support agent: TF-IDF retrieval + stronger rule-bas
 - [x] Decision log
 - [x] Public GitHub repo
 - [x] Unit tests passing (10)
-- [ ] Notion form submitted (complete in browser)
+- [x] Notion form submitted (2026-09-09) — confirmation: “Your response has been submitted.”
+  - Github: https://github.com/mangeshraut712/hiver-spotify-support-agent
+  - Email: mbr63@drexel.edu
+  - LinkedIn: https://www.linkedin.com/in/mangeshraut71298/
+  - Phone: +91 7276819090
+  - Form: https://intelligent-bar-256.notion.site/39492cbf0da2800682cfc78a600a745f
 
 ## Cite
 
