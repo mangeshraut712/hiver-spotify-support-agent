@@ -1,0 +1,3939 @@
+{
+  "n": 200,
+  "intent_accuracy": 0.82,
+  "intent_macro_f1": 0.8131418382464686,
+  "escalate": {
+    "accuracy": 0.825,
+    "precision": 0.8294573643410853,
+    "recall": 0.8916666666666667,
+    "f1": 0.8594377510040162,
+    "support_positive": 120.0
+  },
+  "intent_confusion": {
+    "account_security": {
+      "account_security": 17,
+      "playback_bug": 1
+    },
+    "billing_charge": {
+      "billing_charge": 24,
+      "other": 3
+    },
+    "feature_howto": {
+      "feature_howto": 12,
+      "family_duo_plan": 1,
+      "other": 1,
+      "login_access": 1,
+      "playback_bug": 4
+    },
+    "other": {
+      "other": 44,
+      "cancel_premium": 2,
+      "feature_howto": 1,
+      "login_access": 1,
+      "playback_bug": 1
+    },
+    "cancel_premium": {
+      "billing_charge": 2,
+      "cancel_premium": 13,
+      "other": 1
+    },
+    "family_duo_plan": {
+      "billing_charge": 1,
+      "family_duo_plan": 24
+    },
+    "playback_bug": {
+      "playback_bug": 20,
+      "feature_howto": 1,
+      "other": 6
+    },
+    "login_access": {
+      "login_access": 10,
+      "billing_charge": 1,
+      "cancel_premium": 2,
+      "other": 5,
+      "feature_howto": 1
+    }
+  },
+  "examples": [
+    {
+      "id": "sp_03603",
+      "gold_intent": "account_security",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're seeing possible unauthorized access \u2014 that's not okay. Please DM us your account's email/username (no passwords) so we can investigate and secure it.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_06435",
+        "sp_01837",
+        "sp_08823",
+        "sp_09179",
+        "sp_09812"
+      ],
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_03965",
+      "gold_intent": "account_security",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're seeing possible unauthorized access \u2014 that's not okay. Please DM us your account's email/username (no passwords) so we can investigate and secure it.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_07365",
+        "sp_00214",
+        "sp_09232",
+        "sp_02879",
+        "sp_00102"
+      ],
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_00268",
+      "gold_intent": "account_security",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're seeing possible unauthorized access \u2014 that's not okay. Please DM us your account's email/username (no passwords) so we can investigate and secure it.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_00632",
+        "sp_01554",
+        "sp_05048",
+        "sp_06502",
+        "sp_02609"
+      ],
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_04813",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Happy to help update your payment method. Please DM us the account email/username and confirm which card/country you're trying to use \u2014 we'll walk you through it.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_02315",
+        "sp_08806",
+        "sp_09349",
+        "sp_01572",
+        "sp_06769"
+      ],
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_02070",
+      "gold_intent": "feature_howto",
+      "pred_intent": "feature_howto",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "Happy to help with that. If you can share which device/app screen you're on (or a screenshot via DM), we can point you to the right steps. DM us here and we'll continue: https://t.co/ldFdZRiNAt",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_08099",
+        "sp_00989",
+        "sp_05406",
+        "sp_01870",
+        "sp_05245"
+      ],
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_05312",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@635620 You're welcome! Let us know if you have any other questions. We'd be... https://t.co/LgAM6ky9Vv /DR",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_03828",
+        "sp_05741",
+        "sp_08182",
+        "sp_00957",
+        "sp_03168"
+      ],
+      "judge": {
+        "groundedness": 2,
+        "brand_voice": 5,
+        "helpfulness": 2,
+        "safety": 5,
+        "pass_fail": "fail",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_05855",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Thanks for reaching out \u2014 we want to help. DM us here and we'll continue: https://t.co/ldFdZRiNAt",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_03171",
+        "sp_05190",
+        "sp_03481",
+        "sp_03644",
+        "sp_03979"
+      ],
+      "judge": {
+        "groundedness": 2,
+        "brand_voice": 4,
+        "helpfulness": 2,
+        "safety": 5,
+        "pass_fail": "fail",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_00766",
+      "gold_intent": "account_security",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're seeing possible unauthorized access \u2014 that's not okay. Please DM us your account's email/username (no passwords) so we can investigate and secure it. A screenshot helps too.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_01237",
+        "sp_03409",
+        "sp_09505",
+        "sp_07935",
+        "sp_02736"
+      ],
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_02975",
+      "gold_intent": "account_security",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're seeing possible unauthorized access \u2014 that's not okay. Please DM us your account's email/username (no passwords) so we can investigate and secure it.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_04349",
+        "sp_07310",
+        "sp_01009",
+        "sp_04978",
+        "sp_03808"
+      ],
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_08795",
+      "gold_intent": "account_security",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're seeing possible unauthorized access \u2014 that's not okay. Please DM us your account's email/username (no passwords) so we can investigate and secure it.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_04232",
+        "sp_02134",
+        "sp_05374",
+        "sp_02483",
+        "sp_06462"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_01479",
+      "gold_intent": "account_security",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're seeing possible unauthorized access \u2014 that's not okay. Please DM us your account's email/username (no passwords) so we can investigate and secure it.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_07784",
+        "sp_08856",
+        "sp_08039",
+        "sp_05821",
+        "sp_06043"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05304",
+      "gold_intent": "account_security",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're seeing possible unauthorized access \u2014 that's not okay. Please DM us your account's email/username (no passwords) so we can investigate and secure it.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_00072",
+        "sp_04952",
+        "sp_00325",
+        "sp_00114",
+        "sp_03008"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_00833",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@242763 We'd love to have him on Spotify! Hopefully we will in the future. Check this out: https://t.co/GGCDZEFHTz /KM",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_02842",
+        "sp_02087",
+        "sp_08645",
+        "sp_06952",
+        "sp_00419"
+      ],
+      "judge": {
+        "groundedness": 2,
+        "brand_voice": 5,
+        "helpfulness": 2,
+        "safety": 5,
+        "pass_fail": "fail",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_02831",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry about the billing trouble. Please DM us your account email/username and a screenshot of the charge (hide full card digits) so we can look into this with you.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_01127",
+        "sp_09664",
+        "sp_04384",
+        "sp_04555",
+        "sp_07543"
+      ],
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_07169",
+      "gold_intent": "account_security",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're seeing possible unauthorized access \u2014 that's not okay. Please DM us your account's email/username (no passwords) so we can investigate and secure it.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_00647",
+        "sp_06300",
+        "sp_08741",
+        "sp_06699",
+        "sp_03618"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09690",
+      "gold_intent": "account_security",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're seeing possible unauthorized access \u2014 that's not okay. Please DM us your account's email/username (no passwords) so we can investigate and secure it.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_08870",
+        "sp_04984",
+        "sp_04581",
+        "sp_00214",
+        "sp_07025"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_08838",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry about the refund delay. Please DM us your account email/username plus a screenshot of the charge (hide full card digits) so we can investigate the billing side with you.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_09103",
+        "sp_06705",
+        "sp_06525",
+        "sp_00894",
+        "sp_07584"
+      ],
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_00025",
+      "gold_intent": "account_security",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're seeing possible unauthorized access \u2014 that's not okay. Please DM us your account's email/username (no passwords) so we can investigate and secure it.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_01262",
+        "sp_02336",
+        "sp_02512",
+        "sp_09863",
+        "sp_07430"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_07168",
+      "gold_intent": "account_security",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're seeing possible unauthorized access \u2014 that's not okay. Please DM us your account's email/username (no passwords) so we can investigate and secure it.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_07288",
+        "sp_03889",
+        "sp_07523",
+        "sp_08039",
+        "sp_01854"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_08331",
+      "gold_intent": "account_security",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're seeing possible unauthorized access \u2014 that's not okay. Please DM us your account's email/username (no passwords) so we can investigate and secure it.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_06657",
+        "sp_06584",
+        "sp_06420",
+        "sp_02742",
+        "sp_09204"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05323",
+      "gold_intent": "account_security",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're seeing possible unauthorized access \u2014 that's not okay. Please DM us your account's email/username (no passwords) so we can investigate and secure it.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_02609",
+        "sp_06657",
+        "sp_00072",
+        "sp_04222",
+        "sp_02975"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_03889",
+      "gold_intent": "account_security",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're seeing possible unauthorized access \u2014 that's not okay. Please DM us your account's email/username (no passwords) so we can investigate and secure it.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_07288",
+        "sp_07168",
+        "sp_04289",
+        "sp_07523",
+        "sp_08039"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02474",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@516078 Hey there! You can find the playlist right here: https://t.co/CcRVy37X9G /JX",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_06699",
+        "sp_03896",
+        "sp_03790",
+        "sp_04971",
+        "sp_00908"
+      ],
+      "judge": {
+        "groundedness": 2,
+        "brand_voice": 5,
+        "helpfulness": 2,
+        "safety": 5,
+        "pass_fail": "fail",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_05753",
+      "gold_intent": "account_security",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're seeing possible unauthorized access \u2014 that's not okay. Please DM us your account's email/username (no passwords) so we can investigate and secure it.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_00138",
+        "sp_03267",
+        "sp_08526",
+        "sp_07207",
+        "sp_08227"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05768",
+      "gold_intent": "cancel_premium",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry about the billing trouble. Please DM us your account email/username and a screenshot of the charge (hide full card digits) so we can look into this with you.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_04168",
+        "sp_08765",
+        "sp_00796",
+        "sp_09541",
+        "sp_05102"
+      ],
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_06712",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry about the billing trouble. Please DM us your account email/username and a screenshot of the charge (hide full card digits) so we can look into this with you.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_00594",
+        "sp_05266",
+        "sp_09557",
+        "sp_09984",
+        "sp_09122"
+      ],
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_02454",
+      "gold_intent": "billing_charge",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@644028 Hi there. We've just sent a DM your way. Let's carry on chatting there /QI",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_09625",
+        "sp_04453",
+        "sp_08095",
+        "sp_00241",
+        "sp_04857"
+      ],
+      "judge": {
+        "groundedness": 2,
+        "brand_voice": 5,
+        "helpfulness": 2,
+        "safety": 5,
+        "pass_fail": "fail",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_09148",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry about the refund delay. Please DM us your account email/username plus a screenshot of the charge (hide full card digits) so we can investigate the billing side with you.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_03922",
+        "sp_01207",
+        "sp_00420",
+        "sp_02248",
+        "sp_02841"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02429",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry about the billing trouble. Please DM us your account email/username and a screenshot of the charge (hide full card digits) so we can look into this with you.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_05603",
+        "sp_01339",
+        "sp_09734",
+        "sp_04558",
+        "sp_05452"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_07374",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry about the refund delay. Please DM us your account email/username plus a screenshot of the charge (hide full card digits) so we can investigate the billing side with you.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_02819",
+        "sp_02118",
+        "sp_07584",
+        "sp_06679",
+        "sp_03258"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_00425",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Happy to help update your payment method. Please DM us the account email/username and confirm which card/country you're trying to use \u2014 we'll walk you through it.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_05589",
+        "sp_08668",
+        "sp_06418",
+        "sp_06940",
+        "sp_01528"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_08796",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Happy to help update your payment method. Please DM us the account email/username and confirm which card/country you're trying to use \u2014 we'll walk you through it. A screenshot helps too.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_07517",
+        "sp_03094",
+        "sp_07587",
+        "sp_08486",
+        "sp_01769"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09291",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry about the billing trouble. Please DM us your account email/username and a screenshot of the charge (hide full card digits) so we can look into this with you.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_03738",
+        "sp_04516",
+        "sp_00594",
+        "sp_01337",
+        "sp_03379"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02582",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry about the billing trouble. Please DM us your account email/username and a screenshot of the charge (hide full card digits) so we can look into this with you.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_00754",
+        "sp_01905",
+        "sp_00148",
+        "sp_06021",
+        "sp_02708"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05842",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@693588 Great! Glad to hear it's working. Just let us know if we can help with anything else. https://t.co/m4HWSbgHVZ /CG",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_08766",
+        "sp_01307",
+        "sp_07170",
+        "sp_07182",
+        "sp_00714"
+      ],
+      "judge": {
+        "groundedness": 2,
+        "brand_voice": 5,
+        "helpfulness": 2,
+        "safety": 5,
+        "pass_fail": "fail",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_07511",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry about the billing trouble. Please DM us your account email/username and a screenshot of the charge (hide full card digits) so we can look into this with you.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_00202",
+        "sp_09149",
+        "sp_06692",
+        "sp_04316",
+        "sp_09425"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_04370",
+      "gold_intent": "billing_charge",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@785736 Hi there! Can you DM us your account's email address or username? We'll take a look backstage /NQ https://t.co/ldFdZRiNAt",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_04809",
+        "sp_01781",
+        "sp_03389",
+        "sp_06077",
+        "sp_06391"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_01127",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry about the billing trouble. Please DM us your account email/username and a screenshot of the charge (hide full card digits) so we can look into this with you.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_09664",
+        "sp_04384",
+        "sp_00721",
+        "sp_02831",
+        "sp_03420"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02478",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry about the billing trouble. Please DM us your account email/username and a screenshot of the charge (hide full card digits) so we can look into this with you.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_04069",
+        "sp_03795",
+        "sp_02915",
+        "sp_08977",
+        "sp_07882"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_04943",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry about the billing trouble. Please DM us your account email/username and a screenshot of the charge (hide full card digits) so we can look into this with you.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_02283",
+        "sp_00962",
+        "sp_06649",
+        "sp_08024",
+        "sp_03550"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_07908",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry about the billing trouble. Please DM us your account email/username and a screenshot of the charge (hide full card digits) so we can look into this with you.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_00545",
+        "sp_09346",
+        "sp_06293",
+        "sp_03757",
+        "sp_03958"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_03660",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@574908 Hi! Sorry to hear that. Check out the steps under \u201cDownloads unexpectedly removed\u201d at https://t.co/38J7tFlIBF. They should help out /MC",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_02630",
+        "sp_03060",
+        "sp_04726",
+        "sp_08395",
+        "sp_04504"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_07164",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry about the refund delay. Please DM us your account email/username plus a screenshot of the charge (hide full card digits) so we can investigate the billing side with you.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_03925",
+        "sp_00233",
+        "sp_03742",
+        "sp_02288",
+        "sp_06920"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_04129",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry about the billing trouble. Please DM us your account email/username and a screenshot of the charge (hide full card digits) so we can look into this with you.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_02854",
+        "sp_02192",
+        "sp_09821",
+        "sp_02895",
+        "sp_05073"
+      ],
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_04604",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry about the refund delay. Please DM us your account email/username plus a screenshot of the charge (hide full card digits) so we can investigate the billing side with you.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_03214",
+        "sp_03973",
+        "sp_06060",
+        "sp_00594",
+        "sp_09791"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_08496",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry about the billing trouble. Please DM us your account email/username and a screenshot of the charge (hide full card digits) so we can look into this with you.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_07848",
+        "sp_08412",
+        "sp_03530",
+        "sp_09600",
+        "sp_05918"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_08170",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry about the billing trouble. Please DM us your account email/username and a screenshot of the charge (hide full card digits) so we can look into this with you.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_00836",
+        "sp_01659",
+        "sp_06838",
+        "sp_07191",
+        "sp_07286"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06022",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Happy to help update your payment method. Please DM us the account email/username and confirm which card/country you're trying to use \u2014 we'll walk you through it.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_01147",
+        "sp_03970",
+        "sp_00157",
+        "sp_06834",
+        "sp_04979"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_00786",
+      "gold_intent": "cancel_premium",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "We can help with cancelling/stopping Premium. Please DM us the account email/username you're trying to manage and we'll take a closer look.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_05473",
+        "sp_04320",
+        "sp_09498",
+        "sp_00576",
+        "sp_05702"
+      ],
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 4,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_09113",
+      "gold_intent": "cancel_premium",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "We can help with cancelling/stopping Premium. Please DM us the account email/username you're trying to manage and we'll take a closer look.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_00981",
+        "sp_04205",
+        "sp_08569",
+        "sp_05252",
+        "sp_05760"
+      ],
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 4,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_05256",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're hitting Family/Duo plan issues. Please DM us the plan manager's email/username and what error you see so we can check the invite/household side.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_03500",
+        "sp_07908",
+        "sp_07185",
+        "sp_02795",
+        "sp_06789"
+      ],
+      "judge": {
+        "groundedness": 2,
+        "brand_voice": 5,
+        "helpfulness": 2,
+        "safety": 5,
+        "pass_fail": "fail",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_09993",
+      "gold_intent": "cancel_premium",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "We can help with cancelling/stopping Premium. Please DM us the account email/username you're trying to manage and we'll take a closer look.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_04848",
+        "sp_03680",
+        "sp_02611",
+        "sp_03669",
+        "sp_07586"
+      ],
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 4,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_02925",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry playback/downloads are acting up. Mind DMing your device + OS + Spotify app version, and a quick note on what happens? We'll dig in.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_00777",
+        "sp_04866",
+        "sp_03520",
+        "sp_01742",
+        "sp_03804"
+      ],
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_07318",
+      "gold_intent": "cancel_premium",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "We can help with cancelling/stopping Premium. Please DM us the account email/username you're trying to manage and we'll take a closer look.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_03882",
+        "sp_01074",
+        "sp_05702",
+        "sp_03800",
+        "sp_00801"
+      ],
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 4,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_04282",
+      "gold_intent": "cancel_premium",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "We can help with cancelling/stopping Premium. Please DM us the account email/username you're trying to manage and we'll take a closer look.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_09711",
+        "sp_00140",
+        "sp_07827",
+        "sp_08229",
+        "sp_08609"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09105",
+      "gold_intent": "cancel_premium",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "We can help with cancelling/stopping Premium. Please DM us the account email/username you're trying to manage and we'll take a closer look.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_07122",
+        "sp_02634",
+        "sp_03877",
+        "sp_09407",
+        "sp_01518"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_08988",
+      "gold_intent": "cancel_premium",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "We can help with cancelling/stopping Premium. Please DM us the account email/username you're trying to manage and we'll take a closer look.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_05989",
+        "sp_06113",
+        "sp_00437",
+        "sp_04558",
+        "sp_02005"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_01875",
+      "gold_intent": "cancel_premium",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "We can help with cancelling/stopping Premium. Please DM us the account email/username you're trying to manage and we'll take a closer look.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_04399",
+        "sp_02696",
+        "sp_06981",
+        "sp_08418",
+        "sp_01410"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06271",
+      "gold_intent": "login_access",
+      "pred_intent": "login_access",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you can't get into your account. Please DM us the email/username you're using (don't send passwords) and the exact error message \u2014 we'll help from there.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_03263",
+        "sp_09463",
+        "sp_04067",
+        "sp_08724",
+        "sp_03333"
+      ],
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_07343",
+      "gold_intent": "cancel_premium",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "We can help with cancelling/stopping Premium. Please DM us the account email/username you're trying to manage and we'll take a closer look.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_00241",
+        "sp_07967",
+        "sp_08784",
+        "sp_03298",
+        "sp_05409"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_00337",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry about the billing trouble. Please DM us your account email/username and a screenshot of the charge (hide full card digits) so we can look into this with you.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_05883",
+        "sp_07326",
+        "sp_07426",
+        "sp_03855",
+        "sp_03592"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_00568",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're hitting Family/Duo plan issues. Please DM us the plan manager's email/username and what error you see so we can check the invite/household side.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_06161",
+        "sp_07725",
+        "sp_01562",
+        "sp_03989",
+        "sp_00195"
+      ],
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_06394",
+      "gold_intent": "login_access",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry about the billing trouble. Please DM us your account email/username and a screenshot of the charge (hide full card digits) so we can look into this with you.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_02751",
+        "sp_05702",
+        "sp_07830",
+        "sp_02850",
+        "sp_01232"
+      ],
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_04412",
+      "gold_intent": "cancel_premium",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "We can help with cancelling/stopping Premium. Please DM us the account email/username you're trying to manage and we'll take a closer look.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_01890",
+        "sp_01503",
+        "sp_07271",
+        "sp_08155",
+        "sp_03822"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05252",
+      "gold_intent": "cancel_premium",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry about the billing trouble. Please DM us your account email/username and a screenshot of the charge (hide full card digits) so we can look into this with you.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_00222",
+        "sp_02584",
+        "sp_03399",
+        "sp_07458",
+        "sp_06719"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09126",
+      "gold_intent": "other",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "We can help with cancelling/stopping Premium. Please DM us the account email/username you're trying to manage and we'll take a closer look.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_01324",
+        "sp_06350",
+        "sp_01760",
+        "sp_07234",
+        "sp_00498"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_03882",
+      "gold_intent": "other",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "We can help with cancelling/stopping Premium. Please DM us the account email/username you're trying to manage and we'll take a closer look.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_00576",
+        "sp_09825",
+        "sp_03800",
+        "sp_07318",
+        "sp_04862"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02262",
+      "gold_intent": "cancel_premium",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "We can help with cancelling/stopping Premium. Please DM us the account email/username you're trying to manage and we'll take a closer look.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_00974",
+        "sp_03747",
+        "sp_08160",
+        "sp_09125",
+        "sp_05676"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_04320",
+      "gold_intent": "login_access",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "We can help with cancelling/stopping Premium. Please DM us the account email/username you're trying to manage and we'll take a closer look.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_03837",
+        "sp_00786",
+        "sp_01264",
+        "sp_05011",
+        "sp_05948"
+      ],
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 4,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_04862",
+      "gold_intent": "cancel_premium",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "We can help with cancelling/stopping Premium. Please DM us the account email/username you're trying to manage and we'll take a closer look.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_02157",
+        "sp_03882",
+        "sp_05799",
+        "sp_00668",
+        "sp_00131"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06533",
+      "gold_intent": "cancel_premium",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "We can help with cancelling/stopping Premium. Please DM us the account email/username you're trying to manage and we'll take a closer look.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_05791",
+        "sp_09883",
+        "sp_00262",
+        "sp_08612",
+        "sp_06890"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09229",
+      "gold_intent": "login_access",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "We can help with cancelling/stopping Premium. Please DM us the account email/username you're trying to manage and we'll take a closer look.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_07286",
+        "sp_01823",
+        "sp_09825",
+        "sp_06824",
+        "sp_01649"
+      ],
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 4,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_08696",
+      "gold_intent": "feature_howto",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're hitting Family/Duo plan issues. Please DM us the plan manager's email/username and what error you see so we can check the invite/household side.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_08133",
+        "sp_07210",
+        "sp_01279",
+        "sp_01481",
+        "sp_09232"
+      ],
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_07497",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're hitting Family/Duo plan issues. Please DM us the plan manager's email/username and what error you see so we can check the invite/household side.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_06328",
+        "sp_04878",
+        "sp_06349",
+        "sp_00461",
+        "sp_08697"
+      ],
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_05222",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're hitting Family/Duo plan issues. Please DM us the plan manager's email/username and what error you see so we can check the invite/household side.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_04058",
+        "sp_00432",
+        "sp_01104",
+        "sp_09233",
+        "sp_00700"
+      ],
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_02642",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're hitting Family/Duo plan issues. Please DM us the plan manager's email/username and what error you see so we can check the invite/household side.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_03190",
+        "sp_03091",
+        "sp_01294",
+        "sp_08357",
+        "sp_05938"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09994",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're hitting Family/Duo plan issues. Please DM us the plan manager's email/username and what error you see so we can check the invite/household side.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_07533",
+        "sp_00028",
+        "sp_03333",
+        "sp_09285",
+        "sp_01196"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02003",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're hitting Family/Duo plan issues. Please DM us the plan manager's email/username and what error you see so we can check the invite/household side.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_04384",
+        "sp_01127",
+        "sp_09664",
+        "sp_06521",
+        "sp_01877"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_08383",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're hitting Family/Duo plan issues. Please DM us the plan manager's email/username and what error you see so we can check the invite/household side.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_03692",
+        "sp_02616",
+        "sp_04054",
+        "sp_05654",
+        "sp_02183"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05633",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're hitting Family/Duo plan issues. Please DM us the plan manager's email/username and what error you see so we can check the invite/household side.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_02072",
+        "sp_06904",
+        "sp_02329",
+        "sp_09232",
+        "sp_02183"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09855",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're hitting Family/Duo plan issues. Please DM us the plan manager's email/username and what error you see so we can check the invite/household side.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_07941",
+        "sp_08382",
+        "sp_09494",
+        "sp_01969",
+        "sp_07397"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06325",
+      "gold_intent": "feature_howto",
+      "pred_intent": "feature_howto",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@772372 Hey Jordan! Could you send us a DM with your account's email address? We'll take a look backstage /FR https://t.co/ldFdZRiNAt",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_05750",
+        "sp_09114",
+        "sp_05787",
+        "sp_07867",
+        "sp_07371"
+      ],
+      "judge": {
+        "groundedness": 2,
+        "brand_voice": 5,
+        "helpfulness": 2,
+        "safety": 5,
+        "pass_fail": "fail",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_08552",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're hitting Family/Duo plan issues. Please DM us the plan manager's email/username and what error you see so we can check the invite/household side.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_00816",
+        "sp_05705",
+        "sp_08833",
+        "sp_02382",
+        "sp_02616"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_00716",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're hitting Family/Duo plan issues. Please DM us the plan manager's email/username and what error you see so we can check the invite/household side.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_03399",
+        "sp_06664",
+        "sp_04697",
+        "sp_05489",
+        "sp_09596"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06540",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're hitting Family/Duo plan issues. Please DM us the plan manager's email/username and what error you see so we can check the invite/household side.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_04321",
+        "sp_03381",
+        "sp_09494",
+        "sp_06636",
+        "sp_07673"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09116",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're hitting Family/Duo plan issues. Please DM us the plan manager's email/username and what error you see so we can check the invite/household side.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_08579",
+        "sp_00207",
+        "sp_08674",
+        "sp_09119",
+        "sp_01380"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02895",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're hitting Family/Duo plan issues. Please DM us the plan manager's email/username and what error you see so we can check the invite/household side.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_01570",
+        "sp_02854",
+        "sp_04129",
+        "sp_05073",
+        "sp_02372"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_07746",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're hitting Family/Duo plan issues. Please DM us the plan manager's email/username and what error you see so we can check the invite/household side.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_04715",
+        "sp_02920",
+        "sp_08676",
+        "sp_05264",
+        "sp_04878"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02330",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're hitting Family/Duo plan issues. Please DM us the plan manager's email/username and what error you see so we can check the invite/household side.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_08044",
+        "sp_07088",
+        "sp_06478",
+        "sp_02783",
+        "sp_00102"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_04386",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're hitting Family/Duo plan issues. Please DM us the plan manager's email/username and what error you see so we can check the invite/household side.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_05758",
+        "sp_08704",
+        "sp_06199",
+        "sp_05467",
+        "sp_06003"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05711",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're hitting Family/Duo plan issues. Please DM us the plan manager's email/username and what error you see so we can check the invite/household side.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_08697",
+        "sp_00799",
+        "sp_00282",
+        "sp_06309",
+        "sp_06128"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05997",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're hitting Family/Duo plan issues. Please DM us the plan manager's email/username and what error you see so we can check the invite/household side.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_04054",
+        "sp_05604",
+        "sp_04878",
+        "sp_08419",
+        "sp_00568"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_01643",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're hitting Family/Duo plan issues. Please DM us the plan manager's email/username and what error you see so we can check the invite/household side.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_06839",
+        "sp_03819",
+        "sp_00571",
+        "sp_06745",
+        "sp_03008"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_03496",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're hitting Family/Duo plan issues. Please DM us the plan manager's email/username and what error you see so we can check the invite/household side.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_02854",
+        "sp_00102",
+        "sp_07397",
+        "sp_04129",
+        "sp_02741"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_01133",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're hitting Family/Duo plan issues. Please DM us the plan manager's email/username and what error you see so we can check the invite/household side.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_07673",
+        "sp_06636",
+        "sp_08456",
+        "sp_06540",
+        "sp_03381"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_08404",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're hitting Family/Duo plan issues. Please DM us the plan manager's email/username and what error you see so we can check the invite/household side.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_05423",
+        "sp_02854",
+        "sp_05398",
+        "sp_05705",
+        "sp_02895"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06754",
+      "gold_intent": "playback_bug",
+      "pred_intent": "feature_howto",
+      "gold_escalate": true,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@539757 Hey, that's not cool! Can you DM us your account's username or email address? We'll take a look under the hood /JM https://t.co/ldFdZRiNAt",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_02469",
+        "sp_00083",
+        "sp_04290",
+        "sp_01507",
+        "sp_07844"
+      ],
+      "judge": {
+        "groundedness": 2,
+        "brand_voice": 5,
+        "helpfulness": 2,
+        "safety": 5,
+        "pass_fail": "fail",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_02597",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry playback/downloads are acting up. Mind DMing your device + OS + Spotify app version, and a quick note on what happens? We'll dig in.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_08424",
+        "sp_03981",
+        "sp_02535",
+        "sp_02409",
+        "sp_07759"
+      ],
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_00576",
+      "gold_intent": "login_access",
+      "pred_intent": "login_access",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you can't get into your account. Please DM us the email/username you're using (don't send passwords) and the exact error message \u2014 we'll help from there.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_09495",
+        "sp_03228",
+        "sp_00277",
+        "sp_06462",
+        "sp_05635"
+      ],
+      "judge": {
+        "groundedness": 2,
+        "brand_voice": 5,
+        "helpfulness": 2,
+        "safety": 5,
+        "pass_fail": "fail",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_07452",
+      "gold_intent": "feature_howto",
+      "pred_intent": "feature_howto",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "Happy to help with that. If you can share which device/app screen you're on (or a screenshot via DM), we can point you to the right steps. DM us here and we'll continue: https://t.co/ldFdZRiNAt",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_03929",
+        "sp_03683",
+        "sp_06821",
+        "sp_03605",
+        "sp_03613"
+      ],
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_00401",
+      "gold_intent": "feature_howto",
+      "pred_intent": "feature_howto",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "Happy to help with that. If you can share which device/app screen you're on (or a screenshot via DM), we can point you to the right steps. DM us here and we'll continue: https://t.co/ldFdZRiNAt",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_05364",
+        "sp_02246",
+        "sp_07009",
+        "sp_02836",
+        "sp_04977"
+      ],
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_01617",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@548808 Hey! What device, operating system, and Spotify version are you on? By any chance, are you listening on shuffle via Spotify Connect? /AY",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_01920",
+        "sp_06828",
+        "sp_00924",
+        "sp_03790",
+        "sp_06638"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_03378",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry about the billing trouble. Please DM us your account email/username and a screenshot of the charge (hide full card digits) so we can look into this with you.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_09647",
+        "sp_03462",
+        "sp_04325",
+        "sp_03991",
+        "sp_07373"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_00394",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@186720 Hey! We've just replied to your DM. Let's carry on chatting there /RH",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_09101",
+        "sp_01780",
+        "sp_05728",
+        "sp_02738",
+        "sp_03048"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_03153",
+      "gold_intent": "feature_howto",
+      "pred_intent": "feature_howto",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "Happy to help with that. If you can share which device/app screen you're on (or a screenshot via DM), we can point you to the right steps. DM us here and we'll continue: https://t.co/ldFdZRiNAt",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_00708",
+        "sp_00503",
+        "sp_00610",
+        "sp_05202",
+        "sp_02017"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02088",
+      "gold_intent": "playback_bug",
+      "pred_intent": "other",
+      "gold_escalate": true,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@393486 Hey there! Fingers crossed we'll be able to have it soon, but there's info about Spotify content here: https://t.co/0i8GpimuDa /MO",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_07321",
+        "sp_02204",
+        "sp_08083",
+        "sp_07083",
+        "sp_02495"
+      ],
+      "judge": {
+        "groundedness": 2,
+        "brand_voice": 5,
+        "helpfulness": 2,
+        "safety": 5,
+        "pass_fail": "fail",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_05496",
+      "gold_intent": "feature_howto",
+      "pred_intent": "feature_howto",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "Happy to help with that. If you can share which device/app screen you're on (or a screenshot via DM), we can point you to the right steps. DM us here and we'll continue: https://t.co/ldFdZRiNAt",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_07803",
+        "sp_01090",
+        "sp_01846",
+        "sp_06699",
+        "sp_08751"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06724",
+      "gold_intent": "feature_howto",
+      "pred_intent": "feature_howto",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@151986 Hey Gerald! What iOS and Spotify version are you using? Also, a screenshot of what you see on your end would really help /BH",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_04262",
+        "sp_06370",
+        "sp_03423",
+        "sp_08690",
+        "sp_02483"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_04808",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@398136 Awesome! Let us know if you ever need us again. We'd be... https://t.co/LgAM6ky9Vv /RH",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_00980",
+        "sp_06430",
+        "sp_06403",
+        "sp_04406",
+        "sp_08151"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_01668",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "Thanks for reaching out \u2014 we want to help. Could you share a bit more detail DM us here and we'll continue: https://t.co/ldFdZRiNAt",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_03210",
+        "sp_04185",
+        "sp_09974",
+        "sp_05134",
+        "sp_07146"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05810",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@639286 Glad to hear you liked it! Thanks for the feedback, it's music to our ears \ud83c\udfb6 /DR",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_00517",
+        "sp_06591",
+        "sp_07328",
+        "sp_01301",
+        "sp_07736"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_00575",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@125921 Can you DM us the email address that you use for Facebook? We'll take a look backstage /SY https://t.co/ldFdZRiNAt",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_09424",
+        "sp_06667",
+        "sp_07026",
+        "sp_09132",
+        "sp_03131"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09803",
+      "gold_intent": "feature_howto",
+      "pred_intent": "feature_howto",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "Happy to help with that. If you can share which device/app screen you're on (or a screenshot via DM), we can point you to the right steps. DM us here and we'll continue: https://t.co/ldFdZRiNAt",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_09462",
+        "sp_00956",
+        "sp_08445",
+        "sp_08117",
+        "sp_01796"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02280",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@799426 Hi Kevin! To help make this happen, you can leave a vote for this idea in our Community page at https://t.co/OQIKCllR7i. Let us know if you have any other questions /NY",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_01973",
+        "sp_05628",
+        "sp_04550",
+        "sp_05535",
+        "sp_06424"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_07008",
+      "gold_intent": "feature_howto",
+      "pred_intent": "feature_howto",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "Happy to help with that. If you can share which device/app screen you're on (or a screenshot via DM), we can point you to the right steps. DM us here and we'll continue: https://t.co/ldFdZRiNAt",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_01029",
+        "sp_04585",
+        "sp_05338",
+        "sp_06699",
+        "sp_08110"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_04108",
+      "gold_intent": "login_access",
+      "pred_intent": "login_access",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you can't get into your account. Please DM us the email/username you're using (don't send passwords) and the exact error message \u2014 we'll help from there.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_08375",
+        "sp_05635",
+        "sp_00465",
+        "sp_03618",
+        "sp_07826"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_08423",
+      "gold_intent": "feature_howto",
+      "pred_intent": "feature_howto",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "Happy to help with that. If you can share which device/app screen you're on (or a screenshot via DM), we can point you to the right steps. DM us here and we'll continue: https://t.co/ldFdZRiNAt",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_01918",
+        "sp_02464",
+        "sp_09475",
+        "sp_09962",
+        "sp_07345"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_03456",
+      "gold_intent": "feature_howto",
+      "pred_intent": "feature_howto",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "Happy to help with that. If you can share which device/app screen you're on (or a screenshot via DM), we can point you to the right steps. DM us here and we'll continue: https://t.co/ldFdZRiNAt",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_03260",
+        "sp_07842",
+        "sp_06726",
+        "sp_00322",
+        "sp_06334"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_07153",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@501646 Hi there, thanks for bearing with us. Spotify should be working perfectly again! Let us know if not /LP",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_05856",
+        "sp_06494",
+        "sp_01107",
+        "sp_00755",
+        "sp_06507"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_08600",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@671907 Hey Pat, that doesn't sound good! Did the app crash at any point during the 30 minutes? That can cause the ad-free time to reset /GK",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_09051",
+        "sp_07287",
+        "sp_03447",
+        "sp_09497",
+        "sp_07683"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_00135",
+      "gold_intent": "login_access",
+      "pred_intent": "other",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Thanks for reaching out \u2014 we want to help. DM us here and we'll continue: https://t.co/ldFdZRiNAt",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_00263",
+        "sp_02333",
+        "sp_09087",
+        "sp_04632",
+        "sp_04118"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_01838",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Thanks for reaching out \u2014 we want to help. DM us here and we'll continue: https://t.co/ldFdZRiNAt",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_00291",
+        "sp_09082",
+        "sp_00396",
+        "sp_06105",
+        "sp_00128"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_01486",
+      "gold_intent": "login_access",
+      "pred_intent": "login_access",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you can't get into your account. Please DM us the email/username you're using (don't send passwords) and the exact error message \u2014 we'll help from there.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_01539",
+        "sp_07729",
+        "sp_06502",
+        "sp_08147",
+        "sp_00897"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_03369",
+      "gold_intent": "login_access",
+      "pred_intent": "login_access",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you can't get into your account. Please DM us the email/username you're using (don't send passwords) and the exact error message \u2014 we'll help from there.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_02030",
+        "sp_09117",
+        "sp_04366",
+        "sp_00886",
+        "sp_05723"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_00886",
+      "gold_intent": "login_access",
+      "pred_intent": "login_access",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you can't get into your account. Please DM us the email/username you're using (don't send passwords) and the exact error message \u2014 we'll help from there.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_09117",
+        "sp_02030",
+        "sp_05917",
+        "sp_04273",
+        "sp_00829"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06959",
+      "gold_intent": "login_access",
+      "pred_intent": "login_access",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you can't get into your account. Please DM us the email/username you're using (don't send passwords) and the exact error message \u2014 we'll help from there.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_01280",
+        "sp_06685",
+        "sp_01957",
+        "sp_09583",
+        "sp_02075"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_03173",
+      "gold_intent": "login_access",
+      "pred_intent": "other",
+      "gold_escalate": true,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@706218 Hey there, help's here! Can you DM us your account's email address? We'll check backstage /MO https://t.co/ldFdZRiNAt",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_04085",
+        "sp_00881",
+        "sp_03650",
+        "sp_04749",
+        "sp_01070"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09678",
+      "gold_intent": "feature_howto",
+      "pred_intent": "feature_howto",
+      "gold_escalate": true,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@389451 In that case, could you DM us your Facebook account's email address? A link to your Facebook profile will be handy too /CO https://t.co/ldFdZRiNAt",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_01616",
+        "sp_09327",
+        "sp_02969",
+        "sp_08409",
+        "sp_05189"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02753",
+      "gold_intent": "login_access",
+      "pred_intent": "other",
+      "gold_escalate": true,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@432156 Hey there! Can you tell us more about what's happening? Which iOS version are you running? We'll lend a hand /MV",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_05694",
+        "sp_00108",
+        "sp_03134",
+        "sp_06717",
+        "sp_06034"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05465",
+      "gold_intent": "feature_howto",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@393493 Hey Will, help's here! Could you DM us your new account's email address? We'll take a look backstage /GU https://t.co/ldFdZRiNAt",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_03986",
+        "sp_03734",
+        "sp_06419",
+        "sp_01108",
+        "sp_09083"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02731",
+      "gold_intent": "other",
+      "pred_intent": "feature_howto",
+      "gold_escalate": true,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@554624 Hi, help's here! Could you send us a DM with your account's email address or username? We'll take a look backstage /LO https://t.co/ldFdZRiNAt",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_00334",
+        "sp_05282",
+        "sp_09538",
+        "sp_01561",
+        "sp_00925"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06246",
+      "gold_intent": "login_access",
+      "pred_intent": "other",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Thanks for reaching out \u2014 we want to help. DM us here and we'll continue: https://t.co/ldFdZRiNAt",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_04713",
+        "sp_02913",
+        "sp_07021",
+        "sp_03384",
+        "sp_08507"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_07224",
+      "gold_intent": "login_access",
+      "pred_intent": "feature_howto",
+      "gold_escalate": true,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@152535 Hey Marcus, help's arrived! Could you DM us your username and email address? We'll check it out \ud83d\udd0d /JY https://t.co/ldFdZRiNAt",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_06816",
+        "sp_04356",
+        "sp_02014",
+        "sp_06084",
+        "sp_00092"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_08471",
+      "gold_intent": "playback_bug",
+      "pred_intent": "other",
+      "gold_escalate": true,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@400362 We appreciate the heads-up. Do you have any active firewall/antivirus programs? If so, could you try temporarily disabling them? /MT",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_07302",
+        "sp_05519",
+        "sp_09843",
+        "sp_01149",
+        "sp_00847"
+      ],
+      "judge": {
+        "groundedness": 2,
+        "brand_voice": 5,
+        "helpfulness": 2,
+        "safety": 5,
+        "pass_fail": "fail",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
+    },
+    {
+      "id": "sp_09225",
+      "gold_intent": "feature_howto",
+      "pred_intent": "login_access",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you can't get into your account. Please DM us the email/username you're using (don't send passwords) and the exact error message \u2014 we'll help from there.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_08505",
+        "sp_05990",
+        "sp_05944",
+        "sp_06096",
+        "sp_07781"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06460",
+      "gold_intent": "login_access",
+      "pred_intent": "login_access",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you can't get into your account. Please DM us the email/username you're using (don't send passwords) and the exact error message \u2014 we'll help from there.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_00917",
+        "sp_09721",
+        "sp_06824",
+        "sp_01554",
+        "sp_04965"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_01031",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry playback/downloads are acting up. Mind DMing your device + OS + Spotify app version, and a quick note on what happens? We'll dig in.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_05606",
+        "sp_02725",
+        "sp_04192",
+        "sp_04557",
+        "sp_00855"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_03502",
+      "gold_intent": "other",
+      "pred_intent": "login_access",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you can't get into your account. Please DM us the email/username you're using (don't send passwords) and the exact error message \u2014 we'll help from there.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_01619",
+        "sp_08248",
+        "sp_09913",
+        "sp_00276",
+        "sp_06231"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02746",
+      "gold_intent": "login_access",
+      "pred_intent": "login_access",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you can't get into your account. Please DM us the email/username you're using (don't send passwords) and the exact error message \u2014 we'll help from there.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_06258",
+        "sp_04066",
+        "sp_04769",
+        "sp_09644",
+        "sp_09158"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_08946",
+      "gold_intent": "playback_bug",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@564087 It seems that you're playing directly from your iPhone instead of just streaming it from your computer first. You need to play the track on your computer before using Connect to stream it to your iPhone. You can check for the steps here: https://t.co/64CIqASpvY /JU",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_06818",
+        "sp_08427",
+        "sp_00569",
+        "sp_08744",
+        "sp_01341"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_07891",
+      "gold_intent": "billing_charge",
+      "pred_intent": "other",
+      "gold_escalate": true,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@124510 @115888 Hi! We've just replied to your DM. We'll carry on helping there /MQ",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_07569",
+        "sp_00949",
+        "sp_05803",
+        "sp_01412",
+        "sp_03077"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09402",
+      "gold_intent": "login_access",
+      "pred_intent": "login_access",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you can't get into your account. Please DM us the email/username you're using (don't send passwords) and the exact error message \u2014 we'll help from there.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_02596",
+        "sp_04312",
+        "sp_09186",
+        "sp_07318",
+        "sp_06192"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02971",
+      "gold_intent": "login_access",
+      "pred_intent": "other",
+      "gold_escalate": true,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@283945 Hi Will! Help's here. Can you DM us your account's email address? We'll take a look backstage /AU https://t.co/ldFdZRiNAt",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_03381",
+        "sp_04321",
+        "sp_08725",
+        "sp_02145",
+        "sp_06540"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_04871",
+      "gold_intent": "cancel_premium",
+      "pred_intent": "other",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Thanks for reaching out \u2014 we want to help. DM us here and we'll continue: https://t.co/ldFdZRiNAt",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_02639",
+        "sp_08697",
+        "sp_04571",
+        "sp_08644",
+        "sp_01551"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02015",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@371218 Alright! Could you DM us your Spotify account's email address or username? We'll take a look under the hood /BH https://t.co/ldFdZRiNAt",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_01025",
+        "sp_09413",
+        "sp_01021",
+        "sp_05739",
+        "sp_01612"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09503",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Thanks for reaching out \u2014 we want to help. DM us here and we'll continue: https://t.co/ldFdZRiNAt",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_09759",
+        "sp_08549",
+        "sp_04757",
+        "sp_03030",
+        "sp_07121"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_00897",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": true,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@537119 Hey George! That's not cool. Could you DM us your account's username or email address? We'll take a look under the hood /GU https://t.co/ldFdZRiNAt",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_03801",
+        "sp_07872",
+        "sp_03262",
+        "sp_08147",
+        "sp_01486"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05638",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@491261 Great! Glad to hear it's working. Just give us a shout if we can help with anything else. https://t.co/m4HWSbgHVZ /CE",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_01982",
+        "sp_07499",
+        "sp_06462",
+        "sp_03602",
+        "sp_09680"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06886",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@553756 Hey! Don't worry, we're on it. Our developers are looking into this, and we'll keep everyone updated /TF",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_01151",
+        "sp_03856",
+        "sp_05311",
+        "sp_09383",
+        "sp_09328"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09689",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@676447 Hey there! Is this the album you're looking for: https://t.co/RqYePOitw0? /FR",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_05973",
+        "sp_07953",
+        "sp_06531",
+        "sp_08615",
+        "sp_03983"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_04336",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@401922 Sorry to hear that. Could you DM us your username and email address? We'll take a look backstage \ud83d\udd0d /JQ https://t.co/ldFdZRiNAt",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_03127",
+        "sp_07725",
+        "sp_01562",
+        "sp_09937",
+        "sp_01950"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06768",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@293907 Got it. Does using an incognito window help? If it's still happening, can you DM us your account's username? We'll check backstage /AP",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_01887",
+        "sp_07209",
+        "sp_05962",
+        "sp_08073",
+        "sp_07682"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_03106",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@406777 Hey there! Can you DM us your account's username or email address? We'll take a look under the hood /JM https://t.co/ldFdZRiNAt",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_05522",
+        "sp_01780",
+        "sp_00469",
+        "sp_05286",
+        "sp_09386"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02176",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@140446 Anytime! We'll keep an eye out for your reply /JI",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_01980",
+        "sp_01744",
+        "sp_06728",
+        "sp_09542",
+        "sp_03042"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06499",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@270316 Hey there, we'd love to have them on Spotify! Hopefully we will in the future. Check this out: https://t.co/MEjmIRL2eB /SY",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_08200",
+        "sp_00873",
+        "sp_05848",
+        "sp_08688",
+        "sp_00402"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_00002",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@266416 Sure. Just tap/click on the link below to send us a DM /MG https://t.co/ldFdZRiNAt",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_09166",
+        "sp_00470",
+        "sp_03678",
+        "sp_04674",
+        "sp_01083"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_04908",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@252746 Got it! Just to check, have you been experiencing this issue even before switching to the beta macOS version? /KB",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_07649",
+        "sp_02827",
+        "sp_00087",
+        "sp_02898",
+        "sp_08219"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_00806",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@471798 Hey there! We\u2019ll have it available to you as soon as it\u2019s available to us! https://t.co/0i8GpimuDa /JX",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_09851",
+        "sp_05144",
+        "sp_09850",
+        "sp_05627",
+        "sp_07908"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02834",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@654614 Hi! Taylor Swift's 'Reputation' isn't available to stream just yet \u2013 stay tuned! For now, check out the singles: https://t.co/3h0TnPWP0c /DF",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_00185",
+        "sp_03692",
+        "sp_04482",
+        "sp_08494",
+        "sp_08252"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06174",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@693597 We hear you! To help make it happen, we recommend showing your support for the idea here: https://t.co/YSHYSPDR4z \ud83d\ude42 /VK",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_04743",
+        "sp_02443",
+        "sp_07217",
+        "sp_02452",
+        "sp_08721"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_01369",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@217181 1: Hi there! Don't worry, help has arrived. We've checked your collaborative playlist from our end, and we can play all tracks.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_04905",
+        "sp_05375",
+        "sp_00585",
+        "sp_03019",
+        "sp_07042"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05557",
+      "gold_intent": "playback_bug",
+      "pred_intent": "other",
+      "gold_escalate": true,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@293909 https://t.co/qAh6tkevrD! You know where to find us if there's anything else /KM",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_06057",
+        "sp_01332",
+        "sp_03579",
+        "sp_02835",
+        "sp_08898"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_01997",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": true,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@386840 @393336 We've replied to your DM - we'll keep helping out there! /N",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_02545",
+        "sp_01196",
+        "sp_00028",
+        "sp_09285",
+        "sp_06027"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_07269",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@382502 You're welcome! Give us a shout for anything else. https://t.co/uEkAlnxbzn \ud83d\ude42 /JS",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_04872",
+        "sp_03350",
+        "sp_02705",
+        "sp_05314",
+        "sp_01277"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06742",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@723630 Hey there! We're afraid we don't have any info on this right now, but we\u2019re working on it as we speak. Stay tuned /RE",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_09672",
+        "sp_00473",
+        "sp_09311",
+        "sp_03836",
+        "sp_06833"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_04237",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@404330 Hey there! What country is your account set to? We'll check things out /AY",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_05054",
+        "sp_09566",
+        "sp_09859",
+        "sp_00725",
+        "sp_01243"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09044",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@276221 Hey there! That's just a personalized signature of the person helping you out. Hope we were able to clarify this for you /RB",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_03393",
+        "sp_00912",
+        "sp_02705",
+        "sp_05314",
+        "sp_01478"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_04702",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@147352 Does restarting your device help at all? When did you notice this started happening? /AP",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_03777",
+        "sp_00510",
+        "sp_08189",
+        "sp_01961",
+        "sp_00676"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09423",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry playback/downloads are acting up. Mind DMing your device + OS + Spotify app version, and a quick note on what happens? We'll dig in.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_04105",
+        "sp_02764",
+        "sp_02628",
+        "sp_00880",
+        "sp_06014"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05876",
+      "gold_intent": "feature_howto",
+      "pred_intent": "playback_bug",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "Sorry playback/downloads are acting up. Mind DMing your device + OS + Spotify app version, and a quick note on what happens? We'll dig in.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_03215",
+        "sp_07509",
+        "sp_05884",
+        "sp_08945",
+        "sp_03078"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_03053",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry playback/downloads are acting up. Mind DMing your device + OS + Spotify app version, and a quick note on what happens? We'll dig in.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_01665",
+        "sp_06148",
+        "sp_05619",
+        "sp_05525",
+        "sp_03069"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_04677",
+      "gold_intent": "feature_howto",
+      "pred_intent": "playback_bug",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry playback/downloads are acting up. Mind DMing your device + OS + Spotify app version, and a quick note on what happens? We'll dig in.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_05932",
+        "sp_02176",
+        "sp_00071",
+        "sp_04424",
+        "sp_07786"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02756",
+      "gold_intent": "other",
+      "pred_intent": "playback_bug",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry playback/downloads are acting up. Mind DMing your device + OS + Spotify app version, and a quick note on what happens? We'll dig in.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_01163",
+        "sp_02764",
+        "sp_01955",
+        "sp_09155",
+        "sp_05687"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_01812",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry playback/downloads are acting up. Mind DMing your device + OS + Spotify app version, and a quick note on what happens? We'll dig in.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_02853",
+        "sp_02580",
+        "sp_07120",
+        "sp_09707",
+        "sp_09722"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05408",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry playback/downloads are acting up. Mind DMing your device + OS + Spotify app version, and a quick note on what happens? We'll dig in.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_01726",
+        "sp_08710",
+        "sp_00009",
+        "sp_08110",
+        "sp_02074"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_07223",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry playback/downloads are acting up. Mind DMing your device + OS + Spotify app version, and a quick note on what happens? We'll dig in.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_08473",
+        "sp_02466",
+        "sp_01852",
+        "sp_05378",
+        "sp_00822"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_01701",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry playback/downloads are acting up. Mind DMing your device + OS + Spotify app version, and a quick note on what happens? We'll dig in.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_02484",
+        "sp_01189",
+        "sp_09271",
+        "sp_01795",
+        "sp_01740"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_00280",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry playback/downloads are acting up. Mind DMing your device + OS + Spotify app version, and a quick note on what happens? We'll dig in.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_07883",
+        "sp_02654",
+        "sp_08420",
+        "sp_08253",
+        "sp_07116"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_03141",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry playback/downloads are acting up. Mind DMing your device + OS + Spotify app version, and a quick note on what happens? We'll dig in.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_04050",
+        "sp_03241",
+        "sp_00673",
+        "sp_03104",
+        "sp_07142"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05246",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry playback/downloads are acting up. Mind DMing your device + OS + Spotify app version, and a quick note on what happens? We'll dig in.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_03256",
+        "sp_06676",
+        "sp_05238",
+        "sp_08851",
+        "sp_00861"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09476",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry playback/downloads are acting up. Mind DMing your device + OS + Spotify app version, and a quick note on what happens? We'll dig in.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_07120",
+        "sp_07233",
+        "sp_00963",
+        "sp_01638",
+        "sp_04775"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05694",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry playback/downloads are acting up. Mind DMing your device + OS + Spotify app version, and a quick note on what happens? We'll dig in.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_00108",
+        "sp_09804",
+        "sp_01597",
+        "sp_06034",
+        "sp_03134"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06020",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry playback/downloads are acting up. Mind DMing your device + OS + Spotify app version, and a quick note on what happens? We'll dig in.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_00325",
+        "sp_04952",
+        "sp_03618",
+        "sp_07706",
+        "sp_09346"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09890",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry playback/downloads are acting up. Mind DMing your device + OS + Spotify app version, and a quick note on what happens? We'll dig in.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_08316",
+        "sp_01889",
+        "sp_03399",
+        "sp_03136",
+        "sp_03241"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09915",
+      "gold_intent": "account_security",
+      "pred_intent": "playback_bug",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry playback/downloads are acting up. Mind DMing your device + OS + Spotify app version, and a quick note on what happens? We'll dig in.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_02696",
+        "sp_03638",
+        "sp_08284",
+        "sp_06034",
+        "sp_09992"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05692",
+      "gold_intent": "feature_howto",
+      "pred_intent": "playback_bug",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "Sorry playback/downloads are acting up. Mind DMing your device + OS + Spotify app version, and a quick note on what happens? We'll dig in.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_00905",
+        "sp_03444",
+        "sp_09718",
+        "sp_00653",
+        "sp_01699"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09899",
+      "gold_intent": "feature_howto",
+      "pred_intent": "playback_bug",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry playback/downloads are acting up. Mind DMing your device + OS + Spotify app version, and a quick note on what happens? We'll dig in.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_02888",
+        "sp_09686",
+        "sp_08005",
+        "sp_06266",
+        "sp_09081"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_08091",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry playback/downloads are acting up. Mind DMing your device + OS + Spotify app version, and a quick note on what happens? We'll dig in.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_07155",
+        "sp_00164",
+        "sp_06336",
+        "sp_02583",
+        "sp_07438"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_08189",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry playback/downloads are acting up. Mind DMing your device + OS + Spotify app version, and a quick note on what happens? We'll dig in.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_00244",
+        "sp_04702",
+        "sp_07880",
+        "sp_09802",
+        "sp_09740"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_07883",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry playback/downloads are acting up. Mind DMing your device + OS + Spotify app version, and a quick note on what happens? We'll dig in.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_00559",
+        "sp_08420",
+        "sp_00280",
+        "sp_06624",
+        "sp_08679"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02526",
+      "gold_intent": "playback_bug",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@279456 Got it. When did this start happening? Was it after a specific firmware/app update? /NS",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_02075",
+        "sp_00117",
+        "sp_03238",
+        "sp_00293",
+        "sp_03611"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_04588",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry playback/downloads are acting up. Mind DMing your device + OS + Spotify app version, and a quick note on what happens? We'll dig in.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_06784",
+        "sp_04232",
+        "sp_03768",
+        "sp_02636",
+        "sp_06389"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02876",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@750030 You're welcome! If you need us again, just... https://t.co/AUc7DGJpgF /KT",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_04209",
+        "sp_06692",
+        "sp_04316",
+        "sp_09425",
+        "sp_09075"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_07311",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@494079 Got it. We\u2019d suggest using the steps under 'Spotify and Chromecast: General Troubleshooting\u2019 at https://t.co/z4uvkOnM7p. Keep us posted /MT",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_02354",
+        "sp_09284",
+        "sp_08134",
+        "sp_08283",
+        "sp_06277"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_01361",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry about the billing trouble. Please DM us your account email/username and a screenshot of the charge (hide full card digits) so we can look into this with you.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_00369",
+        "sp_01033",
+        "sp_09984",
+        "sp_03536",
+        "sp_01794"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_03281",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@138957 We understand. No guarantees, but rest assured, your feedback has been noted and passed on to the team. Thanks for bearing with us /JE",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_08258",
+        "sp_05761",
+        "sp_02533",
+        "sp_06083",
+        "sp_06433"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_08594",
+      "gold_intent": "account_security",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.72,
+      "reply": "Sorry you're seeing possible unauthorized access \u2014 that's not okay. Please DM us your account's email/username (no passwords) so we can investigate and secure it.",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_04984",
+        "sp_01714",
+        "sp_05323",
+        "sp_02609",
+        "sp_09625"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06016",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@139085 Sounds like a plan! We'll be right here waiting for your update /WP",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_00159",
+        "sp_02614",
+        "sp_01012",
+        "sp_07176",
+        "sp_00126"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05560",
+      "gold_intent": "playback_bug",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@274279 Hey, help's here. What device, operating system, and Spotify version is this happening on? We'll see what we can suggest /AY",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_02643",
+        "sp_09100",
+        "sp_02824",
+        "sp_03713",
+        "sp_08848"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_00628",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.72,
+      "reply": "@785735 Hey there! Thanks for the feedback \u2013 we appreciate it. We\u2019ll get this passed onto the right team /NQ",
+      "reason": "rules+composed_reply",
+      "retrieved_ids": [
+        "sp_01768",
+        "sp_01189",
+        "sp_03119",
+        "sp_09708",
+        "sp_03271"
+      ],
+      "judge": null
+    }
+  ]
+}

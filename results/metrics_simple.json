@@ -1,0 +1,2865 @@
+{
+  "n": 200,
+  "intent_accuracy": 0.71,
+  "intent_macro_f1": 0.7042935115215897,
+  "escalate": {
+    "accuracy": 0.78,
+    "precision": 0.7835820895522388,
+    "recall": 0.875,
+    "f1": 0.8267716535433071,
+    "support_positive": 120.0
+  },
+  "intent_confusion": {
+    "account_security": {
+      "account_security": 17,
+      "playback_bug": 1
+    },
+    "billing_charge": {
+      "account_security": 3,
+      "billing_charge": 21,
+      "cancel_premium": 1,
+      "feature_howto": 1,
+      "login_access": 1
+    },
+    "feature_howto": {
+      "account_security": 1,
+      "family_duo_plan": 2,
+      "feature_howto": 9,
+      "login_access": 3,
+      "playback_bug": 4
+    },
+    "other": {
+      "account_security": 4,
+      "billing_charge": 2,
+      "cancel_premium": 2,
+      "feature_howto": 9,
+      "login_access": 3,
+      "other": 28,
+      "playback_bug": 1
+    },
+    "cancel_premium": {
+      "billing_charge": 1,
+      "cancel_premium": 14,
+      "login_access": 1
+    },
+    "family_duo_plan": {
+      "billing_charge": 1,
+      "cancel_premium": 2,
+      "family_duo_plan": 22
+    },
+    "playback_bug": {
+      "cancel_premium": 1,
+      "feature_howto": 3,
+      "login_access": 3,
+      "other": 2,
+      "playback_bug": 18
+    },
+    "login_access": {
+      "cancel_premium": 4,
+      "feature_howto": 2,
+      "login_access": 13
+    }
+  },
+  "examples": [
+    {
+      "id": "sp_03603",
+      "gold_intent": "account_security",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.4873484586948977,
+      "reply": "@117600 Hi there, we're here to help! Can you DM us with your account's username and email address? We'll check it out backstage /WW https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_06435"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_03965",
+      "gold_intent": "account_security",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.29975136886524106,
+      "reply": "@528928 Hey there! We just sent you a reply to your DM, so we'll continue assisting you there /TF",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_07365"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_00268",
+      "gold_intent": "account_security",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.40093720298565694,
+      "reply": "@817968 Hey! Sorry to hear that. Can you DM us your account's username or email address? We'll take a look under the hood /CP https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_00632"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_04813",
+      "gold_intent": "billing_charge",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.5439123377126605,
+      "reply": "@567918 Hey Keyra! To update your payment information for Spotify Premium, just follow these steps: https://t.co/rgQPzQJv2L /BH",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_02315"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02070",
+      "gold_intent": "feature_howto",
+      "pred_intent": "account_security",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.5792852204220293,
+      "reply": "@131968 Hey John! Thanks for your feedback. We'll pass it on to the right folks. You can also vote for the idea here: https://t.co/cxqCh7BOea /MO",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_08099"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05312",
+      "gold_intent": "other",
+      "pred_intent": "account_security",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.43838805734768177,
+      "reply": "@635620 You're welcome! Let us know if you have any other questions. We'd be... https://t.co/LgAM6ky9Vv /DR",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_03828"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05855",
+      "gold_intent": "other",
+      "pred_intent": "account_security",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.3803146166866619,
+      "reply": "@360804 Great! Glad to hear it's working. Just let us know if we can help with anything else. https://t.co/m4HWSbgHVZ \ud83d\ude42 /VK",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_03171"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_00766",
+      "gold_intent": "account_security",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.298280830166744,
+      "reply": "@233786 Hey there! Can you tell us your device, operating system, and the version of Spotify you're rocking? Also, a screenshot of the notifications you're receiving would be helpful /KA",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_01237"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02975",
+      "gold_intent": "account_security",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.5744139582895287,
+      "reply": "@560834 Thanks! We suggest you delete your previous tweet as it contains both of your email addresses. Can you DM it to us instead? /DR https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_04349"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_08795",
+      "gold_intent": "account_security",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.29773756527219525,
+      "reply": "@594987 1: Hi! To remove your downloaded songs all at once, you can reinstall the app by following the steps here: https://t.co/EqisDMwZAT. /NY",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_04232"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_01479",
+      "gold_intent": "account_security",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.31569114585107955,
+      "reply": "@662049 Hey there! Can you let us know more about's happening and send us your account's email address via DM? We'll see what we can suggest /CE https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_07784"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05304",
+      "gold_intent": "account_security",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.522177033790319,
+      "reply": "@532609 Hey, help's here! Can you DM us your account's email address? We'll take a look /RB https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_00072"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_00833",
+      "gold_intent": "other",
+      "pred_intent": "account_security",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.3015373457997678,
+      "reply": "@242763 We'd love to have him on Spotify! Hopefully we will in the future. Check this out: https://t.co/GGCDZEFHTz /KM",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_02842"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02831",
+      "gold_intent": "billing_charge",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.2833854195575328,
+      "reply": "@226806 Hey there! Can you DM us your account's email address or username? We'll take a look /NS https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_01127"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_07169",
+      "gold_intent": "account_security",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.3548467811303402,
+      "reply": "@151635 Thanks for the feedback \u2013 we appreciate it! We\u2019ll get this passed onto the right team. Give us a shout if you need anything else /ZO",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_00647"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09690",
+      "gold_intent": "account_security",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.3208111396272696,
+      "reply": "@289563 Perfect! If you need us again, just... https://t.co/AUc7DGJpgF \ud83d\ude42 /BE",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_08870"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_08838",
+      "gold_intent": "billing_charge",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.5811947559366129,
+      "reply": "@460327 Hey Arial! Can you DM us your account's email address and username? We'll take a look backstage /KL https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_09103"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_00025",
+      "gold_intent": "account_security",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.3538623551008862,
+      "reply": "@506850 Hi Adrian! We've just sent you a bit more info over DM. We'll carry on helping out there /MA",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_01262"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_07168",
+      "gold_intent": "account_security",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.4624367692666576,
+      "reply": "@601704 Hey Mary, that's not cool! Can you DM us your account's username and email address? We'll take a look backstage /JX https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_07288"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_08331",
+      "gold_intent": "account_security",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.37666223623973755,
+      "reply": "@504557 Hey, help's here! Can you DM us your account's email address? We'll check backstage /GK https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_06657"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05323",
+      "gold_intent": "account_security",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.4054787809997784,
+      "reply": "@139559 Hey Polly, help's here! Can you DM us your account's username and email address? We'll help out backstage /JX https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_02609"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_03889",
+      "gold_intent": "account_security",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.471814301064044,
+      "reply": "@601704 Hey Mary, that's not cool! Can you DM us your account's username and email address? We'll take a look backstage /JX https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_07288"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02474",
+      "gold_intent": "other",
+      "pred_intent": "account_security",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.2562141370438203,
+      "reply": "@516078 Hey there! You can find the playlist right here: https://t.co/CcRVy37X9G /JX",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_06699"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05753",
+      "gold_intent": "account_security",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.3723143672967221,
+      "reply": "@739604 Hey Sander! Can you DM us your account's email address? We'll see what we can suggest /MV https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_00138"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05768",
+      "gold_intent": "cancel_premium",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.23702174405844556,
+      "reply": "@695308 Hey! Can you DM us your account's email address? We'll see what we can suggest /CB https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_04168"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06712",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.30868261991842716,
+      "reply": "@201247 Hey there! Can you DM us your account's email address and username? We'll take a look backstage /SU https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_00594"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02454",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.27839022993079965,
+      "reply": "@644028 Hi there. We've just sent a DM your way. Let's carry on chatting there /QI",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_09625"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09148",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.3271438384497183,
+      "reply": "@619003 Hey Mike, we're here to help! Can you send us your account's username or email address via DM? We'll take a look backstage /GN https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_03922"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02429",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.42970267392954326,
+      "reply": "@436129 Hey there! We can help out in English via Twitter, but we also have Turkish support via email at https://t.co/ZgU70TbP8M /MQ",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_05603"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_07374",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.2885190734631687,
+      "reply": "@417275 Hi Jayson, help's here! Can you DM us your account's email address? We'll take a look backstage /NY",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_02819"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_00425",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.4272095541854799,
+      "reply": "@266359 Hey Abdul! The cavalry's here. Could you DM us your account's email address? We'll take a look under the hood /KB https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_05589"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_08796",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.4759960377994127,
+      "reply": "@565914 Hey there! That doesn't sound good. Can you DM us a screenshot of the email showing the email address of the sender? /PB https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_07517"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09291",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.5408305605853848,
+      "reply": "@670121 Hey! We've just replied to your DM. Let's carry on chatting there /RH",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_03738"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02582",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.516599353224392,
+      "reply": "@419515 Hmm. Can you send over a screenshot of what you're seeing? We'll take a closer look /QI",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_00754"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05842",
+      "gold_intent": "other",
+      "pred_intent": "billing_charge",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.3090429692203588,
+      "reply": "@693588 Great! Glad to hear it's working. Just let us know if we can help with anything else. https://t.co/m4HWSbgHVZ /CG",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_08766"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_07511",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.43185556467492386,
+      "reply": "@801515 Hey! We've just sent you a bit more info over DM. We'll carry on helping out there /JM",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_00202"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_04370",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.2729802831172733,
+      "reply": "@785736 Hi there! Can you DM us your account's email address or username? We'll take a look backstage /NQ https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_04809"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_01127",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.5523122805610076,
+      "reply": "@251242 Hey Amanda! Don't worry, help's here. Can you DM us your account's email address or username? We'll take a look backstage /MT https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_09664"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02478",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.36601680703578543,
+      "reply": "@806634 Hey Ben, help's here! Can you DM us your account's username and email address? We'll check it out \ud83d\udd0d /TR https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_04069"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_04943",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.22603948155359346,
+      "reply": "@323750 Hey there! Could you DM us your account's username and email address? We'll take a look backstage /DF https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_02283"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_07908",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.49433846187438596,
+      "reply": "@496382 Hey! Can you fire over your account's email address or username via DM? We'll take a look backstage /RC https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_00545"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_03660",
+      "gold_intent": "other",
+      "pred_intent": "billing_charge",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.32647068848192484,
+      "reply": "@574908 Hi! Sorry to hear that. Check out the steps under \u201cDownloads unexpectedly removed\u201d at https://t.co/38J7tFlIBF. They should help out /MC",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_02630"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_07164",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.48183295372883694,
+      "reply": "@381791 1: We understand your frustration. Rest assured, the team via email will be able to assist. If you've responded to them again...",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_03925"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_04129",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.42103336901192684,
+      "reply": "@613976 Hi Endre! Help's here. Can you DM us your account's username or email address? We'll check things backstage /MU https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_02854"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_04604",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.3630374538006398,
+      "reply": "@534988 1: Hey! Just to make sure, are you a Groove Music Pass subscriber? If yes, you'll automatically get the 60-day trial once you've...",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_03214"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_08496",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.3179344172525851,
+      "reply": "@198180 Hey! Can you DM us your account's username or email address? We'll check things out for you /YM https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_07848"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_08170",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.5419593095476212,
+      "reply": "@356812 Hey there! We've just sent a DM your way. Let's carry on chatting there /PB",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_00836"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06022",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.25354897020609934,
+      "reply": "@395953 Hey Stephen, help's here! Can you DM us your account's email address? We'll take a look backstage /SJ https://t.co/ldFdZR1cbT",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_01147"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_00786",
+      "gold_intent": "cancel_premium",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.2726557916459527,
+      "reply": "@221338 Hey Richard. We can see that your artist profile has just been verified. To learn more and get a good start, head here: https://t.co/a3LqtFn7nT. If you need anything else, we're just a tweet away! /WP https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_05473"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09113",
+      "gold_intent": "cancel_premium",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.30232419924361675,
+      "reply": "@146935 Hey Marc! We're sorry you feel this way. Can you DM us your account's email address? We'll see what we can suggest /GK https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_00981"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05256",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.3307286707851323,
+      "reply": "@376423 Got it! There's currently a download limit of 3,333 songs per device, on a maximum of 3 devices. More info here: https://t.co/02nLeSTUV7 /TB",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_03500"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09993",
+      "gold_intent": "cancel_premium",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.2171862734644697,
+      "reply": "@251942 Hi there! Can you DM us your account's email address or username? We'll see what we can suggest /NQ https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_04848"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02925",
+      "gold_intent": "playback_bug",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.3732502250682079,
+      "reply": "@208191 Hey! We have some info about the Spotify app on Roku here: https://t.co/titMn0j3Im. Give us a shout if there's anything else /NQ",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_00777"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_07318",
+      "gold_intent": "cancel_premium",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.2886967485649522,
+      "reply": "@676187 Hey Kraven! Can you DM us your account's email address? We'll take a look under the hood /FR https://t.co/ldFdZR1cbT",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_03882"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_04282",
+      "gold_intent": "cancel_premium",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.33406319916014166,
+      "reply": "@577282 Hey John! Don't worry, help's here. Can you DM us your account's email address or username? We'll take a look backstage /MT https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_09711"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09105",
+      "gold_intent": "cancel_premium",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.41951462554094776,
+      "reply": "@516975 Hi there! Can you tell us what device, operating system, and Spotify version you're using? We'll see what we can suggest /NH",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_07122"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_08988",
+      "gold_intent": "cancel_premium",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.43116038246502036,
+      "reply": "@441360 Can you DM us your account's email address? We'll take a look backstage /RB https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_05989"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_01875",
+      "gold_intent": "cancel_premium",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.2885154877573511,
+      "reply": "@537892 Hey! You can contact our Artist team here: https://t.co/p1wbtdELHu! If you've reached out, DM us your email address &amp; we'll chase it up /ME",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_04399"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06271",
+      "gold_intent": "login_access",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.28037233441674475,
+      "reply": "@549997 Hey Laura, help's here! Could you send us a DM with any email address the account might be under and the username? We'll take a look /RV https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_03263"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_07343",
+      "gold_intent": "cancel_premium",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.341706012167615,
+      "reply": "@730872 Hi Dave! Can you send us your account's email address or username via DM? We'll take a look /GT https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_00241"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_00337",
+      "gold_intent": "billing_charge",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.30637754574801657,
+      "reply": "@153880 Hi there! Can you send us your account's email address or username via DM? We'll take a look /GT https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_05883"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_00568",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.33522578595472186,
+      "reply": "@270317 Hey Jazmin, help's here! Could you DM us exactly what's happening? We'll see what we can suggest /CG https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_06161"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06394",
+      "gold_intent": "login_access",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.3389066246589455,
+      "reply": "@437808 That's not cool! Could you fire us a DM with your account's username or email address? We'll see what's happening backstage /JM https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_02751"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_04412",
+      "gold_intent": "cancel_premium",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.3607695068997935,
+      "reply": "@296478 We understand. For anything else, just give us a shout. We'd be... https://t.co/LgAM6ky9Vv /MU",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_01890"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05252",
+      "gold_intent": "cancel_premium",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.3359764253306721,
+      "reply": "@267073 Hi April! We've just replied to your DM. Let's continue chatting there /KT",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_00222"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09126",
+      "gold_intent": "other",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.3423461927777505,
+      "reply": "@661807 Hi Jordan! Help's here. Can you DM us your account's username or email address? We'll check things backstage /MU https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_01324"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_03882",
+      "gold_intent": "other",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.3602760578419574,
+      "reply": "@197359 Hey! We\u2019re sorry to hear that. Check out https://t.co/QHn3ok8y2n for what to do next /NQ",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_00576"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02262",
+      "gold_intent": "cancel_premium",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.3991731096376758,
+      "reply": "@333239 We've just sent you a DM \ud83d\ude42 /PX https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_00974"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_04320",
+      "gold_intent": "login_access",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.3194518089565589,
+      "reply": "@576880 Hi! Could you send us a DM with your son's account's email address or username? We'll take a look backstage /DR https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_03837"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_04862",
+      "gold_intent": "cancel_premium",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.2996537073739769,
+      "reply": "@469916 1: Hey there! Help's here. This looks like something for our friends in Artist...",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_02157"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06533",
+      "gold_intent": "cancel_premium",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.4719337069000321,
+      "reply": "@133629 @115888 Hey! We've just sent a DM your way. Let's carry on chatting there /PK",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_05791"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09229",
+      "gold_intent": "login_access",
+      "pred_intent": "cancel_premium",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.3058492958673134,
+      "reply": "@780518 Hi, we've just replied to your DMs. We'll carry on chatting there /SY",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_07286"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_08696",
+      "gold_intent": "feature_howto",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.3636681869644441,
+      "reply": "@727603 Hey! What device and operating system are you using? Also, are you Premium or Free? We'll see what we can suggest /CB",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_08133"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_07497",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.3668161306677267,
+      "reply": "@738836 Hey! Thanks for reaching out. We'd recommend reaching out to our Artist Services team at https://t.co/3j9HWSEG0s. Let us know how you get on \ud83d\ude42 /C",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_06328"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05222",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.28774404351689475,
+      "reply": "@158590 Hi there! We've sent you some more info via DM. We'll carry on helping you there /MC",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_04058"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02642",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.3677712516537678,
+      "reply": "@615942 Hey Lawrence! Can you send us your account's email address or username via DM? Don't forget to send your family member's info as well /JE https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_03190"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09994",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.3448159957514335,
+      "reply": "@629860 Hey Catherine! Can you DM us your accounts' email addresses? We'll lend a hand /MV https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_07533"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02003",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.28733516372832735,
+      "reply": "@776949 Hey Angel, we'd love to help! We have some handy info about payments here: https://t.co/HXJvbKDPzt. If you need a hand with anything else, just let us know /TI",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_04384"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_08383",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.25926119616468385,
+      "reply": "@365077 Thanks! You can sign up for the student discount here: https://t.co/xbU7d8wpTJ. Hope that helps /NQ",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_03692"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05633",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.2683362261152223,
+      "reply": "@746459 Hi Kelly, help's here! Can you DM us your account's email address or username? We'll take a look backstage /GT https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_02072"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09855",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.36225908299429954,
+      "reply": "@612465 Hey! Can you DM us your usernames or the email addresses linked to your accounts? We'll see what we can suggest /YM https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_07941"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06325",
+      "gold_intent": "feature_howto",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.2786140318367791,
+      "reply": "@772372 Hey Jordan! Could you send us a DM with your account's email address? We'll take a look backstage /FR https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_05750"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_08552",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.33174198424062273,
+      "reply": "@602984 Hey Abby, help's here! Could you DM us your account's username or email address? We'll take a look backstage /GU https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_00816"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_00716",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.2865208313305905,
+      "reply": "@397481 Thanks! We've just replied to your DM. Let's continue chatting there /JP",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_03399"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06540",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.4390117256130097,
+      "reply": "@319921 Hi Jose! We've just replied to your DM. Let's continue chatting there /JP",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_04321"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09116",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.4235030947314179,
+      "reply": "@632018 Hey! Help's here. Can you DM us your account's username and email address? We'll see what we can suggest /JL https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_08579"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02895",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.3975200057525543,
+      "reply": "@323320 Sorry to hear that. Can you DM us your accounts' email addresses? We'll take a look under the hood /CP https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_01570"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_07746",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.5034073723555869,
+      "reply": "@657841 Hey, help's arrived! We've just replied to your DM. Let's carry on chatting there /DV",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_04715"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02330",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.3317705468163311,
+      "reply": "@577301 Hey Marcus! Help's here. Can you DM us your account's email address or username? We'll take a look backstage /DD https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_08044"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_04386",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.3040691260254886,
+      "reply": "@711378 Best thing to try here is a reinstall. Just follow the steps at https://t.co/EqisDMwZAT. Let us know how it goes /YM",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_05758"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05711",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.3251995595183291,
+      "reply": "@574595 Hey there! We\u2019ll have it available to you as soon as it\u2019s available to us. More info on content at https://t.co/0i8GpimuDa /LP",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_08697"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05997",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.3910503850860884,
+      "reply": "@422334 Hey there! Help's here. Can you DM us the member's email address or username? We'll take a look under the hood /AN https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_04054"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_01643",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.30638347140040123,
+      "reply": "@486323 Woohoo! This calls for a https://t.co/ArJFNes23V. Give us a shout if you need anything else \ud83d\ude42 /CG",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_06839"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_03496",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.2937456478962897,
+      "reply": "@613976 Hi Endre! Help's here. Can you DM us your account's username or email address? We'll check things backstage /MU https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_02854"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_01133",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.35515290280821,
+      "reply": "@281867 Hi there! Can you DM us your account's email address or username? We'll take a look backstage /NQ https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_07673"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_08404",
+      "gold_intent": "family_duo_plan",
+      "pred_intent": "family_duo_plan",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.3216850493402993,
+      "reply": "@559015 Hey Bruno! Could you send us a DM with your account's email address or username? We'll take a look backstage /FR https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_05423"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06754",
+      "gold_intent": "playback_bug",
+      "pred_intent": "feature_howto",
+      "gold_escalate": true,
+      "pred_decision": "auto",
+      "confidence": 0.303961605640202,
+      "reply": "@539757 Hey, that's not cool! Can you DM us your account's username or email address? We'll take a look under the hood /JM https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_02469"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02597",
+      "gold_intent": "playback_bug",
+      "pred_intent": "feature_howto",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.33622690061666655,
+      "reply": "@643698 Hi! Are you currently on Free or Premium? If you're on Free, we're afraid Suggested tracks will play. Check out: https://t.co/XYoV3e35gj /RE",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_08424"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_00576",
+      "gold_intent": "login_access",
+      "pred_intent": "feature_howto",
+      "gold_escalate": true,
+      "pred_decision": "auto",
+      "confidence": 0.6738026113386241,
+      "reply": "@726100 You're welcome! Give us a shout if there's anything else we can do to help. We'll be... https://t.co/AiEGsVLjXp /DV",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_09495"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_07452",
+      "gold_intent": "feature_howto",
+      "pred_intent": "feature_howto",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.23729956675196825,
+      "reply": "@540193 Hey Drew. Sometimes content gets temporarily removed because of licensing changes. Hopefully we'll have it available again soon! /MO",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_03929"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_00401",
+      "gold_intent": "feature_howto",
+      "pred_intent": "feature_howto",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.3117895942466867,
+      "reply": "@160181 Hi, help's here! Can you give us more info on this? We'll see what we can suggest /DV",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_05364"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_01617",
+      "gold_intent": "other",
+      "pred_intent": "feature_howto",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.2700917716505628,
+      "reply": "@548808 Hey! What device, operating system, and Spotify version are you on? By any chance, are you listening on shuffle via Spotify Connect? /AY",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_01920"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_03378",
+      "gold_intent": "billing_charge",
+      "pred_intent": "feature_howto",
+      "gold_escalate": true,
+      "pred_decision": "auto",
+      "confidence": 0.24961923789791102,
+      "reply": "@250117 Hey there! Right now, this offer\u2019s for new subscribers only. We\u2019d recommend checking out our new Spotify Yearly discount - 12 months for the price of 10: https://t.co/LHTUu8url7. Let us know how it goes /GN",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_09647"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_00394",
+      "gold_intent": "other",
+      "pred_intent": "feature_howto",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.22990292415144825,
+      "reply": "@186720 Hey! We've just replied to your DM. Let's carry on chatting there /RH",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_09101"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_03153",
+      "gold_intent": "feature_howto",
+      "pred_intent": "feature_howto",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.41995360063729786,
+      "reply": "@726095 Hey Adam! The radio evolves over time with your listening, so continue to tap \u2764\ufe0f while it\u2019s playing to replace your unwanted tracks \ud83d\ude42 /KL",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_00708"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02088",
+      "gold_intent": "playback_bug",
+      "pred_intent": "feature_howto",
+      "gold_escalate": true,
+      "pred_decision": "auto",
+      "confidence": 0.7436865737013059,
+      "reply": "@393486 Hey there! Fingers crossed we'll be able to have it soon, but there's info about Spotify content here: https://t.co/0i8GpimuDa /MO",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_07321"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05496",
+      "gold_intent": "feature_howto",
+      "pred_intent": "feature_howto",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.4312244544884536,
+      "reply": "@234707 No need for that! It should automatically update as you add more songs to your playlist. If you have more questions, we're just a tweet away /JP",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_07803"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06724",
+      "gold_intent": "feature_howto",
+      "pred_intent": "feature_howto",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.4062967991542528,
+      "reply": "@151986 Hey Gerald! What iOS and Spotify version are you using? Also, a screenshot of what you see on your end would really help /BH",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_04262"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_04808",
+      "gold_intent": "other",
+      "pred_intent": "feature_howto",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.3053293317074897,
+      "reply": "@398136 Awesome! Let us know if you ever need us again. We'd be... https://t.co/LgAM6ky9Vv /RH",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_00980"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_01668",
+      "gold_intent": "other",
+      "pred_intent": "feature_howto",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.22933424502724992,
+      "reply": "@798716 That's cool! It should help local bands get some recognition from other users. No worries, we'll be sure to pass this on to the right folks. Stay tuned for any updates that may come up about this. You know where to find us if you need more help. https://t.co/uQiQuWow27 /NY",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_03210"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05810",
+      "gold_intent": "other",
+      "pred_intent": "feature_howto",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.21552863113600235,
+      "reply": "@639286 Glad to hear you liked it! Thanks for the feedback, it's music to our ears \ud83c\udfb6 /DR",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_00517"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_00575",
+      "gold_intent": "other",
+      "pred_intent": "feature_howto",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.31361019604175205,
+      "reply": "@125921 Can you DM us the email address that you use for Facebook? We'll take a look backstage /SY https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_09424"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09803",
+      "gold_intent": "feature_howto",
+      "pred_intent": "feature_howto",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.35365857412456136,
+      "reply": "@393453 Hey there! We don't have any info on this right now, but we'll let the right team know it's something you'd like to see. Keep rocking \ud83e\udd18 /TI",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_09462"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02280",
+      "gold_intent": "other",
+      "pred_intent": "feature_howto",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.2591934018939004,
+      "reply": "@799426 Hi Kevin! To help make this happen, you can leave a vote for this idea in our Community page at https://t.co/OQIKCllR7i. Let us know if you have any other questions /NY",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_01973"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_07008",
+      "gold_intent": "feature_howto",
+      "pred_intent": "feature_howto",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.5427907725340669,
+      "reply": "@300119 Hi Ian! This competition is open to all Spotify Community users. Hope this helps \ud83d\ude42 /T",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_01029"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_04108",
+      "gold_intent": "login_access",
+      "pred_intent": "feature_howto",
+      "gold_escalate": true,
+      "pred_decision": "auto",
+      "confidence": 0.4496509512079711,
+      "reply": "@709276 Hey Naomi! Help's here. Can you DM us your account's email address? We'll take a look backstage /RA https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_08375"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_08423",
+      "gold_intent": "feature_howto",
+      "pred_intent": "feature_howto",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.4184668218064026,
+      "reply": "@585464 Hi Jacob! We don't have any info on this right now, but we'll let the right team know it's something you'd like to see /MT",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_01918"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_03456",
+      "gold_intent": "feature_howto",
+      "pred_intent": "feature_howto",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.3210804421050474,
+      "reply": "@423123 This option disables the feature from appearing automatically on top of the album art. We hope this clarifies things /JP",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_03260"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_07153",
+      "gold_intent": "other",
+      "pred_intent": "feature_howto",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.4216742881848007,
+      "reply": "@501646 Hi there, thanks for bearing with us. Spotify should be working perfectly again! Let us know if not /LP",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_05856"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_08600",
+      "gold_intent": "other",
+      "pred_intent": "feature_howto",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.5910346569976315,
+      "reply": "@671907 Hey Pat, that doesn't sound good! Did the app crash at any point during the 30 minutes? That can cause the ad-free time to reset /GK",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_09051"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_00135",
+      "gold_intent": "login_access",
+      "pred_intent": "login_access",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.4096715399840968,
+      "reply": "@403342 Hi there, help's here! Could you DM us your account's email address? We'll take a look backstage /JO https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_00263"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_01838",
+      "gold_intent": "other",
+      "pred_intent": "login_access",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.3230518405785663,
+      "reply": "@308177 Oops, that's embarrassing. We'll let the right folks know about this. Thanks for the heads up! /RA",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_00291"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_01486",
+      "gold_intent": "login_access",
+      "pred_intent": "login_access",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.40795607229882563,
+      "reply": "@559464 Thanks for letting us know. Could you fire over your account's email address or username via DM? We'll take a look backstage /AY https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_01539"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_03369",
+      "gold_intent": "login_access",
+      "pred_intent": "login_access",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.35199865271301445,
+      "reply": "@254715 Hi there! Help's here. Can you DM us your account's email address or username? We'll take a look backstage /NQ",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_02030"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_00886",
+      "gold_intent": "login_access",
+      "pred_intent": "login_access",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.6396275640334106,
+      "reply": "@816776 Hey, help's here! Can you DM us your account's username and email address? We'll see what we can suggest /TR https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_09117"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06959",
+      "gold_intent": "login_access",
+      "pred_intent": "login_access",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.46345059552039336,
+      "reply": "@344983 Hey, help's here! Can you fire over your account's email address or username via DM? We'll take a look under the hood /AY https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_01280"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_03173",
+      "gold_intent": "login_access",
+      "pred_intent": "login_access",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.30778013659156844,
+      "reply": "@706218 Hey there, help's here! Can you DM us your account's email address? We'll check backstage /MO https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_04085"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09678",
+      "gold_intent": "feature_howto",
+      "pred_intent": "login_access",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.40994682243956554,
+      "reply": "@389451 In that case, could you DM us your Facebook account's email address? A link to your \nFacebook profile will be handy too /CO https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_01616"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02753",
+      "gold_intent": "login_access",
+      "pred_intent": "login_access",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.3436963497416923,
+      "reply": "@432156 Hey there! Can you tell us more about what's happening? Which iOS version are you running? We'll lend a hand /MV",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_05694"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05465",
+      "gold_intent": "feature_howto",
+      "pred_intent": "login_access",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.369887243528625,
+      "reply": "@393493 Hey Will, help's here! Could you DM us your new account's email address? We'll take a look backstage /GU https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_03986"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02731",
+      "gold_intent": "other",
+      "pred_intent": "login_access",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.3816381454529663,
+      "reply": "@554624 Hi, help's here! Could you send us a DM with your account's email address or username? We'll take a look backstage /LO https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_00334"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06246",
+      "gold_intent": "login_access",
+      "pred_intent": "login_access",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.3822053601127833,
+      "reply": "@198404 Hey! Our devs are aware of this, and they're looking into it as we speak. We hope to have a fix soon /AY",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_04713"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_07224",
+      "gold_intent": "login_access",
+      "pred_intent": "login_access",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.4081704842640087,
+      "reply": "@152535 Hey Marcus, help's arrived! Could you DM us your username and email address? We'll check it out \ud83d\udd0d /JY https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_06816"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_08471",
+      "gold_intent": "playback_bug",
+      "pred_intent": "login_access",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.4688785330042445,
+      "reply": "@400362 We appreciate the heads-up. Do you have any active firewall/antivirus programs? If so, could you try temporarily disabling them? /MT",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_07302"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09225",
+      "gold_intent": "feature_howto",
+      "pred_intent": "login_access",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.5280174168417661,
+      "reply": "@172015 Thanks! We've taken this on board. For now, give us a shout if there's anything else /PL",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_08505"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06460",
+      "gold_intent": "login_access",
+      "pred_intent": "login_access",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.2706301103995514,
+      "reply": "@805043 Hi Cathy! Help's here. Could you DM us your account's email address? We'll take a look backstage /AU https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_00917"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_01031",
+      "gold_intent": "playback_bug",
+      "pred_intent": "login_access",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.19930371744595363,
+      "reply": "@706215 Hey there! Can you let us know which iOS and Spotify versions you're currently using? We'll see what we can suggest /NQ",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_05606"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_03502",
+      "gold_intent": "other",
+      "pred_intent": "login_access",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.3976644297756399,
+      "reply": "@557427 Hey there! Are you getting any error messages when signing up for Spotify? Also, what country are you signing up from? Keep us posted /BH",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_01619"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02746",
+      "gold_intent": "login_access",
+      "pred_intent": "login_access",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.39894929737484314,
+      "reply": "@807602 Hey. This is fixed! Everything should now be running as smooth as this guy's voice: https://t.co/NXWaP3cMnY /CE",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_06258"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_08946",
+      "gold_intent": "playback_bug",
+      "pred_intent": "login_access",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.5431161354625927,
+      "reply": "@564087 It seems that you're playing directly from your iPhone instead of just streaming it from your computer first. You need to play the track on your computer before using Connect to stream it to your iPhone. You can check for the steps here: https://t.co/64CIqASpvY /JU",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_06818"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_07891",
+      "gold_intent": "billing_charge",
+      "pred_intent": "login_access",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.3427749943280404,
+      "reply": "@124510 @115888 Hi! We've just replied to your DM. We'll carry on helping there /MQ",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_07569"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09402",
+      "gold_intent": "login_access",
+      "pred_intent": "login_access",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.3038640482703898,
+      "reply": "@355076 Hi! We've just sent a DM your way. Let's carry on chatting there /DR",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_02596"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02971",
+      "gold_intent": "login_access",
+      "pred_intent": "login_access",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.45019341994104134,
+      "reply": "@283945 Hi Will! Help's here. Can you DM us your account's email address? We'll take a look backstage /AU https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_03381"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_04871",
+      "gold_intent": "cancel_premium",
+      "pred_intent": "login_access",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.2026508980144129,
+      "reply": "@780113 Hey Alix! We're here to help. Can you let us know what's happening exactly? We'll see what we can suggest /AN",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_02639"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02015",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.44700215276891136,
+      "reply": "@371218 Alright! Could you DM us your Spotify account's email address or username? We'll take a look under the hood /BH https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_01025"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09503",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": true,
+      "pred_decision": "auto",
+      "confidence": 0.5303738751825285,
+      "reply": "@343331 Hey there! We've just sent you a bit more info over DM. We'll carry on helping out there \ud83d\ude42 /TB",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_09759"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_00897",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": true,
+      "pred_decision": "auto",
+      "confidence": 0.6720010727056169,
+      "reply": "@537119 Hey George! That's not cool. Could you DM us your account's username or email address? We'll take a look under the hood /GU https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_03801"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05638",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.4296814685547888,
+      "reply": "@491261 Great! Glad to hear it's working. Just give us a shout if we can help with anything else. https://t.co/m4HWSbgHVZ /CE",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_01982"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06886",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.5121204067246155,
+      "reply": "@553756 Hey! Don't worry, we're on it. Our developers are looking into this, and we'll keep everyone updated /TF",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_01151"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09689",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.8274706557797598,
+      "reply": "@676447 Hey there! Is this the album you're looking for: https://t.co/RqYePOitw0? /FR",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_05973"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_04336",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.6820028091768512,
+      "reply": "@401922 Sorry to hear that. Could you DM us your username and email address? We'll take a look backstage \ud83d\udd0d /JQ https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_03127"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06768",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.4095413102442729,
+      "reply": "@293907 Got it. Does using an incognito window help? If it's still happening, can you DM us your account's username? We'll check backstage /AP",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_01887"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_03106",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.41249450119283354,
+      "reply": "@406777 Hey there! Can you DM us your account's username or email address? We'll take a look under the hood /JM https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_05522"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02176",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 1.0,
+      "reply": "@140446 Anytime! We'll keep an eye out for your reply /JI",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_01980"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06499",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.5237227534165748,
+      "reply": "@270316 Hey there, we'd love to have them on Spotify! Hopefully we will in the future. Check this out: https://t.co/MEjmIRL2eB /SY",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_08200"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_00002",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.34282618145958615,
+      "reply": "@266416 Sure. Just tap/click on the link below to send us a DM /MG https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_09166"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_04908",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.4831230332973199,
+      "reply": "@252746 Got it! Just to check, have you been experiencing this issue even before switching to the beta macOS version? /KB",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_07649"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_00806",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.3668649124793353,
+      "reply": "@471798 Hey there! We\u2019ll have it available to you as soon as it\u2019s available to us! https://t.co/0i8GpimuDa /JX",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_09851"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02834",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.36169773138424144,
+      "reply": "@654614 Hi! Taylor Swift's 'Reputation' isn't available to stream just yet \u2013 stay tuned! For now, check out the singles: https://t.co/3h0TnPWP0c /DF",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_00185"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06174",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.5272026533943039,
+      "reply": "@693597 We hear you! To help make it happen, we recommend showing your support for the idea here: https://t.co/YSHYSPDR4z \ud83d\ude42 /VK",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_04743"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_01369",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.5599935192669879,
+      "reply": "@217181 1: Hi there! Don't worry, help has arrived. We've checked your collaborative playlist from our end, and we can play all tracks.",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_04905"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05557",
+      "gold_intent": "playback_bug",
+      "pred_intent": "other",
+      "gold_escalate": true,
+      "pred_decision": "auto",
+      "confidence": 0.2811061632905202,
+      "reply": "@293909 https://t.co/qAh6tkevrD! You know where to find us if there's anything else /KM",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_06057"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_01997",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": true,
+      "pred_decision": "auto",
+      "confidence": 0.7455436602513437,
+      "reply": "@386840 @393336 We've replied to your DM - we'll keep helping out there! /N",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_02545"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_07269",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.4655369037103724,
+      "reply": "@382502 You're welcome! Give us a shout for anything else. https://t.co/uEkAlnxbzn \ud83d\ude42 /JS",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_04872"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06742",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.5204366570026844,
+      "reply": "@723630 Hey there! We're afraid we don't have any info on this right now, but we\u2019re working on it as we speak. Stay tuned /RE",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_09672"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_04237",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.3816057731575543,
+      "reply": "@404330 Hey there! What country is your account set to? We'll check things out /AY",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_05054"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09044",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.6580265534582904,
+      "reply": "@276221 Hey there! That's just a personalized signature of the person helping you out. Hope we were able to clarify this for you /RB",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_03393"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_04702",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.372208355178866,
+      "reply": "@147352 Does restarting your device help at all? When did you notice this started happening? /AP",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_03777"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09423",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.35622467748999465,
+      "reply": "@590052 Hi there! Can you let us know the device you're using, its operating system, and Spotify version? We'll see what we can suggest /NY",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_04105"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05876",
+      "gold_intent": "feature_howto",
+      "pred_intent": "playback_bug",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.31952831538659743,
+      "reply": "@379578 Hey there! Sorry, we didn't mean to cause any offense. We'll pass your feedback on to our Ads team /MT",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_03215"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_03053",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.35480045096942703,
+      "reply": "@574908 Hmm. Could you DM us your account's email address or username? We'll take a look under the hood /AY https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_01665"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_04677",
+      "gold_intent": "feature_howto",
+      "pred_intent": "playback_bug",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.28293340997405514,
+      "reply": "@612657 Hey! We're afraid this isn't possible, but you can suggest it in our Community at https://t.co/rtDvYZOF32 &amp; get support from other users /NS",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_05932"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02756",
+      "gold_intent": "other",
+      "pred_intent": "playback_bug",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.37776527996607095,
+      "reply": "@313093 Hey there! Is this happening with your downloaded playlists or all songs synced offline? Let us know /TF",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_01163"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_01812",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": true,
+      "pred_decision": "auto",
+      "confidence": 0.4626548134054453,
+      "reply": "@797227 Hey there! Can you let us know the Android and Spotify versions you're using? We'll see what we can suggest /RH",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_02853"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05408",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": true,
+      "pred_decision": "auto",
+      "confidence": 0.2980877651546978,
+      "reply": "@806944 Hey Spencer, help's here! Can you DM us your account's email address and username? We'll take a look backstage /AQ",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_01726"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_07223",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.37870481778677023,
+      "reply": "@279620 Hey there! Can you let us know the device, operating system, and Spotify version you're using? We'll see what we can suggest /AR",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_08473"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_01701",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": true,
+      "pred_decision": "auto",
+      "confidence": 0.2551782625395454,
+      "reply": "@400364 Hey there! If you're on Premium, you can download your tunes for offline use. More info here: https://t.co/WSjJgGAmPy /FR",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_02484"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_00280",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.5173739169115555,
+      "reply": "@190436 Sorry to hear that, but thanks for the heads up. Our tech folks are investigating this as we speak. Hopefully we'll have a fix soon! /RK",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_07883"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_03141",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.2646760028507948,
+      "reply": "@661810 We hear you! We're passing on all comments around this \u2013 thanks for sharing your thoughts \ud83d\udc9a /MO",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_04050"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05246",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": true,
+      "pred_decision": "auto",
+      "confidence": 0.351986728918127,
+      "reply": "@221639 Got it. Does logging out &gt; restarting the device &gt; logging back in help? Keep us in the loop /KL",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_03256"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09476",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.27529206785008775,
+      "reply": "@554613 We've replied to your DM. Let's carry on chatting there /YM",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_07120"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05694",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.4928888027334298,
+      "reply": "@283228 Hey Richard, help's here! Can you try logging out &gt; completely closing the app &gt; restarting your device &gt; logging back in again? Let us know how it goes /KM",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_00108"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06020",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.3123155100672042,
+      "reply": "@784342 Hey! To sign up for Premium, head to https://t.co/AeHiFRoX6a. If you have questions, let us know /RA",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_00325"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09890",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.2518287034514645,
+      "reply": "@765226 Hey, help's here! Can you let us know the device, operating system, and Spotify version you're using? We'll see what we can suggest /GK",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_08316"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09915",
+      "gold_intent": "account_security",
+      "pred_intent": "playback_bug",
+      "gold_escalate": true,
+      "pred_decision": "auto",
+      "confidence": 0.2366210921213777,
+      "reply": "@715945 Thanks! Can you DM us your account's username and email address? We'll take a look backstage /SY",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_02696"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05692",
+      "gold_intent": "feature_howto",
+      "pred_intent": "playback_bug",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.283074275196881,
+      "reply": "@744669 Hey Candice, help's here! Could you send us your account's email address and a link to your Facebook profile? We'll take a look backstage /VK",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_00905"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_09899",
+      "gold_intent": "feature_howto",
+      "pred_intent": "playback_bug",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.4604480529391056,
+      "reply": "@633111 Hey, that's not cool! Can you tell us what's happening exactly? We'll see what we can suggest /CH",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_02888"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_08091",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": true,
+      "pred_decision": "auto",
+      "confidence": 0.5428941233231701,
+      "reply": "@557464 Sorry to hear that! Check out the steps under \u201cDownloads unexpectedly removed\u201d at https://t.co/38J7tFlIBF. They should help with this /CO",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_07155"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_08189",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.27381137821331586,
+      "reply": "@796697 Got it. Can you check if reinstalling the app does the trick? Just follow the steps at https://t.co/46sWVpIvlI. Let us know how it goes /DV",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_00244"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_07883",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.5761509455838791,
+      "reply": "@805030 Hi there! Everything's up and running on our end. What's happening exactly? Can you let us know the exact device, operating system, and Spotify app version you're using? We'll help out /NJ",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_00559"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02526",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.38164715880830175,
+      "reply": "@279456 Got it. When did this start happening? Was it after a specific firmware/app update? /NS",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_02075"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_04588",
+      "gold_intent": "playback_bug",
+      "pred_intent": "playback_bug",
+      "gold_escalate": false,
+      "pred_decision": "escalate",
+      "confidence": 0.41349806666021566,
+      "reply": "@487185 Hey! This sounds like one for our Artist team. Don't worry, you can contact them at https://t.co/p1wbtdELHu \ud83d\ude42 /M",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_06784"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_02876",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.4668436422384746,
+      "reply": "@750030 You're welcome! If you need us again, just... https://t.co/AUc7DGJpgF /KT",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_04209"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_07311",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.5252535934996421,
+      "reply": "@494079 Got it. We\u2019d suggest using the steps under 'Spotify and Chromecast: General Troubleshooting\u2019 at https://t.co/z4uvkOnM7p. Keep us posted /MT",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_02354"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_01361",
+      "gold_intent": "billing_charge",
+      "pred_intent": "billing_charge",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.27341434278967697,
+      "reply": "@625884 Hey Victor, help's here! Could you DM us your account's email address and username? We'll take a look backstage /CG https://t.co/ldFdZRiNAt",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_00369"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_03281",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 1.0,
+      "reply": "@138957 We understand. No guarantees, but rest assured, your feedback has been noted and passed on to the team. Thanks for bearing with us /JE",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_08258"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_08594",
+      "gold_intent": "account_security",
+      "pred_intent": "account_security",
+      "gold_escalate": true,
+      "pred_decision": "escalate",
+      "confidence": 0.30929983309483045,
+      "reply": "@379837 Got it. We'd like to check all bases. If you could fire over your account's email address, that'd be great /AN",
+      "reason": "Keyword intent + escalate heuristics",
+      "retrieved_ids": [
+        "sp_04984"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_06016",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.48889713139855745,
+      "reply": "@139085 Sounds like a plan! We'll be right here waiting for your update /WP",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_00159"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_05560",
+      "gold_intent": "playback_bug",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.4310927364925313,
+      "reply": "@274279 Hey, help's here. What device, operating system, and Spotify version is this happening on? We'll see what we can suggest /AY",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_02643"
+      ],
+      "judge": null
+    },
+    {
+      "id": "sp_00628",
+      "gold_intent": "other",
+      "pred_intent": "other",
+      "gold_escalate": false,
+      "pred_decision": "auto",
+      "confidence": 0.25702672902687906,
+      "reply": "@785735 Hey there! Thanks for the feedback \u2013 we appreciate it. We\u2019ll get this passed onto the right team /NQ",
+      "reason": "Keyword intent; no escalate triggers",
+      "retrieved_ids": [
+        "sp_01768"
+      ],
+      "judge": null
+    }
+  ]
+}
