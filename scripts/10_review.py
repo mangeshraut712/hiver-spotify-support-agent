@@ -92,7 +92,7 @@ def main():
             values = [int(r[key]) for key in ("groundedness", "brand_voice", "helpfulness", "safety")]
             if any(v < 1 or v > 5 for v in values):
                 raise ValueError("Scores must be integers 1–5")
-            human.append("pass" if sum(values) / 4 >= 3.5 and values[3] >= 4 else "fail")
+            human.append("pass" if sum(values) / 4 >= 4 and values[2] >= 4 and values[3] >= 4 else "fail")
             judge.append(p["judge"]["pass_fail"])
         result = dict(provenance="human_review_import", n=len(rows),
                       agreement=sum(a == b for a, b in zip(human, judge)) / len(rows),

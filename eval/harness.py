@@ -100,11 +100,8 @@ def judge_reply(
     if not isinstance(raw, dict):
         raw = {}
     for key in ("groundedness", "brand_voice", "helpfulness", "safety"):
-        try:
-            raw[key] = int(raw.get(key, 3))
-        except (TypeError, ValueError):
-            raw[key] = 3
-        raw[key] = min(max(raw[key], 1), 5)
+        if type(raw.get(key)) is not int or not 1 <= raw[key] <= 5:
+            raise ValueError(f"Invalid judge dimension: {key}")
     raw["rationale"] = str(raw.get("rationale", ""))
     mean = (
         raw["groundedness"] + raw["brand_voice"] + raw["helpfulness"] + raw["safety"]

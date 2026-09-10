@@ -1,5 +1,7 @@
 # Submission packet — Hiver SDE Intern take-home
 
+> CORRECTION (10 September 2026): This is a historical submission record. The human-label and human–judge claims below are invalid: the user confirmed no human review took place. Current readiness and corrected evidence are in README.md and READINESS.md. Do not reuse this packet or submit it again. The recorded submission confirmation has not been independently reverified by this audit.
+
 Use this with the Notion form:
 https://intelligent-bar-256.notion.site/39492cbf0da2800682cfc78a600a745f?pvs=105
 

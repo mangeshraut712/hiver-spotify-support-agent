@@ -53,18 +53,11 @@ def main() -> None:
     retriever = ReplyRetriever.load()
     run_judge = args.judge and not args.no_judge
 
-    # Merge with prior headline so multi-system runs accumulate.
-    if HEADLINE_PATH.exists():
-        try:
-            headline = json.loads(HEADLINE_PATH.read_text())
-            if not isinstance(headline.get("systems"), dict):
-                headline = {"systems": {}}
-        except json.JSONDecodeError:
-            headline = {"systems": {}}
-    else:
-        headline = {"systems": {}}
+    # A run is one experiment; never merge different subsets or label versions.
+    headline = {"systems": {}}
     headline["n_eval"] = len(goldens)
-    headline["label_provenance"] = "human_hand_pass"
+    headline["label_provenance"] = "automated_proposal_not_human_review"
+    headline["evidence_status"] = "exploratory_pending_human_validation"
     headline.setdefault("systems", {})
 
     for name in [s.strip() for s in args.systems.split(",") if s.strip()]:

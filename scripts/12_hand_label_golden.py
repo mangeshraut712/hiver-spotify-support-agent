@@ -186,6 +186,7 @@ def hand_label(text: str) -> tuple[str, bool, str]:
 
 
 def main() -> None:
+    raise SystemExit("Disabled: generated labels cannot establish human review. Use scripts/10_review.py.")
     rows = [json.loads(l) for l in GOLDEN_PATH.read_text().splitlines() if l.strip()]
     changed = 0
     out = []

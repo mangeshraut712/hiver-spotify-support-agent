@@ -31,6 +31,7 @@ def stratified_ids(examples: List[Dict], per_intent: int = 5) -> List[str]:
 
 
 def main() -> None:
+    raise SystemExit("Disabled: both raters are code, not human or LLM judges. Use actual review imports and LLM evaluation.")
     metrics = json.loads((RESULTS_DIR / "metrics_agent.json").read_text())
     golden = {
         json.loads(l)["id"]: json.loads(l)

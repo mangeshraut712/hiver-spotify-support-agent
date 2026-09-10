@@ -69,9 +69,16 @@
         "sp_01837",
         "sp_08823",
         "sp_09179",
-        "sp_08509"
+        "sp_09812"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_03965",
@@ -89,7 +96,14 @@
         "sp_02879",
         "sp_00102"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_00268",
@@ -101,13 +115,20 @@
       "reply": "Sorry you're seeing possible unauthorized access \u2014 that's not okay. Please DM us your account's email/username (no passwords) so we can investigate and secure it.",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
-        "sp_01554",
         "sp_00632",
+        "sp_01554",
+        "sp_05048",
         "sp_06502",
-        "sp_06657",
         "sp_02609"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_04813",
@@ -120,12 +141,19 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_02315",
-        "sp_01572",
         "sp_08806",
         "sp_09349",
+        "sp_01572",
         "sp_06769"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_02070",
@@ -143,7 +171,14 @@
         "sp_01870",
         "sp_05245"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_05312",
@@ -152,16 +187,23 @@
       "gold_escalate": false,
       "pred_decision": "auto",
       "confidence": 0.72,
-      "reply": "@526460 No worries! If you ever need us again, just shout \ud83d\ude42 /MQ",
+      "reply": "@635620 You're welcome! Let us know if you have any other questions. We'd be... https://t.co/LgAM6ky9Vv /DR",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
-        "sp_00994",
-        "sp_01304",
-        "sp_03252",
-        "sp_01277",
-        "sp_02479"
+        "sp_03828",
+        "sp_05741",
+        "sp_08182",
+        "sp_00957",
+        "sp_03168"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 2,
+        "brand_voice": 5,
+        "helpfulness": 2,
+        "safety": 5,
+        "pass_fail": "fail",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_05855",
@@ -173,13 +215,20 @@
       "reply": "Thanks for reaching out \u2014 we want to help. DM us here and we'll continue: https://t.co/ldFdZRiNAt",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
-        "sp_05190",
         "sp_03171",
+        "sp_05190",
         "sp_03481",
         "sp_03644",
         "sp_03979"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 2,
+        "brand_voice": 4,
+        "helpfulness": 2,
+        "safety": 5,
+        "pass_fail": "fail",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_00766",
@@ -191,13 +240,20 @@
       "reply": "Sorry you're seeing possible unauthorized access \u2014 that's not okay. Please DM us your account's email/username (no passwords) so we can investigate and secure it. A screenshot helps too.",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
-        "sp_09505",
-        "sp_01671",
         "sp_01237",
+        "sp_03409",
+        "sp_09505",
         "sp_07935",
         "sp_02736"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_02975",
@@ -215,7 +271,14 @@
         "sp_04978",
         "sp_03808"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_08795",
@@ -245,11 +308,11 @@
       "reply": "Sorry you're seeing possible unauthorized access \u2014 that's not okay. Please DM us your account's email/username (no passwords) so we can investigate and secure it.",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
-        "sp_08856",
         "sp_07784",
+        "sp_08856",
+        "sp_08039",
         "sp_05821",
-        "sp_06043",
-        "sp_02081"
+        "sp_06043"
       ],
       "judge": null
     },
@@ -264,10 +327,10 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_00072",
-        "sp_00114",
         "sp_04952",
         "sp_00325",
-        "sp_05821"
+        "sp_00114",
+        "sp_03008"
       ],
       "judge": null
     },
@@ -278,16 +341,23 @@
       "gold_escalate": false,
       "pred_decision": "auto",
       "confidence": 0.72,
-      "reply": "@569092 Hi there, thanks for bearing with us! We had a little hiccup earlier, but everything should be running just fine now /JS",
+      "reply": "@242763 We'd love to have him on Spotify! Hopefully we will in the future. Check this out: https://t.co/GGCDZEFHTz /KM",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
+        "sp_02842",
         "sp_02087",
         "sp_08645",
-        "sp_00419",
-        "sp_04493",
-        "sp_02842"
+        "sp_06952",
+        "sp_00419"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 2,
+        "brand_voice": 5,
+        "helpfulness": 2,
+        "safety": 5,
+        "pass_fail": "fail",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_02831",
@@ -299,13 +369,20 @@
       "reply": "Sorry about the billing trouble. Please DM us your account email/username and a screenshot of the charge (hide full card digits) so we can look into this with you.",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
+        "sp_01127",
         "sp_09664",
         "sp_04384",
         "sp_04555",
-        "sp_07543",
-        "sp_02604"
+        "sp_07543"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_07169",
@@ -320,8 +397,8 @@
         "sp_00647",
         "sp_06300",
         "sp_08741",
-        "sp_03618",
-        "sp_06699"
+        "sp_06699",
+        "sp_03618"
       ],
       "judge": null
     },
@@ -359,7 +436,14 @@
         "sp_00894",
         "sp_07584"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_00025",
@@ -371,11 +455,11 @@
       "reply": "Sorry you're seeing possible unauthorized access \u2014 that's not okay. Please DM us your account's email/username (no passwords) so we can investigate and secure it.",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
-        "sp_09863",
-        "sp_02512",
+        "sp_01262",
         "sp_02336",
-        "sp_07430",
-        "sp_07229"
+        "sp_02512",
+        "sp_09863",
+        "sp_07430"
       ],
       "judge": null
     },
@@ -390,10 +474,10 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_07288",
+        "sp_03889",
         "sp_07523",
         "sp_08039",
-        "sp_01854",
-        "sp_04289"
+        "sp_01854"
       ],
       "judge": null
     },
@@ -407,10 +491,10 @@
       "reply": "Sorry you're seeing possible unauthorized access \u2014 that's not okay. Please DM us your account's email/username (no passwords) so we can investigate and secure it.",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
-        "sp_06420",
         "sp_06657",
+        "sp_06584",
+        "sp_06420",
         "sp_02742",
-        "sp_04942",
         "sp_09204"
       ],
       "judge": null
@@ -429,7 +513,7 @@
         "sp_06657",
         "sp_00072",
         "sp_04222",
-        "sp_00693"
+        "sp_02975"
       ],
       "judge": null
     },
@@ -444,10 +528,10 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_07288",
-        "sp_08039",
+        "sp_07168",
         "sp_04289",
         "sp_07523",
-        "sp_09413"
+        "sp_08039"
       ],
       "judge": null
     },
@@ -458,16 +542,23 @@
       "gold_escalate": false,
       "pred_decision": "auto",
       "confidence": 0.72,
-      "reply": "@313093 Sorry to hear that! Check out the steps under \u201cDownloads unexpectedly removed\u201d at https://t.co/38J7tFlIBF. They should help with this /TF",
+      "reply": "@516078 Hey there! You can find the playlist right here: https://t.co/CcRVy37X9G /JX",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
-        "sp_03896",
         "sp_06699",
+        "sp_03896",
         "sp_03790",
         "sp_04971",
-        "sp_08336"
+        "sp_00908"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 2,
+        "brand_voice": 5,
+        "helpfulness": 2,
+        "safety": 5,
+        "pass_fail": "fail",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_05753",
@@ -480,10 +571,10 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_00138",
-        "sp_05346",
         "sp_03267",
         "sp_08526",
-        "sp_07207"
+        "sp_07207",
+        "sp_08227"
       ],
       "judge": null
     },
@@ -499,11 +590,18 @@
       "retrieved_ids": [
         "sp_04168",
         "sp_08765",
-        "sp_09541",
         "sp_00796",
-        "sp_06743"
+        "sp_09541",
+        "sp_05102"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_06712",
@@ -516,12 +614,19 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_00594",
+        "sp_05266",
         "sp_09557",
-        "sp_09122",
         "sp_09984",
-        "sp_02359"
+        "sp_09122"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_02454",
@@ -536,10 +641,17 @@
         "sp_09625",
         "sp_04453",
         "sp_08095",
-        "sp_04857",
-        "sp_00241"
+        "sp_00241",
+        "sp_04857"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 2,
+        "brand_voice": 5,
+        "helpfulness": 2,
+        "safety": 5,
+        "pass_fail": "fail",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_09148",
@@ -569,11 +681,11 @@
       "reply": "Sorry about the billing trouble. Please DM us your account email/username and a screenshot of the charge (hide full card digits) so we can look into this with you.",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
-        "sp_01339",
         "sp_05603",
+        "sp_01339",
         "sp_09734",
-        "sp_05452",
-        "sp_04558"
+        "sp_04558",
+        "sp_05452"
       ],
       "judge": null
     },
@@ -591,7 +703,7 @@
         "sp_02118",
         "sp_07584",
         "sp_06679",
-        "sp_08857"
+        "sp_03258"
       ],
       "judge": null
     },
@@ -683,7 +795,14 @@
         "sp_07182",
         "sp_00714"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 2,
+        "brand_voice": 5,
+        "helpfulness": 2,
+        "safety": 5,
+        "pass_fail": "fail",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_07511",
@@ -696,10 +815,10 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_00202",
-        "sp_09425",
+        "sp_09149",
         "sp_06692",
         "sp_04316",
-        "sp_06787"
+        "sp_09425"
       ],
       "judge": null
     },
@@ -715,7 +834,7 @@
       "retrieved_ids": [
         "sp_04809",
         "sp_01781",
-        "sp_09135",
+        "sp_03389",
         "sp_06077",
         "sp_06391"
       ],
@@ -734,8 +853,8 @@
         "sp_09664",
         "sp_04384",
         "sp_00721",
-        "sp_03258",
-        "sp_07543"
+        "sp_02831",
+        "sp_03420"
       ],
       "judge": null
     },
@@ -752,8 +871,8 @@
         "sp_04069",
         "sp_03795",
         "sp_02915",
-        "sp_01855",
-        "sp_08977"
+        "sp_08977",
+        "sp_07882"
       ],
       "judge": null
     },
@@ -769,9 +888,9 @@
       "retrieved_ids": [
         "sp_02283",
         "sp_00962",
+        "sp_06649",
         "sp_08024",
-        "sp_03550",
-        "sp_07348"
+        "sp_03550"
       ],
       "judge": null
     },
@@ -821,11 +940,11 @@
       "reply": "Sorry about the refund delay. Please DM us your account email/username plus a screenshot of the charge (hide full card digits) so we can investigate the billing side with you.",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
+        "sp_03925",
         "sp_00233",
-        "sp_03360",
-        "sp_06920",
+        "sp_03742",
         "sp_02288",
-        "sp_04745"
+        "sp_06920"
       ],
       "judge": null
     },
@@ -840,12 +959,19 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_02854",
-        "sp_09821",
         "sp_02192",
-        "sp_05073",
-        "sp_06253"
+        "sp_09821",
+        "sp_02895",
+        "sp_05073"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_04604",
@@ -879,7 +1005,7 @@
         "sp_08412",
         "sp_03530",
         "sp_09600",
-        "sp_06622"
+        "sp_05918"
       ],
       "judge": null
     },
@@ -912,10 +1038,10 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_01147",
+        "sp_03970",
         "sp_00157",
         "sp_06834",
-        "sp_04979",
-        "sp_04348"
+        "sp_04979"
       ],
       "judge": null
     },
@@ -930,12 +1056,19 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_05473",
+        "sp_04320",
         "sp_09498",
-        "sp_05702",
-        "sp_06087",
-        "sp_07430"
+        "sp_00576",
+        "sp_05702"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 4,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_09113",
@@ -950,10 +1083,17 @@
         "sp_00981",
         "sp_04205",
         "sp_08569",
-        "sp_05760",
-        "sp_03136"
+        "sp_05252",
+        "sp_05760"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 4,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_05256",
@@ -966,12 +1106,19 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_03500",
+        "sp_07908",
+        "sp_07185",
         "sp_02795",
-        "sp_06789",
-        "sp_08004",
-        "sp_06093"
+        "sp_06789"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 2,
+        "brand_voice": 5,
+        "helpfulness": 2,
+        "safety": 5,
+        "pass_fail": "fail",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_09993",
@@ -985,11 +1132,18 @@
       "retrieved_ids": [
         "sp_04848",
         "sp_03680",
-        "sp_03669",
         "sp_02611",
+        "sp_03669",
         "sp_07586"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 4,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_02925",
@@ -1003,11 +1157,18 @@
       "retrieved_ids": [
         "sp_00777",
         "sp_04866",
+        "sp_03520",
         "sp_01742",
-        "sp_03804",
-        "sp_09661"
+        "sp_03804"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_07318",
@@ -1019,13 +1180,20 @@
       "reply": "We can help with cancelling/stopping Premium. Please DM us the account email/username you're trying to manage and we'll take a closer look.",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
-        "sp_05702",
+        "sp_03882",
         "sp_01074",
+        "sp_05702",
         "sp_03800",
-        "sp_00801",
-        "sp_02276"
+        "sp_00801"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 4,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_04282",
@@ -1039,8 +1207,8 @@
       "retrieved_ids": [
         "sp_09711",
         "sp_00140",
-        "sp_08229",
         "sp_07827",
+        "sp_08229",
         "sp_08609"
       ],
       "judge": null
@@ -1073,8 +1241,8 @@
       "reply": "We can help with cancelling/stopping Premium. Please DM us the account email/username you're trying to manage and we'll take a closer look.",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
-        "sp_06113",
         "sp_05989",
+        "sp_06113",
         "sp_00437",
         "sp_04558",
         "sp_02005"
@@ -1092,10 +1260,10 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_04399",
-        "sp_08418",
         "sp_02696",
         "sp_06981",
-        "sp_02023"
+        "sp_08418",
+        "sp_01410"
       ],
       "judge": null
     },
@@ -1111,11 +1279,18 @@
       "retrieved_ids": [
         "sp_03263",
         "sp_09463",
+        "sp_04067",
         "sp_08724",
-        "sp_06027",
-        "sp_01196"
+        "sp_03333"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_07343",
@@ -1128,10 +1303,10 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_00241",
-        "sp_03298",
+        "sp_07967",
         "sp_08784",
-        "sp_05409",
-        "sp_06744"
+        "sp_03298",
+        "sp_05409"
       ],
       "judge": null
     },
@@ -1149,7 +1324,7 @@
         "sp_07326",
         "sp_07426",
         "sp_03855",
-        "sp_08418"
+        "sp_03592"
       ],
       "judge": null
     },
@@ -1164,12 +1339,19 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_06161",
-        "sp_01562",
         "sp_07725",
-        "sp_00247",
-        "sp_05604"
+        "sp_01562",
+        "sp_03989",
+        "sp_00195"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_06394",
@@ -1181,13 +1363,20 @@
       "reply": "Sorry about the billing trouble. Please DM us your account email/username and a screenshot of the charge (hide full card digits) so we can look into this with you.",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
-        "sp_05702",
         "sp_02751",
+        "sp_05702",
         "sp_07830",
         "sp_02850",
         "sp_01232"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_04412",
@@ -1203,7 +1392,7 @@
         "sp_01503",
         "sp_07271",
         "sp_08155",
-        "sp_04981"
+        "sp_03822"
       ],
       "judge": null
     },
@@ -1220,8 +1409,8 @@
         "sp_00222",
         "sp_02584",
         "sp_03399",
-        "sp_04334",
-        "sp_06133"
+        "sp_07458",
+        "sp_06719"
       ],
       "judge": null
     },
@@ -1235,10 +1424,10 @@
       "reply": "We can help with cancelling/stopping Premium. Please DM us the account email/username you're trying to manage and we'll take a closer look.",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
+        "sp_01324",
         "sp_06350",
         "sp_01760",
         "sp_07234",
-        "sp_08397",
         "sp_00498"
       ],
       "judge": null
@@ -1253,11 +1442,11 @@
       "reply": "We can help with cancelling/stopping Premium. Please DM us the account email/username you're trying to manage and we'll take a closer look.",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
+        "sp_00576",
         "sp_09825",
         "sp_03800",
-        "sp_01074",
-        "sp_00131",
-        "sp_09948"
+        "sp_07318",
+        "sp_04862"
       ],
       "judge": null
     },
@@ -1271,11 +1460,11 @@
       "reply": "We can help with cancelling/stopping Premium. Please DM us the account email/username you're trying to manage and we'll take a closer look.",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
-        "sp_03747",
         "sp_00974",
+        "sp_03747",
         "sp_08160",
-        "sp_05048",
-        "sp_09125"
+        "sp_09125",
+        "sp_05676"
       ],
       "judge": null
     },
@@ -1289,13 +1478,20 @@
       "reply": "We can help with cancelling/stopping Premium. Please DM us the account email/username you're trying to manage and we'll take a closer look.",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
-        "sp_05948",
-        "sp_03160",
-        "sp_06096",
-        "sp_05702",
-        "sp_00131"
+        "sp_03837",
+        "sp_00786",
+        "sp_01264",
+        "sp_05011",
+        "sp_05948"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 4,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_04862",
@@ -1308,10 +1504,10 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_02157",
+        "sp_03882",
+        "sp_05799",
         "sp_00668",
-        "sp_00131",
-        "sp_09825",
-        "sp_05799"
+        "sp_00131"
       ],
       "judge": null
     },
@@ -1326,9 +1522,9 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_05791",
-        "sp_08612",
-        "sp_00262",
         "sp_09883",
+        "sp_00262",
+        "sp_08612",
         "sp_06890"
       ],
       "judge": null
@@ -1349,7 +1545,14 @@
         "sp_06824",
         "sp_01649"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 4,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_08696",
@@ -1367,7 +1570,14 @@
         "sp_01481",
         "sp_09232"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_07497",
@@ -1385,7 +1595,14 @@
         "sp_00461",
         "sp_08697"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_05222",
@@ -1397,13 +1614,20 @@
       "reply": "Sorry you're hitting Family/Duo plan issues. Please DM us the plan manager's email/username and what error you see so we can check the invite/household side.",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
-        "sp_00432",
         "sp_04058",
+        "sp_00432",
         "sp_01104",
         "sp_09233",
         "sp_00700"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_02642",
@@ -1434,10 +1658,10 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_07533",
-        "sp_01196",
         "sp_00028",
+        "sp_03333",
         "sp_09285",
-        "sp_06027"
+        "sp_01196"
       ],
       "judge": null
     },
@@ -1452,10 +1676,10 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_04384",
+        "sp_01127",
         "sp_09664",
-        "sp_07543",
-        "sp_01294",
-        "sp_00721"
+        "sp_06521",
+        "sp_01877"
       ],
       "judge": null
     },
@@ -1470,10 +1694,10 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_03692",
+        "sp_02616",
+        "sp_04054",
         "sp_05654",
-        "sp_02183",
-        "sp_08112",
-        "sp_02072"
+        "sp_02183"
       ],
       "judge": null
     },
@@ -1487,11 +1711,11 @@
       "reply": "Sorry you're hitting Family/Duo plan issues. Please DM us the plan manager's email/username and what error you see so we can check the invite/household side.",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
-        "sp_06904",
         "sp_02072",
-        "sp_05604",
+        "sp_06904",
         "sp_02329",
-        "sp_08440"
+        "sp_09232",
+        "sp_02183"
       ],
       "judge": null
     },
@@ -1505,10 +1729,10 @@
       "reply": "Sorry you're hitting Family/Duo plan issues. Please DM us the plan manager's email/username and what error you see so we can check the invite/household side.",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
+        "sp_07941",
         "sp_08382",
         "sp_09494",
         "sp_01969",
-        "sp_07941",
         "sp_07397"
       ],
       "judge": null
@@ -1527,9 +1751,16 @@
         "sp_09114",
         "sp_05787",
         "sp_07867",
-        "sp_06919"
+        "sp_07371"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 2,
+        "brand_voice": 5,
+        "helpfulness": 2,
+        "safety": 5,
+        "pass_fail": "fail",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_08552",
@@ -1543,9 +1774,9 @@
       "retrieved_ids": [
         "sp_00816",
         "sp_05705",
-        "sp_02616",
+        "sp_08833",
         "sp_02382",
-        "sp_09055"
+        "sp_02616"
       ],
       "judge": null
     },
@@ -1560,10 +1791,10 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_03399",
+        "sp_06664",
+        "sp_04697",
         "sp_05489",
-        "sp_09596",
-        "sp_09660",
-        "sp_03444"
+        "sp_09596"
       ],
       "judge": null
     },
@@ -1578,10 +1809,10 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_04321",
-        "sp_07673",
         "sp_03381",
         "sp_09494",
-        "sp_06636"
+        "sp_06636",
+        "sp_07673"
       ],
       "judge": null
     },
@@ -1615,9 +1846,9 @@
       "retrieved_ids": [
         "sp_01570",
         "sp_02854",
+        "sp_04129",
         "sp_05073",
-        "sp_02372",
-        "sp_01152"
+        "sp_02372"
       ],
       "judge": null
     },
@@ -1635,7 +1866,7 @@
         "sp_02920",
         "sp_08676",
         "sp_05264",
-        "sp_07402"
+        "sp_04878"
       ],
       "judge": null
     },
@@ -1667,11 +1898,11 @@
       "reply": "Sorry you're hitting Family/Duo plan issues. Please DM us the plan manager's email/username and what error you see so we can check the invite/household side.",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
-        "sp_08704",
         "sp_05758",
+        "sp_08704",
+        "sp_06199",
         "sp_05467",
-        "sp_06003",
-        "sp_09998"
+        "sp_06003"
       ],
       "judge": null
     },
@@ -1704,10 +1935,10 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_04054",
+        "sp_05604",
         "sp_04878",
-        "sp_07941",
         "sp_08419",
-        "sp_05979"
+        "sp_00568"
       ],
       "judge": null
     },
@@ -1721,11 +1952,11 @@
       "reply": "Sorry you're hitting Family/Duo plan issues. Please DM us the plan manager's email/username and what error you see so we can check the invite/household side.",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
+        "sp_06839",
         "sp_03819",
         "sp_00571",
-        "sp_03008",
         "sp_06745",
-        "sp_09737"
+        "sp_03008"
       ],
       "judge": null
     },
@@ -1742,8 +1973,8 @@
         "sp_02854",
         "sp_00102",
         "sp_07397",
-        "sp_02741",
-        "sp_01513"
+        "sp_04129",
+        "sp_02741"
       ],
       "judge": null
     },
@@ -1757,11 +1988,11 @@
       "reply": "Sorry you're hitting Family/Duo plan issues. Please DM us the plan manager's email/username and what error you see so we can check the invite/household side.",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
+        "sp_07673",
         "sp_06636",
         "sp_08456",
-        "sp_07673",
-        "sp_03381",
-        "sp_04321"
+        "sp_06540",
+        "sp_03381"
       ],
       "judge": null
     },
@@ -1779,7 +2010,7 @@
         "sp_02854",
         "sp_05398",
         "sp_05705",
-        "sp_05073"
+        "sp_02895"
       ],
       "judge": null
     },
@@ -1790,16 +2021,23 @@
       "gold_escalate": true,
       "pred_decision": "auto",
       "confidence": 0.72,
-      "reply": "@774843 Hi Paul, help's here. Can you fire over your account's email address or username via DM? We'll take a look backstage /AY https://t.co/ldFdZRiNAt",
+      "reply": "@539757 Hey, that's not cool! Can you DM us your account's username or email address? We'll take a look under the hood /JM https://t.co/ldFdZRiNAt",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
+        "sp_02469",
         "sp_00083",
         "sp_04290",
         "sp_01507",
-        "sp_02469",
         "sp_07844"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 2,
+        "brand_voice": 5,
+        "helpfulness": 2,
+        "safety": 5,
+        "pass_fail": "fail",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_02597",
@@ -1812,12 +2050,19 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_08424",
-        "sp_02409",
+        "sp_03981",
         "sp_02535",
-        "sp_07759",
-        "sp_02335"
+        "sp_02409",
+        "sp_07759"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_00576",
@@ -1835,7 +2080,14 @@
         "sp_06462",
         "sp_05635"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 2,
+        "brand_voice": 5,
+        "helpfulness": 2,
+        "safety": 5,
+        "pass_fail": "fail",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_07452",
@@ -1844,16 +2096,23 @@
       "gold_escalate": false,
       "pred_decision": "auto",
       "confidence": 0.72,
-      "reply": "@413412 Could you send us a DM with your account's email address or username? We'll take a look backstage /FR https://t.co/ldFdZRiNAt",
+      "reply": "Happy to help with that. If you can share which device/app screen you're on (or a screenshot via DM), we can point you to the right steps. DM us here and we'll continue: https://t.co/ldFdZRiNAt",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
-        "sp_03683",
         "sp_03929",
-        "sp_03613",
+        "sp_03683",
         "sp_06821",
-        "sp_00228"
+        "sp_03605",
+        "sp_03613"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_00401",
@@ -1871,7 +2130,14 @@
         "sp_02836",
         "sp_04977"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 4,
+        "brand_voice": 5,
+        "helpfulness": 4,
+        "safety": 5,
+        "pass_fail": "pass",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_01617",
@@ -1903,8 +2169,8 @@
       "retrieved_ids": [
         "sp_09647",
         "sp_03462",
-        "sp_03991",
         "sp_04325",
+        "sp_03991",
         "sp_07373"
       ],
       "judge": null
@@ -1937,11 +2203,11 @@
       "reply": "Happy to help with that. If you can share which device/app screen you're on (or a screenshot via DM), we can point you to the right steps. DM us here and we'll continue: https://t.co/ldFdZRiNAt",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
+        "sp_00708",
+        "sp_00503",
         "sp_00610",
         "sp_05202",
-        "sp_02017",
-        "sp_05709",
-        "sp_09982"
+        "sp_02017"
       ],
       "judge": null
     },
@@ -1961,7 +2227,14 @@
         "sp_07083",
         "sp_02495"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 2,
+        "brand_voice": 5,
+        "helpfulness": 2,
+        "safety": 5,
+        "pass_fail": "fail",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_05496",
@@ -1970,14 +2243,14 @@
       "gold_escalate": false,
       "pred_decision": "auto",
       "confidence": 0.72,
-      "reply": "@320734 Hey Craig, help's here! Can you send us a screenshot of what you're seeing? We'd like to take a close look /JP",
+      "reply": "Happy to help with that. If you can share which device/app screen you're on (or a screenshot via DM), we can point you to the right steps. DM us here and we'll continue: https://t.co/ldFdZRiNAt",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
+        "sp_07803",
         "sp_01090",
-        "sp_06699",
         "sp_01846",
-        "sp_08751",
-        "sp_07738"
+        "sp_06699",
+        "sp_08751"
       ],
       "judge": null
     },
@@ -1993,9 +2266,9 @@
       "retrieved_ids": [
         "sp_04262",
         "sp_06370",
+        "sp_03423",
         "sp_08690",
-        "sp_02483",
-        "sp_01926"
+        "sp_02483"
       ],
       "judge": null
     },
@@ -2030,8 +2303,8 @@
         "sp_03210",
         "sp_04185",
         "sp_09974",
-        "sp_07146",
-        "sp_00036"
+        "sp_05134",
+        "sp_07146"
       ],
       "judge": null
     },
@@ -2081,11 +2354,11 @@
       "reply": "Happy to help with that. If you can share which device/app screen you're on (or a screenshot via DM), we can point you to the right steps. DM us here and we'll continue: https://t.co/ldFdZRiNAt",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
+        "sp_09462",
         "sp_00956",
         "sp_08445",
         "sp_08117",
-        "sp_01796",
-        "sp_03625"
+        "sp_01796"
       ],
       "judge": null
     },
@@ -2096,14 +2369,14 @@
       "gold_escalate": false,
       "pred_decision": "auto",
       "confidence": 0.72,
-      "reply": "@554342 Hey! We\u2019ve recently made some improvements to our shuffle algorithm. We\u2019d love to hear your feedback here: https://t.co/T3vZnSL3od /AR",
+      "reply": "@799426 Hi Kevin! To help make this happen, you can leave a vote for this idea in our Community page at https://t.co/OQIKCllR7i. Let us know if you have any other questions /NY",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
+        "sp_01973",
+        "sp_05628",
         "sp_04550",
         "sp_05535",
-        "sp_06424",
-        "sp_09283",
-        "sp_07764"
+        "sp_06424"
       ],
       "judge": null
     },
@@ -2118,10 +2391,10 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_01029",
+        "sp_04585",
         "sp_05338",
         "sp_06699",
-        "sp_08110",
-        "sp_02334"
+        "sp_08110"
       ],
       "judge": null
     },
@@ -2137,9 +2410,9 @@
       "retrieved_ids": [
         "sp_08375",
         "sp_05635",
-        "sp_07826",
         "sp_00465",
-        "sp_03618"
+        "sp_03618",
+        "sp_07826"
       ],
       "judge": null
     },
@@ -2168,13 +2441,13 @@
       "gold_escalate": false,
       "pred_decision": "auto",
       "confidence": 0.72,
-      "reply": "@555076 Hey Steve! We'd like to discuss your account in private. Can you DM us your account's email address? We'll see what we can suggest /GK https://t.co/ldFdZRiNAt",
+      "reply": "Happy to help with that. If you can share which device/app screen you're on (or a screenshot via DM), we can point you to the right steps. DM us here and we'll continue: https://t.co/ldFdZRiNAt",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
-        "sp_07842",
         "sp_03260",
+        "sp_07842",
         "sp_06726",
-        "sp_04384",
+        "sp_00322",
         "sp_06334"
       ],
       "judge": null
@@ -2186,11 +2459,11 @@
       "gold_escalate": false,
       "pred_decision": "auto",
       "confidence": 0.72,
-      "reply": "@160058 Hey! Help's here. Could you DM us your username or email address? We'll take a look for you \ud83d\ude42 /Q https://t.co/ldFdZRiNAt",
+      "reply": "@501646 Hi there, thanks for bearing with us. Spotify should be working perfectly again! Let us know if not /LP",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
-        "sp_06494",
         "sp_05856",
+        "sp_06494",
         "sp_01107",
         "sp_00755",
         "sp_06507"
@@ -2229,7 +2502,7 @@
         "sp_02333",
         "sp_09087",
         "sp_04632",
-        "sp_06192"
+        "sp_04118"
       ],
       "judge": null
     },
@@ -2244,10 +2517,10 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_00291",
-        "sp_00396",
         "sp_09082",
-        "sp_00128",
-        "sp_06105"
+        "sp_00396",
+        "sp_06105",
+        "sp_00128"
       ],
       "judge": null
     },
@@ -2263,9 +2536,9 @@
       "retrieved_ids": [
         "sp_01539",
         "sp_07729",
-        "sp_08147",
         "sp_06502",
-        "sp_00859"
+        "sp_08147",
+        "sp_00897"
       ],
       "judge": null
     },
@@ -2279,11 +2552,11 @@
       "reply": "Sorry you can't get into your account. Please DM us the email/username you're using (don't send passwords) and the exact error message \u2014 we'll help from there.",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
+        "sp_02030",
         "sp_09117",
         "sp_04366",
-        "sp_02030",
-        "sp_05723",
-        "sp_05917"
+        "sp_00886",
+        "sp_05723"
       ],
       "judge": null
     },
@@ -2315,11 +2588,11 @@
       "reply": "Sorry you can't get into your account. Please DM us the email/username you're using (don't send passwords) and the exact error message \u2014 we'll help from there.",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
+        "sp_01280",
         "sp_06685",
         "sp_01957",
-        "sp_02075",
         "sp_09583",
-        "sp_09910"
+        "sp_02075"
       ],
       "judge": null
     },
@@ -2366,14 +2639,14 @@
       "gold_escalate": true,
       "pred_decision": "auto",
       "confidence": 0.72,
-      "reply": "@283228 Hey Richard, help's here! Can you try logging out &gt; completely closing the app &gt; restarting your device &gt; logging back in again? Let us know how it goes /KM",
+      "reply": "@432156 Hey there! Can you tell us more about what's happening? Which iOS version are you running? We'll lend a hand /MV",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
+        "sp_05694",
         "sp_00108",
         "sp_03134",
-        "sp_06034",
-        "sp_01140",
-        "sp_01937"
+        "sp_06717",
+        "sp_06034"
       ],
       "judge": null
     },
@@ -2390,8 +2663,8 @@
         "sp_03986",
         "sp_03734",
         "sp_06419",
-        "sp_09083",
-        "sp_01108"
+        "sp_01108",
+        "sp_09083"
       ],
       "judge": null
     },
@@ -2407,7 +2680,7 @@
       "retrieved_ids": [
         "sp_00334",
         "sp_05282",
-        "sp_02407",
+        "sp_09538",
         "sp_01561",
         "sp_00925"
       ],
@@ -2423,8 +2696,8 @@
       "reply": "Thanks for reaching out \u2014 we want to help. DM us here and we'll continue: https://t.co/ldFdZRiNAt",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
-        "sp_02913",
         "sp_04713",
+        "sp_02913",
         "sp_07021",
         "sp_03384",
         "sp_08507"
@@ -2462,10 +2735,17 @@
         "sp_07302",
         "sp_05519",
         "sp_09843",
-        "sp_00847",
-        "sp_07971"
+        "sp_01149",
+        "sp_00847"
       ],
-      "judge": null
+      "judge": {
+        "groundedness": 2,
+        "brand_voice": 5,
+        "helpfulness": 2,
+        "safety": 5,
+        "pass_fail": "fail",
+        "rationale": "local_strict_judge_v2_issue_aligned"
+      }
     },
     {
       "id": "sp_09225",
@@ -2499,7 +2779,7 @@
         "sp_09721",
         "sp_06824",
         "sp_01554",
-        "sp_06467"
+        "sp_04965"
       ],
       "judge": null
     },
@@ -2514,10 +2794,10 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_05606",
+        "sp_02725",
         "sp_04192",
         "sp_04557",
-        "sp_00855",
-        "sp_09325"
+        "sp_00855"
       ],
       "judge": null
     },
@@ -2532,10 +2812,10 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_01619",
+        "sp_08248",
         "sp_09913",
         "sp_00276",
-        "sp_06231",
-        "sp_01759"
+        "sp_06231"
       ],
       "judge": null
     },
@@ -2553,7 +2833,7 @@
         "sp_04066",
         "sp_04769",
         "sp_09644",
-        "sp_09910"
+        "sp_09158"
       ],
       "judge": null
     },
@@ -2568,10 +2848,10 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_06818",
+        "sp_08427",
         "sp_00569",
         "sp_08744",
-        "sp_01341",
-        "sp_08046"
+        "sp_01341"
       ],
       "judge": null
     },
@@ -2606,8 +2886,8 @@
         "sp_02596",
         "sp_04312",
         "sp_09186",
-        "sp_08523",
-        "sp_02276"
+        "sp_07318",
+        "sp_06192"
       ],
       "judge": null
     },
@@ -2625,7 +2905,7 @@
         "sp_04321",
         "sp_08725",
         "sp_02145",
-        "sp_01383"
+        "sp_06540"
       ],
       "judge": null
     },
@@ -2639,9 +2919,9 @@
       "reply": "Thanks for reaching out \u2014 we want to help. DM us here and we'll continue: https://t.co/ldFdZRiNAt",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
+        "sp_02639",
         "sp_08697",
         "sp_04571",
-        "sp_03522",
         "sp_08644",
         "sp_01551"
       ],
@@ -2659,8 +2939,8 @@
       "retrieved_ids": [
         "sp_01025",
         "sp_09413",
-        "sp_05739",
         "sp_01021",
+        "sp_05739",
         "sp_01612"
       ],
       "judge": null
@@ -2697,7 +2977,7 @@
         "sp_07872",
         "sp_03262",
         "sp_08147",
-        "sp_09318"
+        "sp_01486"
       ],
       "judge": null
     },
@@ -2730,10 +3010,10 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_01151",
+        "sp_03856",
         "sp_05311",
         "sp_09383",
-        "sp_09328",
-        "sp_04353"
+        "sp_09328"
       ],
       "judge": null
     },
@@ -2769,7 +3049,7 @@
         "sp_07725",
         "sp_01562",
         "sp_09937",
-        "sp_01256"
+        "sp_01950"
       ],
       "judge": null
     },
@@ -2780,12 +3060,12 @@
       "gold_escalate": false,
       "pred_decision": "auto",
       "confidence": 0.72,
-      "reply": "@264903 Got it. Can you DM us your account's username or email address? We'll take a look backstage /MC https://t.co/ldFdZRiNAt",
+      "reply": "@293907 Got it. Does using an incognito window help? If it's still happening, can you DM us your account's username? We'll check backstage /AP",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
+        "sp_01887",
         "sp_07209",
         "sp_05962",
-        "sp_01887",
         "sp_08073",
         "sp_07682"
       ],
@@ -2816,14 +3096,14 @@
       "gold_escalate": false,
       "pred_decision": "auto",
       "confidence": 0.72,
-      "reply": "@421971 You're welcome! Awesome! Let us know if you ever need us again. We'd be... https://t.co/LgAM6ky9Vv \ud83d\ude42 /AU",
+      "reply": "@140446 Anytime! We'll keep an eye out for your reply /JI",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
-        "sp_04051",
-        "sp_01094",
-        "sp_08742",
-        "sp_06512",
-        "sp_08816"
+        "sp_01980",
+        "sp_01744",
+        "sp_06728",
+        "sp_09542",
+        "sp_03042"
       ],
       "judge": null
     },
@@ -2834,14 +3114,14 @@
       "gold_escalate": false,
       "pred_decision": "auto",
       "confidence": 0.72,
-      "reply": "@490268 Hey there! We\u2019d love to have all of their stuff available, but we have some info about content here: https://t.co/0i8GpimuDa /GK",
+      "reply": "@270316 Hey there, we'd love to have them on Spotify! Hopefully we will in the future. Check this out: https://t.co/MEjmIRL2eB /SY",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
+        "sp_08200",
         "sp_00873",
         "sp_05848",
         "sp_08688",
-        "sp_00402",
-        "sp_08101"
+        "sp_00402"
       ],
       "judge": null
     },
@@ -2857,8 +3137,8 @@
       "retrieved_ids": [
         "sp_09166",
         "sp_00470",
-        "sp_04674",
         "sp_03678",
+        "sp_04674",
         "sp_01083"
       ],
       "judge": null
@@ -2888,14 +3168,14 @@
       "gold_escalate": false,
       "pred_decision": "auto",
       "confidence": 0.72,
-      "reply": "@321353 Hey Natashya! Is this: https://t.co/PzfVyWJPBG what you're looking for? /AP /AP",
+      "reply": "@471798 Hey there! We\u2019ll have it available to you as soon as it\u2019s available to us! https://t.co/0i8GpimuDa /JX",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
+        "sp_09851",
         "sp_05144",
         "sp_09850",
         "sp_05627",
-        "sp_00952",
-        "sp_00545"
+        "sp_07908"
       ],
       "judge": null
     },
@@ -2911,9 +3191,9 @@
       "retrieved_ids": [
         "sp_00185",
         "sp_03692",
-        "sp_08252",
-        "sp_03858",
-        "sp_04703"
+        "sp_04482",
+        "sp_08494",
+        "sp_08252"
       ],
       "judge": null
     },
@@ -2966,8 +3246,8 @@
         "sp_06057",
         "sp_01332",
         "sp_03579",
-        "sp_04424",
-        "sp_08904"
+        "sp_02835",
+        "sp_08898"
       ],
       "judge": null
     },
@@ -2982,10 +3262,10 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_02545",
-        "sp_09285",
         "sp_01196",
-        "sp_06027",
-        "sp_00028"
+        "sp_00028",
+        "sp_09285",
+        "sp_06027"
       ],
       "judge": null
     },
@@ -2996,14 +3276,14 @@
       "gold_escalate": false,
       "pred_decision": "auto",
       "confidence": 0.72,
-      "reply": "@468119 No worries! If you ever need anything else, feel free to give us a shout /TF",
+      "reply": "@382502 You're welcome! Give us a shout for anything else. https://t.co/uEkAlnxbzn \ud83d\ude42 /JS",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
-        "sp_07290",
-        "sp_07350",
-        "sp_05741",
-        "sp_04537",
-        "sp_01123"
+        "sp_04872",
+        "sp_03350",
+        "sp_02705",
+        "sp_05314",
+        "sp_01277"
       ],
       "judge": null
     },
@@ -3054,10 +3334,10 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_03393",
-        "sp_03252",
-        "sp_06831",
-        "sp_01304",
-        "sp_02988"
+        "sp_00912",
+        "sp_02705",
+        "sp_05314",
+        "sp_01478"
       ],
       "judge": null
     },
@@ -3073,9 +3353,9 @@
       "retrieved_ids": [
         "sp_03777",
         "sp_00510",
+        "sp_08189",
         "sp_01961",
-        "sp_00676",
-        "sp_03255"
+        "sp_00676"
       ],
       "judge": null
     },
@@ -3089,10 +3369,10 @@
       "reply": "Sorry playback/downloads are acting up. Mind DMing your device + OS + Spotify app version, and a quick note on what happens? We'll dig in.",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
-        "sp_02764",
         "sp_04105",
-        "sp_00880",
+        "sp_02764",
         "sp_02628",
+        "sp_00880",
         "sp_06014"
       ],
       "judge": null
@@ -3108,10 +3388,10 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_03215",
-        "sp_05884",
         "sp_07509",
+        "sp_05884",
         "sp_08945",
-        "sp_03969"
+        "sp_03078"
       ],
       "judge": null
     },
@@ -3129,7 +3409,7 @@
         "sp_06148",
         "sp_05619",
         "sp_05525",
-        "sp_01203"
+        "sp_03069"
       ],
       "judge": null
     },
@@ -3144,10 +3424,10 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_05932",
-        "sp_05549",
-        "sp_01706",
-        "sp_09542",
-        "sp_03533"
+        "sp_02176",
+        "sp_00071",
+        "sp_04424",
+        "sp_07786"
       ],
       "judge": null
     },
@@ -3165,7 +3445,7 @@
         "sp_02764",
         "sp_01955",
         "sp_09155",
-        "sp_02380"
+        "sp_05687"
       ],
       "judge": null
     },
@@ -3197,9 +3477,9 @@
       "reply": "Sorry playback/downloads are acting up. Mind DMing your device + OS + Spotify app version, and a quick note on what happens? We'll dig in.",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
+        "sp_01726",
         "sp_08710",
         "sp_00009",
-        "sp_01726",
         "sp_08110",
         "sp_02074"
       ],
@@ -3215,9 +3495,9 @@
       "reply": "Sorry playback/downloads are acting up. Mind DMing your device + OS + Spotify app version, and a quick note on what happens? We'll dig in.",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
+        "sp_08473",
         "sp_02466",
         "sp_01852",
-        "sp_08473",
         "sp_05378",
         "sp_00822"
       ],
@@ -3234,10 +3514,10 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_02484",
-        "sp_09271",
         "sp_01189",
+        "sp_09271",
         "sp_01795",
-        "sp_06908"
+        "sp_01740"
       ],
       "judge": null
     },
@@ -3251,11 +3531,11 @@
       "reply": "Sorry playback/downloads are acting up. Mind DMing your device + OS + Spotify app version, and a quick note on what happens? We'll dig in.",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
+        "sp_07883",
         "sp_02654",
         "sp_08420",
         "sp_08253",
-        "sp_07116",
-        "sp_01093"
+        "sp_07116"
       ],
       "judge": null
     },
@@ -3288,10 +3568,10 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_03256",
+        "sp_06676",
         "sp_05238",
         "sp_08851",
-        "sp_00861",
-        "sp_05042"
+        "sp_00861"
       ],
       "judge": null
     },
@@ -3307,9 +3587,9 @@
       "retrieved_ids": [
         "sp_07120",
         "sp_07233",
-        "sp_07273",
-        "sp_07621",
-        "sp_00119"
+        "sp_00963",
+        "sp_01638",
+        "sp_04775"
       ],
       "judge": null
     },
@@ -3344,8 +3624,8 @@
         "sp_00325",
         "sp_04952",
         "sp_03618",
-        "sp_07660",
-        "sp_07706"
+        "sp_07706",
+        "sp_09346"
       ],
       "judge": null
     },
@@ -3359,11 +3639,11 @@
       "reply": "Sorry playback/downloads are acting up. Mind DMing your device + OS + Spotify app version, and a quick note on what happens? We'll dig in.",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
+        "sp_08316",
         "sp_01889",
         "sp_03399",
-        "sp_03241",
         "sp_03136",
-        "sp_04577"
+        "sp_03241"
       ],
       "judge": null
     },
@@ -3380,8 +3660,8 @@
         "sp_02696",
         "sp_03638",
         "sp_08284",
-        "sp_09992",
-        "sp_06034"
+        "sp_06034",
+        "sp_09992"
       ],
       "judge": null
     },
@@ -3414,10 +3694,10 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_02888",
+        "sp_09686",
         "sp_08005",
         "sp_06266",
-        "sp_09081",
-        "sp_01488"
+        "sp_09081"
       ],
       "judge": null
     },
@@ -3450,10 +3730,10 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_00244",
-        "sp_09802",
+        "sp_04702",
         "sp_07880",
-        "sp_09740",
-        "sp_07268"
+        "sp_09802",
+        "sp_09740"
       ],
       "judge": null
     },
@@ -3469,9 +3749,9 @@
       "retrieved_ids": [
         "sp_00559",
         "sp_08420",
+        "sp_00280",
         "sp_06624",
-        "sp_08679",
-        "sp_02534"
+        "sp_08679"
       ],
       "judge": null
     },
@@ -3487,8 +3767,8 @@
       "retrieved_ids": [
         "sp_02075",
         "sp_00117",
-        "sp_00293",
         "sp_03238",
+        "sp_00293",
         "sp_03611"
       ],
       "judge": null
@@ -3503,11 +3783,11 @@
       "reply": "Sorry playback/downloads are acting up. Mind DMing your device + OS + Spotify app version, and a quick note on what happens? We'll dig in.",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
+        "sp_06784",
         "sp_04232",
         "sp_03768",
         "sp_02636",
-        "sp_06389",
-        "sp_02643"
+        "sp_06389"
       ],
       "judge": null
     },
@@ -3523,8 +3803,8 @@
       "retrieved_ids": [
         "sp_04209",
         "sp_06692",
-        "sp_09425",
         "sp_04316",
+        "sp_09425",
         "sp_09075"
       ],
       "judge": null
@@ -3536,14 +3816,14 @@
       "gold_escalate": false,
       "pred_decision": "auto",
       "confidence": 0.72,
-      "reply": "@712956 We've just replied to your DM. We'll carry on chatting there! /K",
+      "reply": "@494079 Got it. We\u2019d suggest using the steps under 'Spotify and Chromecast: General Troubleshooting\u2019 at https://t.co/z4uvkOnM7p. Keep us posted /MT",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
-        "sp_09284",
         "sp_02354",
+        "sp_09284",
+        "sp_08134",
         "sp_08283",
-        "sp_06277",
-        "sp_06124"
+        "sp_06277"
       ],
       "judge": null
     },
@@ -3558,10 +3838,10 @@
       "reason": "rules+composed_reply",
       "retrieved_ids": [
         "sp_00369",
+        "sp_01033",
         "sp_09984",
         "sp_03536",
-        "sp_03082",
-        "sp_00048"
+        "sp_01794"
       ],
       "judge": null
     },
@@ -3579,7 +3859,7 @@
         "sp_05761",
         "sp_02533",
         "sp_06083",
-        "sp_03621"
+        "sp_06433"
       ],
       "judge": null
     },
@@ -3593,11 +3873,11 @@
       "reply": "Sorry you're seeing possible unauthorized access \u2014 that's not okay. Please DM us your account's email/username (no passwords) so we can investigate and secure it.",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
+        "sp_04984",
+        "sp_01714",
+        "sp_05323",
         "sp_02609",
-        "sp_09625",
-        "sp_05702",
-        "sp_04654",
-        "sp_09492"
+        "sp_09625"
       ],
       "judge": null
     },
@@ -3626,14 +3906,14 @@
       "gold_escalate": false,
       "pred_decision": "auto",
       "confidence": 0.72,
-      "reply": "@252228 Hey there! Can you let us know your device, operating system, and exact Spotify version? We'll see what we can suggest /AP",
+      "reply": "@274279 Hey, help's here. What device, operating system, and Spotify version is this happening on? We'll see what we can suggest /AY",
       "reason": "rules+composed_reply",
       "retrieved_ids": [
+        "sp_02643",
         "sp_09100",
         "sp_02824",
         "sp_03713",
-        "sp_08848",
-        "sp_03256"
+        "sp_08848"
       ],
       "judge": null
     },
@@ -3649,9 +3929,9 @@
       "retrieved_ids": [
         "sp_01768",
         "sp_01189",
+        "sp_03119",
         "sp_09708",
-        "sp_03271",
-        "sp_02035"
+        "sp_03271"
       ],
       "judge": null
     }

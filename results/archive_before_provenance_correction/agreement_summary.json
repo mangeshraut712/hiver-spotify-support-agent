@@ -1,0 +1,7 @@
+{
+  "n": 40,
+  "pass_fail_agreement": 0.9,
+  "cohens_kappa_pass_fail": 0.782608695652174,
+  "human_pass_rate": 0.6,
+  "judge_pass_rate": 0.7
+}

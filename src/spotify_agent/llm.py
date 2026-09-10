@@ -18,10 +18,6 @@ from spotify_agent.paths import CACHE_DIR, REPO_ROOT, ensure_dirs
 def load_env() -> None:
     load_dotenv(REPO_ROOT / ".env")
     if not os.getenv("OPENAI_API_KEY"):
-        fallback = Path.home() / ".openclaw" / ".env"
-        if fallback.exists():
-            load_dotenv(fallback, override=False)
-    if not os.getenv("OPENAI_API_KEY"):
         hermes = Path.home() / ".hermes" / ".env"
         if hermes.exists():
             load_dotenv(hermes, override=False)
@@ -38,7 +34,7 @@ def get_client() -> OpenAI:
     base_url = os.getenv("OPENAI_BASE_URL")
     if base_url:
         kwargs["base_url"] = base_url
-    return OpenAI(**kwargs)
+    return OpenAI(**kwargs, timeout=30.0, max_retries=0)
 
 
 def agent_model() -> str:

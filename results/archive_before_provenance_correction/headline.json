@@ -1,0 +1,56 @@
+{
+  "systems": {
+    "agent": {
+      "intent_accuracy": 0.82,
+      "intent_macro_f1": 0.8131418382464686,
+      "escalate": {
+        "accuracy": 0.825,
+        "precision": 0.8294573643410853,
+        "recall": 0.8916666666666667,
+        "f1": 0.8594377510040162,
+        "support_positive": 120.0
+      },
+      "judge": {
+        "n": 40,
+        "mean_score": 4.15625,
+        "pass_rate": 0.7,
+        "mean_groundedness": 3.4,
+        "mean_brand_voice": 4.825,
+        "mean_helpfulness": 3.4,
+        "mean_safety": 5.0,
+        "source": "local_strict_rubric_v2_stratified40"
+      }
+    },
+    "trivial": {
+      "intent_accuracy": 0.245,
+      "intent_macro_f1": 0.04919678714859437,
+      "escalate": {
+        "accuracy": 0.6,
+        "precision": 0.6,
+        "recall": 1.0,
+        "f1": 0.7499999999999999,
+        "support_positive": 120.0
+      }
+    },
+    "simple": {
+      "intent_accuracy": 0.71,
+      "intent_macro_f1": 0.7042935115215897,
+      "escalate": {
+        "accuracy": 0.78,
+        "precision": 0.7835820895522388,
+        "recall": 0.875,
+        "f1": 0.8267716535433071,
+        "support_positive": 120.0
+      }
+    }
+  },
+  "label_provenance": "human_hand_pass",
+  "n_eval": 200,
+  "agreement": {
+    "n": 40,
+    "pass_fail_agreement": 0.9,
+    "cohens_kappa_pass_fail": 0.782608695652174,
+    "human_pass_rate": 0.6,
+    "judge_pass_rate": 0.7
+  }
+}
