@@ -1,10 +1,48 @@
-# SpotifyCares support-agent prototype
+# SpotifyCares support agent
 
-Hiver SDE Intern take-home. **Submission requirements are not yet met.** On 10 September 2026 the author confirmed that no human annotation had been performed. Previous claims of 200 hand-labelled examples and 90% human–judge agreement were incorrect. Labels are automated proposals; the reported 0.70 reply score came from heuristic code, not an LLM judge. Historical artifacts are retained under `results/archive_before_provenance_correction/` for audit only.
+One incoming customer tweet in. Intent, a composed reply, an auto/escalate decision, a reason, confidence, and retrieval IDs out.
 
-## Reproduce the exploratory results
+This is a **Hiver SDE Intern take-home prototype**, not a live support product. Default replies are rule-based compose templates over TF-IDF neighbors. They are not LLM generations unless you opt in with a provider key.
 
-Use Python 3.12. The checked-in prediction replay requires no dataset download, provider key or API call:
+[![CI](https://github.com/mangeshraut712/hiver-spotify-support-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/mangeshraut712/hiver-spotify-support-agent/actions/workflows/ci.yml)
+![Python 3.12](https://img.shields.io/badge/python-3.12-3776AB?logo=python&logoColor=white)
+![pytest](https://img.shields.io/badge/pytest-13%20passed-2ea44f)
+![Eval](https://img.shields.io/badge/eval-exploratory%20(not%20human%20gold)-yellow)
+
+**Honest status (September 2026):** submission requirements are not met. On 10 September 2026 the author confirmed that no human annotation had been performed. Previous claims of 200 hand-labelled examples and 90% human–judge agreement were incorrect. Labels are automated proposals; the reported 0.70 reply score came from heuristic code, not an LLM judge. Historical artifacts are retained under `results/archive_before_provenance_correction/` for audit only.
+
+<p align="center">
+  <img src="docs/screenshots/agent-compose.png" alt="Compose-mode CLI: billing tweet classified as billing_charge and escalated" width="920" />
+</p>
+<p align="center">
+  <img src="docs/screenshots/offline-replay.png" alt="Offline metrics replay and pytest, no API key" width="920" />
+</p>
+
+Screenshots are from a real local run on 21 September 2026. Compose-mode used the bundled 40-pair sample index (no Kaggle download, no API key). Replay used checked-in predictions only. See [docs/screenshots/README.md](docs/screenshots/README.md).
+
+## What it is
+
+| | |
+| --- | --- |
+| **Input** | One customer tweet from the [Customer Support on Twitter](https://www.kaggle.com/datasets/thoughtvector/customer-support-on-twitter) dataset, SpotifyCares brand |
+| **Output** | `intent`, `reply`, `auto`/`escalate`, `reason`, `confidence`, `retrieved_ids` |
+| **Intents** | billing, cancellation, login, playback, Family/Duo, security, how-to, other |
+| **Default system** | Stronger rules + composed replies + TF-IDF retrieval |
+| **Baselines** | Trivial (`other` + always escalate) and simple (keywords + nearest-reply copy) |
+| **Out of scope** | Live posting, account changes, refunds, full conversation state, current product policy (source tweets are from 2017) |
+
+Good routing protects account ownership and payment issues. Useful replies name the problem and give a supported next step. Tweet similarity and polite wording do not measure real resolution.
+
+## Stack
+
+- Python 3.12 (requires `>=3.10`)
+- scikit-learn TF-IDF retrieval, pandas, pydantic
+- Optional OpenAI-compatible Chat Completions (`AGENT_REPLY_MODE=llm` and the LLM judge)
+- pytest for unit tests; offline replay of archived per-example predictions
+
+## How to run
+
+Python 3.12. The checked-in prediction replay needs **no dataset download, provider key, or API call**:
 
 ```sh
 python3.12 -m venv .venv
@@ -16,7 +54,26 @@ pytest -q
 
 Replay recomputes routing metrics from saved per-example predictions. It does not rerun generation or prove accuracy against human truth. It is the fast audit path; installation depends on network speed.
 
-To rebuild the retrieval corpus and run all three systems afresh:
+### Compose-mode single tweet (no API key)
+
+The retrieval index is gitignored. For a demo that matches the first screenshot, fit TF-IDF on the bundled sample pairs:
+
+```sh
+python - <<'PY'
+import pandas as pd
+from spotify_agent.retrieve import ReplyRetriever
+from spotify_agent.paths import SAMPLE_DIR, ensure_dirs
+ensure_dirs()
+pairs = pd.read_csv(SAMPLE_DIR / "sample_spotify.csv", dtype=str)
+ReplyRetriever.build(pairs, max_features=5000).save()
+print(f"sample index ready ({len(pairs)} pairs)")
+PY
+AGENT_REPLY_MODE=compose python scripts/03_run_agent.py --system agent --text "I was charged twice for Premium"
+```
+
+That sample index is only 40 pairs. It is not the evaluation retrieval corpus.
+
+### Full pipeline (local dataset; still no LLM if compose-mode)
 
 ```sh
 python scripts/01_prepare_data.py --brand SpotifyCares --max-pairs 10000
@@ -25,15 +82,16 @@ AGENT_REPLY_MODE=compose python scripts/05_evaluate.py --systems trivial,simple,
 python scripts/03_run_agent.py --system agent --text "I was charged twice for Premium"
 ```
 
-The full download is excluded from the fast replay. Set `TWCS_CSV_PATH` for a local Kaggle CSV. The index excludes evaluation customers and exact evaluation texts before fitting TF-IDF. Existing generated files are not distributed as trusted pickle downloads.
+The full download is excluded from the fast replay. Set `TWCS_CSV_PATH` for a local Kaggle CSV. The index excludes evaluation customers and exact evaluation texts before fitting TF-IDF. Generated index files are not distributed.
 
-## Report: framing and scope
+### Secrets (optional LLM drafting and judge)
 
-The brand is SpotifyCares. Input is one customer tweet from the Customer Support on Twitter dataset. Output contains intent, reply, auto/escalate decision, reason, confidence and retrieval IDs. Good routing protects account ownership and payment issues; useful replies identify the problem and give a supported next step. Real resolution is not measured by tweet similarity or polite wording.
+Copy `.env.example` to `.env`. `OPENAI_API_KEY` (or an OpenAI-compatible gateway) is required only for:
 
-Eight intents cover billing, cancellation, login, playback, Family/Duo, security, how-to and other. The dataset dates from 2017, so current product instructions cannot be inferred reliably. Live posting, account changes, refunds and full conversation state are outside scope.
+- `AGENT_REPLY_MODE=llm` reply drafting
+- `python scripts/05_evaluate.py --systems trivial,simple,agent --judge-limit 40`
 
-The default system uses stronger rules plus composed replies, with TF-IDF retrieval. `AGENT_REPLY_MODE=llm` enables optional provider drafting; classification remains rule-based. This default is a deterministic prototype, not evidence that an LLM improves routing. The trivial baseline always chooses `other` and escalates; the simple baseline uses keywords and nearest-reply copying.
+Classification stays rule-based even when the reply is drafted by a model. Provider cost, latency, and availability vary. Compose-mode and replay do not need this key.
 
 ## Exploratory results, 200 automated labels
 
@@ -50,8 +108,6 @@ These numbers measure agreement with automated label proposals. They do not esta
 ## Reply evaluation and human review
 
 `eval/harness.py` includes an API-backed LLM judge. It requires valid integer scores for groundedness, voice, helpfulness and safety; malformed scores fail validation. Passing requires mean >= 4, helpfulness >= 4 and safety >= 4. `eval/strict_judge.py` is only a heuristic diagnostic and cannot substitute for that LLM judge or a human.
-
-Configure a project-local `.env` from `.env.example` for the provider. Then run `python scripts/05_evaluate.py --systems trivial,simple,agent --judge-limit 40`. Provider cost, latency and availability vary; this command is not the offline replay.
 
 `python scripts/10_review.py export` prepares blank worksheets under `eval/review/`. A person must label all 200 messages and independently rate the same drafts scored by the LLM. Complete identity/date/rationale fields and import with `labels` or `agreement`. Imports reject incomplete and duplicate reviews and detect changed drafts. Review worksheets generated before new predictions must be regenerated after preserving any completed work. Never run scripts 08, 09, 12 or 13 to claim human review; those legacy entry points are disabled.
 
