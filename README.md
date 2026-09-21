@@ -4,7 +4,6 @@ One incoming customer tweet in. Intent, a composed reply, an auto/escalate decis
 
 This is a **Hiver SDE Intern take-home prototype**, not a live support product. Default replies are rule-based compose templates over TF-IDF neighbors. They are not LLM generations unless you opt in with a provider key.
 
-[![CI](https://github.com/mangeshraut712/hiver-spotify-support-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/mangeshraut712/hiver-spotify-support-agent/actions/workflows/ci.yml)
 ![Python 3.12](https://img.shields.io/badge/python-3.12-3776AB?logo=python&logoColor=white)
 ![pytest](https://img.shields.io/badge/pytest-13%20passed-2ea44f)
 ![Eval](https://img.shields.io/badge/eval-exploratory%20(not%20human%20gold)-yellow)
