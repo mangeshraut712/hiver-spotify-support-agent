@@ -20,3 +20,6 @@ results/cache/
 *.pkl
 .ipynb_checkpoints/
 eval/review/
+# Local agent tooling
+.agents/
+skills-lock.json
