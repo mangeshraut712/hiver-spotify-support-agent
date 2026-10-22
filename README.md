@@ -2,13 +2,13 @@
 
 One incoming customer tweet in. Intent, a composed reply, an auto/escalate decision, a reason, confidence, and retrieval IDs out.
 
-This is a **Hiver SDE Intern take-home prototype**, not a live support product. Default replies are rule-based compose templates over TF-IDF neighbors. They are not LLM generations unless you opt in with a provider key.
+This is a **prototype support agent for SpotifyCares-style Twitter support**, not a live support product. Default replies are rule-based compose templates over TF-IDF neighbors. They are not LLM generations unless you opt in with a provider key.
 
 ![Python 3.12](https://img.shields.io/badge/python-3.12-3776AB?logo=python&logoColor=white)
 ![pytest](https://img.shields.io/badge/pytest-13%20passed-2ea44f)
 ![Eval](https://img.shields.io/badge/eval-exploratory%20(not%20human%20gold)-yellow)
 
-**Honest status (September 2026):** submission requirements are not met. On 10 September 2026 the author confirmed that no human annotation had been performed. Previous claims of 200 hand-labelled examples and 90% human–judge agreement were incorrect. Labels are automated proposals; the reported 0.70 reply score came from heuristic code, not an LLM judge. Historical artifacts are retained under `results/archive_before_provenance_correction/` for audit only.
+**Evaluation status (September 2026):** the evaluation set does not yet have human labels. On 10 September 2026 the author confirmed that no human annotation had been performed. Previous claims of 200 hand-labelled examples and 90% human–judge agreement were incorrect. Labels are automated proposals; the reported 0.70 reply score came from heuristic code, not an LLM judge. Historical artifacts are retained under `results/archive_before_provenance_correction/` for audit only.
 
 <p align="center">
   <img src="docs/screenshots/agent-compose.png" alt="Compose-mode CLI: billing tweet classified as billing_charge and escalated" width="920" />
@@ -128,10 +128,10 @@ The labels and classifier share rule-shaped assumptions. The evaluation set has 
 
 Complete 150–250 actual human labels under a written guideline; double-label 50 for disagreement analysis. Freeze a new customer-disjoint test set before further tuning. Run the LLM agent and both baselines against the same split, judge a random or stratified subset with recorded model provenance, and compare blinded human scores. Add retrieval relevance measurement and actionable failure slices before introducing embeddings.
 
-## Sources and deliverables
+## Sources and references
 
 - [Customer Support on Twitter, thoughtvector](https://www.kaggle.com/datasets/thoughtvector/customer-support-on-twitter): source data; retain its terms and attribution.
 - scikit-learn TF-IDF and OpenAI-compatible Chat Completions are used by the implementation.
 - [Decision log](DECISION_LOG.md), [sampling provenance](eval/golden/SAMPLING.md), and [readiness status](READINESS.md).
 
-The existing Notion submission is recorded in `SUBMISSION.md`; it has not been re-submitted by this audit. Corrected repository content supersedes earlier unsupported evidence claims.
+Corrected repository content supersedes earlier unsupported evidence claims; older notes are kept in `SUBMISSION.md` for history.
