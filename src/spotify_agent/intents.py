@@ -3,10 +3,9 @@
 from __future__ import annotations
 
 import re
-from typing import Dict, List, Tuple
 
 # Locked after exploratory review of SpotifyCares customer messages.
-INTENTS: Tuple[str, ...] = (
+INTENTS: tuple[str, ...] = (
     "billing_charge",
     "cancel_premium",
     "login_access",
@@ -17,7 +16,7 @@ INTENTS: Tuple[str, ...] = (
     "other",
 )
 
-INTENT_DESCRIPTIONS: Dict[str, str] = {
+INTENT_DESCRIPTIONS: dict[str, str] = {
     "billing_charge": "Unexpected charges, refunds, failed payments, pricing disputes.",
     "cancel_premium": "Cancel Premium, stop subscription, still charged after cancel.",
     "login_access": "Can't log in, password reset, wrong account, Facebook/Apple login.",
@@ -29,7 +28,7 @@ INTENT_DESCRIPTIONS: Dict[str, str] = {
 }
 
 # Keyword hints used for stratified sampling and the simple baseline.
-INTENT_KEYWORDS: Dict[str, List[str]] = {
+INTENT_KEYWORDS: dict[str, list[str]] = {
     "billing_charge": [
         "charge",
         "charged",
@@ -57,7 +56,9 @@ INTENT_KEYWORDS: Dict[str, List[str]] = {
         "can't sign",
         "cannot sign",
         "locked out",
-        "reset",
+        "password reset",
+        "reset password",
+        "reset my pw",
         "facebook",
         "apple id",
     ],
@@ -90,7 +91,8 @@ INTENT_KEYWORDS: Dict[str, List[str]] = {
     ],
     "account_security": [
         "hacked",
-        "hack",
+        "hacker",
+        "hacking",
         "stolen",
         "unauthorized",
         "compromised",
@@ -110,7 +112,7 @@ INTENT_KEYWORDS: Dict[str, List[str]] = {
     "other": [],
 }
 
-ESCALATE_KEYWORDS: List[str] = [
+ESCALATE_KEYWORDS: list[str] = [
     "refund",
     "hacked",
     "stolen",
@@ -129,6 +131,12 @@ ESCALATE_KEYWORDS: List[str] = [
 ]
 
 
+def _contains_keyword(text: str, keyword: str) -> bool:
+    """Match a keyword at a token boundary so ``hack`` does not hit ``shack``."""
+    pattern = r"(?<![a-z0-9])" + re.escape(keyword)
+    return re.search(pattern, text) is not None
+
+
 def keyword_intent(text: str) -> str:
     """Return the first matching intent by keyword priority, else other."""
     lowered = str(text if text is not None else "").lower()
@@ -145,7 +153,7 @@ def keyword_intent(text: str) -> str:
     ]
     for intent in priority:
         for kw in INTENT_KEYWORDS[intent]:
-            if kw in lowered:
+            if _contains_keyword(lowered, kw):
                 return intent
     return "other"
 

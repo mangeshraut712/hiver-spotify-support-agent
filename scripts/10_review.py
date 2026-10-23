@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Export blank human worksheets and validate actual reviews without inventing labels."""
 import argparse
 import csv
@@ -9,6 +10,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path[:0] = [str(ROOT), str(ROOT / "src")]
 from eval.harness import cohens_kappa
+
 from spotify_agent.intents import INTENTS
 
 
@@ -20,26 +22,81 @@ def digest(text):
     return hashlib.sha256(text.encode()).hexdigest()
 
 
+_FORMULA_PREFIXES = ("=", "+", "-", "@", "\t", "\r")
+
+
+def csv_safe(value):
+    """Prefix spreadsheet formula characters so Excel does not execute tweet text."""
+    if value is None:
+        return ""
+    text = str(value)
+    if text.startswith(_FORMULA_PREFIXES):
+        return "'" + text
+    return text
+
+
+def csv_restore(value):
+    text = "" if value is None else str(value)
+    if len(text) > 1 and text.startswith("'") and text[1:].startswith(_FORMULA_PREFIXES):
+        return text[1:]
+    return text
+
+
+def _cell(row, key):
+    value = row.get(key)
+    if value is None:
+        return ""
+    return str(value).strip()
+
+
 def export():
     directory = ROOT / "eval/review"
     directory.mkdir(exist_ok=True)
     golden = read_rows(ROOT / "eval/golden/golden.jsonl")
     metrics = json.loads((ROOT / "results/metrics_agent.json").read_text())
     by_id = {r["id"]: r for r in metrics["examples"]}
+    missing = [g["id"] for g in golden if g["id"] not in by_id]
+    if missing:
+        raise ValueError(f"Metrics are missing golden id {missing[0]}")
     sheets = {
-        "labels.csv": [dict(id=g["id"], customer_text=g["customer_text"],
-                            intent="", escalate="", reviewer="", reviewed_at="", notes="") for g in golden],
-        "replies.csv": [dict(id=g["id"], customer_text=g["customer_text"],
-                             historical_reply=g["brand_reply_text"], draft=by_id[g["id"]]["reply"],
-                             draft_sha256=digest(by_id[g["id"]]["reply"]),
-                             groundedness="", brand_voice="", helpfulness="", safety="",
-                             reviewer="", reviewed_at="", notes="")
-                        for g in golden if by_id[g["id"]].get("judge")],
+        "labels.csv": [
+            {
+                "id": csv_safe(g["id"]),
+                "customer_text": csv_safe(g["customer_text"]),
+                "intent": "",
+                "escalate": "",
+                "reviewer": "",
+                "reviewed_at": "",
+                "notes": "",
+            }
+            for g in golden
+        ],
+        "replies.csv": [
+            {
+                "id": csv_safe(g["id"]),
+                "customer_text": csv_safe(g["customer_text"]),
+                "historical_reply": csv_safe(g["brand_reply_text"]),
+                "draft": csv_safe(by_id[g["id"]]["reply"]),
+                "draft_sha256": digest(by_id[g["id"]]["reply"]),
+                "groundedness": "",
+                "brand_voice": "",
+                "helpfulness": "",
+                "safety": "",
+                "reviewer": "",
+                "reviewed_at": "",
+                "notes": "",
+            }
+            for g in golden
+            if by_id[g["id"]].get("judge")
+        ],
     }
     for name, rows in sheets.items():
         path = directory / name
         if path.exists():
             print(f"Preserved existing {path}")
+            continue
+        if not rows:
+            print(f"No rows to export for {name}")
             continue
         with path.open("w", newline="") as f:
             writer = csv.DictWriter(f, fieldnames=list(rows[0]))
@@ -48,12 +105,27 @@ def export():
         print(f"Exported {len(rows)} blank reviews to {path}")
 
 
+def _score(value):
+    if isinstance(value, bool) or value is None:
+        raise ValueError("Scores must be integers 1–5")
+    text = str(value).strip()
+    if not text.isdigit():
+        raise ValueError("Scores must be integers 1–5")
+    number = int(text)
+    if number < 1 or number > 5:
+        raise ValueError("Scores must be integers 1–5")
+    return number
+
+
 def validate(rows, expected):
-    ids = [r["id"] for r in rows]
-    if len(ids) != len(set(ids)) or set(ids) != set(expected):
+    if any("id" not in row or row["id"] is None for row in rows):
+        raise ValueError("Review IDs must match the expected set exactly, without duplicates")
+    ids = [str(row["id"]) for row in rows]
+    expected_ids = [str(item) for item in expected]
+    if len(ids) != len(set(ids)) or set(ids) != set(expected_ids):
         raise ValueError("Review IDs must match the expected set exactly, without duplicates")
     for row in rows:
-        if any(not row.get(key, "").strip() for key in ("reviewer", "reviewed_at", "notes")):
+        if any(not _cell(row, key) for key in ("reviewer", "reviewed_at", "notes")):
             raise ValueError(f"Incomplete human review: {row['id']}")
 
 
@@ -73,7 +145,7 @@ def main():
             r = by_id[g["id"]]
             if r["intent"] not in INTENTS or r["escalate"].lower() not in ("true", "false"):
                 raise ValueError(f"Invalid label: {g['id']}")
-            if r["customer_text"] != g["customer_text"]:
+            if csv_restore(r["customer_text"]) != g["customer_text"]:
                 raise ValueError("Customer text changed during review")
             g.update(intent=r["intent"], escalate=r["escalate"].lower() == "true",
                      notes=r["notes"], annotation_source="human", reviewer=r["reviewer"], reviewed_at=r["reviewed_at"])
@@ -87,15 +159,15 @@ def main():
         human, judge = [], []
         for r in rows:
             p = predictions[r["id"]]
-            if r["draft_sha256"] != digest(p["reply"]) or r["draft"] != p["reply"]:
+            if r["draft_sha256"] != digest(p["reply"]) or csv_restore(r["draft"]) != p["reply"]:
                 raise ValueError("Draft changed since human review; export a new worksheet")
-            values = [int(r[key]) for key in ("groundedness", "brand_voice", "helpfulness", "safety")]
+            values = [_score(r[key]) for key in ("groundedness", "brand_voice", "helpfulness", "safety")]
             if any(v < 1 or v > 5 for v in values):
                 raise ValueError("Scores must be integers 1–5")
             human.append("pass" if sum(values) / 4 >= 4 and values[2] >= 4 and values[3] >= 4 else "fail")
             judge.append(p["judge"]["pass_fail"])
         result = dict(provenance="human_review_import", n=len(rows),
-                      agreement=sum(a == b for a, b in zip(human, judge)) / len(rows),
+                      agreement=sum(a == b for a, b in zip(human, judge, strict=True)) / len(rows),
                       kappa=cohens_kappa(human, judge))
         (ROOT / "results/human_agreement.json").write_text(json.dumps(result, indent=2))
         print(json.dumps(result, indent=2))

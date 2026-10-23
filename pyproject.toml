@@ -18,11 +18,14 @@ dependencies = [
   "python-dotenv>=1.0.0",
   "pydantic>=2.0.0",
   "tqdm>=4.66.0",
-  "joblib>=1.3.0",
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=7.4.0"]
+dev = [
+  "pytest>=7.4.0",
+  "ruff>=0.6.0",
+  "pip-audit>=2.7.0",
+]
 
 [tool.setuptools.packages.find]
 where = ["src"]
@@ -30,3 +33,22 @@ where = ["src"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+src = ["src", "eval", "scripts", "tests"]
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I", "UP", "B", "BLE", "S", "EXE"]
+ignore = [
+  "E402", # scripts prepend the repo to sys.path before importing the package
+  "E501",
+  "S101", # assertions are the tests
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S105", "S106", "S603", "S607"]
+# pass_fail is a rubric label. Bandit treats the substring "pass" as a password.
+"eval/**" = ["S105"]
+"scripts/13_author_score_agreement.py" = ["S105"]

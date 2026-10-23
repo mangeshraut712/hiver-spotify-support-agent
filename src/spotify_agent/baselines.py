@@ -2,12 +2,12 @@
 
 from __future__ import annotations
 
-from typing import Optional, Sequence
+from collections.abc import Sequence
 
 from spotify_agent.intents import keyword_intent, should_escalate_heuristic
 from spotify_agent.retrieve import ReplyRetriever
+from spotify_agent.safety import is_unsafe_support_text
 from spotify_agent.schemas import AgentOutput
-
 
 TEMPLATE_REPLY = (
     "Hi there! Thanks for reaching out. Please DM us more details so we can look into this."
@@ -20,7 +20,7 @@ class TrivialBaseline:
     def run(
         self,
         customer_text: str,
-        exclude_pair_ids: Optional[Sequence[str]] = None,
+        exclude_pair_ids: Sequence[str] | None = None,
     ) -> AgentOutput:
         _ = customer_text, exclude_pair_ids
         return AgentOutput(
@@ -43,16 +43,20 @@ class SimpleBaseline:
     def run(
         self,
         customer_text: str,
-        exclude_pair_ids: Optional[Sequence[str]] = None,
+        exclude_pair_ids: Sequence[str] | None = None,
     ) -> AgentOutput:
         intent = keyword_intent(customer_text)
         hits = self.retriever.search(
             customer_text, k=self.k, exclude_pair_ids=exclude_pair_ids
         )
-        if hits:
+        if hits and not is_unsafe_support_text(hits[0].brand_reply_text):
             reply = hits[0].brand_reply_text
             retrieved_ids = [hits[0].pair_id]
             confidence = min(max(hits[0].score, 0.0), 1.0)
+        elif hits:
+            reply = TEMPLATE_REPLY
+            retrieved_ids = [hits[0].pair_id]
+            confidence = 0.1
         else:
             reply = TEMPLATE_REPLY
             retrieved_ids = []

@@ -9,10 +9,11 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "src"))
 
+from eval.harness import accuracy, binary_prf, cohens_kappa, macro_f1
+
 from spotify_agent.baselines import TrivialBaseline
 from spotify_agent.intents import keyword_intent, rule_based_intent, should_escalate_heuristic
 from spotify_agent.schemas import AgentOutput, GoldenExample
-from eval.harness import accuracy, binary_prf, cohens_kappa, macro_f1
 
 
 def test_keyword_intent_billing():

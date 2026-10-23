@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """Correct disclaimed human provenance while preserving prior artifacts for audit."""
 import json
 import shutil

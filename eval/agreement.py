@@ -4,12 +4,12 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any
 
 from eval.harness import cohens_kappa
 
 
-def load_agreement_file(path: Path) -> List[Dict[str, Any]]:
+def load_agreement_file(path: Path) -> list[dict[str, Any]]:
     rows = []
     with path.open() as f:
         for line in f:
@@ -20,10 +20,10 @@ def load_agreement_file(path: Path) -> List[Dict[str, Any]]:
     return rows
 
 
-def summarize_agreement(rows: List[Dict[str, Any]]) -> Dict[str, Any]:
+def summarize_agreement(rows: list[dict[str, Any]]) -> dict[str, Any]:
     human = [r["human_pass_fail"] for r in rows]
     judge = [r["judge_pass_fail"] for r in rows]
-    agree = sum(h == j for h, j in zip(human, judge)) / len(rows) if rows else 0.0
+    agree = sum(h == j for h, j in zip(human, judge, strict=True)) / len(rows) if rows else 0.0
     return {
         "n": len(rows),
         "pass_fail_agreement": agree,

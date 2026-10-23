@@ -4,8 +4,8 @@ from __future__ import annotations
 
 import os
 from pathlib import Path
-from typing import Optional
 
+import kagglehub
 import pandas as pd
 
 from spotify_agent.paths import PROCESSED_DIR, RAW_DIR, SAMPLE_DIR, ensure_dirs
@@ -15,7 +15,7 @@ DEFAULT_SEED = 42
 DEFAULT_MAX_PAIRS = 10_000
 
 
-def find_twcs_csv(explicit: Optional[str] = None) -> Path:
+def find_twcs_csv(explicit: str | None = None) -> Path:
     """Locate twcs.csv via env, explicit path, local cache, or kagglehub."""
     ensure_dirs()
     if explicit:
@@ -33,14 +33,6 @@ def find_twcs_csv(explicit: Optional[str] = None) -> Path:
     cached = list(RAW_DIR.rglob("twcs.csv"))
     if cached:
         return cached[0]
-
-    try:
-        import kagglehub
-    except ImportError as exc:
-        raise RuntimeError(
-            "kagglehub is required to download the dataset. "
-            "Install requirements or set TWCS_CSV_PATH."
-        ) from exc
 
     download_root = Path(
         kagglehub.dataset_download("thoughtvector/customer-support-on-twitter")
@@ -60,7 +52,7 @@ def find_twcs_csv(explicit: Optional[str] = None) -> Path:
     return dest
 
 
-def load_twcs(csv_path: Path, usecols: Optional[list[str]] = None) -> pd.DataFrame:
+def load_twcs(csv_path: Path, usecols: list[str] | None = None) -> pd.DataFrame:
     cols = usecols or [
         "tweet_id",
         "author_id",
@@ -82,19 +74,20 @@ def build_spotify_pairs(
     """Build customer inbound → first brand reply pairs for one support account."""
     df = twcs.copy()
     df["tweet_id"] = df["tweet_id"].astype(str)
-    df["inbound"] = df["inbound"].astype(str).str.lower().isin(["true", "1"])
+    df["inbound"] = df["inbound"].astype(str).str.strip().str.lower().isin(["true", "1"])
 
     brand_tweets = df[df["author_id"] == brand].copy()
     if brand_tweets.empty:
         raise ValueError(f"No tweets found for brand={brand}")
 
-    # Brand replies that point at a customer tweet.
+    # Brand replies that point at a customer tweet. Blank ids must not pair.
     brand_replies = brand_tweets.dropna(subset=["in_response_to_tweet_id"]).copy()
-    brand_replies["in_response_to_tweet_id"] = brand_replies[
-        "in_response_to_tweet_id"
-    ].astype(str)
+    parent_ids = brand_replies["in_response_to_tweet_id"].astype(str).str.strip()
+    brand_replies = brand_replies.loc[parent_ids.ne("") & parent_ids.str.lower().ne("nan")].copy()
+    brand_replies["in_response_to_tweet_id"] = parent_ids.loc[brand_replies.index]
 
     customers = df[df["inbound"]].copy()
+    customers = customers[customers["tweet_id"].astype(str).str.strip().ne("")]
     customers = customers.rename(
         columns={
             "tweet_id": "customer_tweet_id",
@@ -167,9 +160,9 @@ def save_pairs(pairs: pd.DataFrame) -> Path:
     pairs.to_csv(csv_path, index=False)
     try:
         pairs.to_parquet(PROCESSED_DIR / "spotify_pairs.parquet", index=False)
-    except Exception:
-        # parquet is optional if pyarrow/fastparquet missing
-        pass
+    except ImportError:
+        # Parquet is optional when pyarrow/fastparquet is not installed.
+        return csv_path
     return csv_path
 
 
@@ -185,7 +178,7 @@ def prepare_dataset(
     brand: str = BRAND,
     max_pairs: int = DEFAULT_MAX_PAIRS,
     seed: int = DEFAULT_SEED,
-    twcs_path: Optional[str] = None,
+    twcs_path: str | None = None,
 ) -> pd.DataFrame:
     csv_path = find_twcs_csv(twcs_path)
     twcs = load_twcs(csv_path)

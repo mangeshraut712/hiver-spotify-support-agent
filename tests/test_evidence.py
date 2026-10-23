@@ -1,9 +1,11 @@
 import importlib.util
 from pathlib import Path
+
 import pandas as pd
 import pytest
-from spotify_agent.retrieve import ReplyRetriever
 from eval import harness
+
+from spotify_agent.retrieve import ReplyRetriever
 
 ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location("review", ROOT / "scripts/10_review.py")

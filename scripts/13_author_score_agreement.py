@@ -7,7 +7,6 @@ import json
 import sys
 from collections import defaultdict
 from pathlib import Path
-from typing import Dict, List
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
@@ -15,15 +14,16 @@ sys.path.insert(0, str(ROOT / "src"))
 
 from eval.agreement import summarize_agreement
 from eval.strict_judge import score_reply
+
 from spotify_agent.paths import GOLDEN_PATH, RESULTS_DIR
 
 
-def stratified_ids(examples: List[Dict], per_intent: int = 5) -> List[str]:
+def stratified_ids(examples: list[dict], per_intent: int = 5) -> list[str]:
     """Pick up to `per_intent` examples per gold intent (stable order)."""
-    by: Dict[str, List[Dict]] = defaultdict(list)
+    by: dict[str, list[dict]] = defaultdict(list)
     for ex in examples:
         by[ex["gold_intent"]].append(ex)
-    picked: List[str] = []
+    picked: list[str] = []
     for intent in sorted(by.keys()):
         for ex in by[intent][:per_intent]:
             picked.append(ex["id"])
@@ -34,9 +34,9 @@ def main() -> None:
     raise SystemExit("Disabled: both raters are code, not human or LLM judges. Use actual review imports and LLM evaluation.")
     metrics = json.loads((RESULTS_DIR / "metrics_agent.json").read_text())
     golden = {
-        json.loads(l)["id"]: json.loads(l)
-        for l in GOLDEN_PATH.read_text().splitlines()
-        if l.strip()
+        json.loads(line)["id"]: json.loads(line)
+        for line in GOLDEN_PATH.read_text().splitlines()
+        if line.strip()
     }
     by_id = {ex["id"]: ex for ex in metrics["examples"]}
     ids = stratified_ids(metrics["examples"], per_intent=5)

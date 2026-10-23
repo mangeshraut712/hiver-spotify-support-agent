@@ -2,12 +2,11 @@
 
 from __future__ import annotations
 
-from typing import Any, Dict, List, Literal, Optional
+from typing import Any, Literal
 
 from pydantic import BaseModel, Field, field_validator
 
 from spotify_agent.intents import INTENTS
-
 
 Decision = Literal["auto", "escalate"]
 
@@ -18,7 +17,7 @@ class AgentOutput(BaseModel):
     decision: Decision
     reason: str
     confidence: float = Field(ge=0.0, le=1.0)
-    retrieved_ids: List[str] = Field(default_factory=list)
+    retrieved_ids: list[str] = Field(default_factory=list)
 
     @field_validator("intent")
     @classmethod
@@ -61,9 +60,9 @@ class JudgeScore(BaseModel):
         ) / 4.0
 
 
-def agent_output_to_dict(output: AgentOutput) -> Dict[str, Any]:
+def agent_output_to_dict(output: AgentOutput) -> dict[str, Any]:
     return output.model_dump()
 
 
-def parse_agent_output(payload: Dict[str, Any]) -> AgentOutput:
+def parse_agent_output(payload: dict[str, Any]) -> AgentOutput:
     return AgentOutput.model_validate(payload)

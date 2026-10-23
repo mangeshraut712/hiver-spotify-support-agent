@@ -87,7 +87,7 @@ def author_label(text: str) -> tuple[str, bool, str]:
 
 def main() -> None:
     raise SystemExit("Disabled: regex labels are not human review. Use scripts/10_review.py export, then import actual reviews.")
-    rows = [json.loads(l) for l in GOLDEN_PATH.read_text().splitlines() if l.strip()]
+    rows = [json.loads(line) for line in GOLDEN_PATH.read_text().splitlines() if line.strip()]
     updated = []
     changed = 0
     for row in rows:
