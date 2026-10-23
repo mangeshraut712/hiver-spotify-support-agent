@@ -15,6 +15,7 @@ sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT))
 
 from eval.harness import evaluate_predictions, load_golden
+
 from spotify_agent.agent import SupportAgent
 from spotify_agent.baselines import SimpleBaseline, TrivialBaseline
 from spotify_agent.paths import GOLDEN_PATH, HEADLINE_PATH, RESULTS_DIR, ensure_dirs
@@ -65,8 +66,6 @@ def main() -> None:
         preds = []
         for g in tqdm(goldens, desc=name):
             # Exclude the golden pair itself from retrieval to avoid leakage.
-            exclude = [g.id] if g.id.startswith("sp_") else [g.customer_tweet_id]
-            # Also try pair_id field if present in notes — golden id is g.id
             exclude_ids = {g.id, g.customer_tweet_id}
             preds.append(
                 system.run(g.customer_text, exclude_pair_ids=list(exclude_ids))

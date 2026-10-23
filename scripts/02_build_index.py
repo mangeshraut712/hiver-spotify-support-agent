@@ -11,8 +11,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from spotify_agent.retrieve import ReplyRetriever, load_pairs_csv
 from spotify_agent.paths import GOLDEN_PATH
+from spotify_agent.retrieve import ReplyRetriever, load_pairs_csv
 
 
 def main() -> None:

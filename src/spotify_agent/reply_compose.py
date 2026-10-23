@@ -3,9 +3,10 @@
 from __future__ import annotations
 
 import re
-from typing import Optional, Sequence
+from collections.abc import Sequence
 
 from spotify_agent.retrieve import RetrievedExample
+from spotify_agent.safety import is_unsafe_support_text
 
 # Short, on-brand openers keyed by intent — always mention the issue class.
 _TEMPLATES = {
@@ -48,7 +49,7 @@ _HOWTO_HINTS = (
 _DM = " DM us here and we'll continue: https://t.co/ldFdZRiNAt"
 
 
-def _has_useful_historical(ex: Optional[RetrievedExample]) -> bool:
+def _has_useful_historical(ex: RetrievedExample | None) -> bool:
     if not ex:
         return False
     t = ex.brand_reply_text.lower()
@@ -69,6 +70,14 @@ def _has_useful_historical(ex: Optional[RetrievedExample]) -> bool:
     )
 
 
+def _historical_is_usable(ex: RetrievedExample | None, *, limit: int) -> bool:
+    if not ex or len(ex.brand_reply_text) >= limit:
+        return False
+    if is_unsafe_support_text(ex.brand_reply_text):
+        return False
+    return True
+
+
 def compose_reply(
     intent: str,
     customer_text: str,
@@ -81,14 +90,18 @@ def compose_reply(
 
     if intent == "feature_howto":
         # For how-tos, try to keep historical tips if they look specific; else ask clarifying Q.
-        if top and _has_useful_historical(top) and len(top.brand_reply_text) < 320:
+        if (
+            top
+            and _has_useful_historical(top)
+            and _historical_is_usable(top, limit=320)
+        ):
             reply = top.brand_reply_text
         else:
             reply = base + _HOWTO_HINTS + _DM
         return _trim(reply)
 
     if intent == "other" and decision == "auto":
-        if top and len(top.brand_reply_text) < 280:
+        if top is not None and _historical_is_usable(top, limit=280):
             return _trim(top.brand_reply_text)
         return _trim(base + "Could you share a bit more detail" + _DM)
 
@@ -106,7 +119,7 @@ def compose_reply(
                 "Sorry about the refund delay. Please DM us your account email/username plus a screenshot "
                 "of the charge (hide full card digits) so we can investigate the billing side with you."
             )
-    if top and _has_useful_historical(top):
+    if top and _has_useful_historical(top) and not is_unsafe_support_text(top.brand_reply_text):
         # Merge one concrete ask from history if not already covered
         hist = top.brand_reply_text
         if "screenshot" in hist.lower() and "screenshot" not in reply.lower():

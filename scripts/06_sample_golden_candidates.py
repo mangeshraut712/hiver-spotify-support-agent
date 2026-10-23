@@ -13,7 +13,7 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from spotify_agent.intents import INTENT_KEYWORDS, keyword_intent
+from spotify_agent.intents import keyword_intent
 from spotify_agent.paths import GOLDEN_DIR, ensure_dirs
 from spotify_agent.retrieve import load_pairs_csv
 
@@ -35,7 +35,7 @@ def sample_stratified(
     pairs["stratum"] = pairs["customer_text"].map(assign_stratum)
     rng = seed
     chunks = []
-    for stratum, group in pairs.groupby("stratum"):
+    for _stratum, group in pairs.groupby("stratum"):
         take = min(per_stratum, len(group))
         chunks.append(group.sample(n=take, random_state=rng))
         rng += 1
