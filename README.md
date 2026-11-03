@@ -5,7 +5,7 @@ One incoming customer tweet in. Intent, a composed reply, an auto/escalate decis
 This is a **prototype support agent for SpotifyCares-style Twitter support**, not a live support product. Default replies are rule-based compose templates over TF-IDF neighbors. They are not LLM generations unless you opt in with a provider key.
 
 ![Python 3.12](https://img.shields.io/badge/python-3.12-3776AB?logo=python&logoColor=white)
-![pytest](https://img.shields.io/badge/pytest-13%20passed-2ea44f)
+![pytest](https://img.shields.io/badge/pytest-40%20passed-2ea44f)
 ![Eval](https://img.shields.io/badge/eval-exploratory%20(not%20human%20gold)-yellow)
 
 **Evaluation status (September 2026):** the evaluation set does not yet have human labels. On 10 September 2026 the author confirmed that no human annotation had been performed. Previous claims of 200 hand-labelled examples and 90% human–judge agreement were incorrect. Labels are automated proposals; the reported 0.70 reply score came from heuristic code, not an LLM judge. Historical artifacts are retained under `results/archive_before_provenance_correction/` for audit only.
