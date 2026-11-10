@@ -88,3 +88,26 @@ def test_rule_thanks_not_security():
     )
     assert intent == "other"
     assert esc is False
+
+
+def test_rule_musical_duo_is_not_family_plan():
+    intent, _ = rule_based_intent("I want to listen to a duo performance")
+    assert intent != "family_duo_plan"
+    intent, _ = rule_based_intent("I'm trying to add a duo to my playlist")
+    assert intent != "family_duo_plan"
+    assert keyword_intent("I want to listen to a duo performance") != "family_duo_plan"
+
+
+def test_rule_duo_plan_still_family():
+    intent, esc = rule_based_intent("can you explain the duo plan household rules")
+    assert intent == "family_duo_plan"
+    assert esc is True
+
+
+def test_rule_podcast_skipping_is_playback():
+    intent, esc = rule_based_intent("my podcast keeps skipping")
+    assert intent == "playback_bug"
+    assert esc is True
+    intent, esc = rule_based_intent("the episode keeps skipping ahead")
+    assert intent == "playback_bug"
+    assert esc is True

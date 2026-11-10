@@ -77,7 +77,9 @@ INTENT_KEYWORDS: dict[str, list[str]] = {
     ],
     "family_duo_plan": [
         "family",
-        "duo",
+        "duo plan",
+        "premium duo",
+        "spotify duo",
         "household",
         "invite",
         "plan member",
@@ -212,7 +214,7 @@ def rule_based_intent(text: str) -> tuple[str, bool]:
     if re.search(
         r"won'?t play|not playing|does not want to play|crash|glitch|buffering|freezing|"
         r"undownload|download(s|ed|ing)?|"
-        r"songs (delete|disappear|skip)|app crashes|keeps (on )?glitch|music stop|"
+        r"songs (delete|disappear|skip)|keeps? (on )?skipp|skipping ahead|(podcast|episode|track)s? .{0,40}\bskipp|app crashes|keeps (on )?glitch|music stop|"
         r"offline|dispositivos|cancelados|baix",
         t,
     ) and re.search(
@@ -230,7 +232,7 @@ def rule_based_intent(text: str) -> tuple[str, bool]:
 
     if re.search(
         r"family plan|premium family|premium for family|\bpff\b|"
-        r"family (account|invite|member|premium)|add (my )?family|household|\bduo\b|"
+        r"family (account|invite|member|premium)|add (my )?family|household|premium duo|\bduo plan\b|\bduo account\b|spotify duo|"
         r"spotify family|invitation to my|invite.*(family|sis|dad|mom|wife|member)|"
         r"error 3|address (verify|verification)|kicked (out|off).*(family|plan)|"
         r"welcoming me to .+family|premium for family",
