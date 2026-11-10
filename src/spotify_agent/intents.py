@@ -219,7 +219,10 @@ def rule_based_intent(text: str) -> tuple[str, bool]:
         r"download|play|crash|glitch|offline|buffer|skip|delet|clear|wipe|dispositivo|cancelad",
         t,
     ):
-        if re.search(r"how (do|can|to).*(playlist|alphabet|filter|curator)", t):
+        if re.search(r"how (do|can|to)|where (do|can|is|are)", t) and not re.search(
+            r"won'?t|can'?t|cannot|crash|glitch|buffer|freezing|keep|still|gone|delet|fail|every",
+            t,
+        ):
             return "feature_howto", False
         esc = True
         if re.search(
