@@ -31,7 +31,18 @@ _INSTRUCTION_OVERRIDE = re.compile(
 )
 
 _CREDENTIAL_TEXT = re.compile(
-    r"(?i)(?:sk-[A-Za-z0-9_\-]{8,}|Bearer\s+[A-Za-z0-9._\-]{8,}|OPENAI_API_KEY\s*=\s*\S+)"
+    r"(?i)(?:"
+    r"sk-[A-Za-z0-9_\-]{8,}"
+    r"|Bearer\s+[A-Za-z0-9._\-]{8,}"
+    r"|OPENAI_API_KEY\s*=\s*\S+"
+    r"|whsec_[A-Za-z0-9+/=]{16,}"
+    r"|rk_(?:live|test)_[A-Za-z0-9]{16,}"
+    r"|xox[baprs]-[A-Za-z0-9-]{10,}"
+    r"|xapp-[A-Za-z0-9-]{8,}"
+    r"|github_pat_[A-Za-z0-9_]{20,}"
+    r"|gh[pousr]_[A-Za-z0-9]{16,}"
+    r"|https://hooks\.slack\.com/services/[A-Za-z0-9/_-]+"
+    r")"
 )
 
 
@@ -48,6 +59,8 @@ def fence_untrusted(label: str, text: Any, *, limit: int = 6000) -> str:
 
 def redact_secrets(text: str) -> str:
     """Remove API keys and bearer tokens from text that may be logged or raised."""
+    if not isinstance(text, str):
+        return "" if text is None else str(text)
     redacted = _CREDENTIAL_TEXT.sub("[REDACTED]", text)
     key = os.getenv("OPENAI_API_KEY")
     if key and len(key) >= 8 and key in redacted:
