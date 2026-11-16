@@ -90,6 +90,22 @@ def test_rule_thanks_not_security():
     assert esc is False
 
 
+def test_offline_howto_is_not_playback():
+    intent, esc = rule_based_intent("how do I use offline mode")
+    assert intent == "feature_howto"
+    assert esc is False
+    intent, _ = rule_based_intent("how can I download music for offline")
+    assert intent == "feature_howto"
+
+
+def test_broken_offline_playback_stays_a_bug():
+    intent, esc = rule_based_intent("downloads keep failing")
+    assert intent == "playback_bug"
+    assert esc is True
+    intent, _ = rule_based_intent("songs disappeared offline")
+    assert intent == "playback_bug"
+
+
 def test_charger_is_not_billing():
     """A hardware charger must not be read as a payment charge."""
     assert keyword_intent("my charger won't work") != "billing_charge"
