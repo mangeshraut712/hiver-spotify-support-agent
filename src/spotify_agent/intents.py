@@ -32,6 +32,8 @@ INTENT_KEYWORDS: dict[str, list[str]] = {
     "billing_charge": [
         "charge",
         "charged",
+        "charges",
+        "charging",
         "billing",
         "refund",
         "payment",
@@ -132,8 +134,10 @@ ESCALATE_KEYWORDS: list[str] = [
 
 
 def _contains_keyword(text: str, keyword: str) -> bool:
-    """Match a keyword at a token boundary so ``hack`` does not hit ``shack``."""
-    pattern = r"(?<![a-z0-9])" + re.escape(keyword)
+    """Match a keyword at both token boundaries so ``charge`` does not hit ``charger`` or ``shack``."""
+    # Optional es/s so "playlist" still hits "playlists" and "refund" still hits
+    # "refunds", without letting "charge" match "charger".
+    pattern = r"(?<![a-z0-9])" + re.escape(keyword) + r"(?:es|s)?(?![a-z0-9])"
     return re.search(pattern, text) is not None
 
 
@@ -176,7 +180,7 @@ def rule_based_intent(text: str) -> tuple[str, bool]:
 
     billing_signal = bool(
         re.search(
-            r"charg(e|ed|ing)|refund|payment|debit card|credit card|billed|money back|"
+            r"(?<![a-z])charg(?:es|ed|ing|e)\b|refund|payment|debit card|credit card|billed|money back|"
             r"student (membership|discount|premium)|\$\d|£\d|rm\d|"
             r"pay my monthly bill|won'?t go through|payment.*(fail|wrong|approved)|"
             r"trying to pay|change my (credit |debit )?card|card info|payment method|"

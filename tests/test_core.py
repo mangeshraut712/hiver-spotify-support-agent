@@ -104,3 +104,25 @@ def test_broken_offline_playback_stays_a_bug():
     assert esc is True
     intent, _ = rule_based_intent("songs disappeared offline")
     assert intent == "playback_bug"
+
+
+def test_charger_is_not_billing():
+    """A hardware charger must not be read as a payment charge."""
+    assert keyword_intent("my charger won't work") != "billing_charge"
+    assert keyword_intent("The phone charger is broken") != "billing_charge"
+    intent, _ = rule_based_intent("my charger won't work")
+    assert intent != "billing_charge"
+    intent, _ = rule_based_intent("The phone charger is broken")
+    assert intent != "billing_charge"
+
+
+def test_billing_charge_words_still_match():
+    assert keyword_intent("I was charged twice this month!") == "billing_charge"
+    assert keyword_intent("unexpected charges on my card") == "billing_charge"
+    assert keyword_intent("Spotify is charging me again") == "billing_charge"
+    intent, esc = rule_based_intent("I was charged twice")
+    assert intent == "billing_charge" and esc is True
+    intent, _ = rule_based_intent("unexpected charge on my card")
+    assert intent == "billing_charge"
+    intent, _ = rule_based_intent("Spotify is charging me again")
+    assert intent == "billing_charge"
