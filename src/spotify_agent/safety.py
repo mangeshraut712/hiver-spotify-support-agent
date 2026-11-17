@@ -37,6 +37,8 @@ _CREDENTIAL_TEXT = re.compile(
     r"|OPENAI_API_KEY\s*=\s*\S+"
     r"|whsec_[A-Za-z0-9+/=]{16,}"
     r"|rk_(?:live|test)_[A-Za-z0-9]{16,}"
+    r"|sk_(?:live|test)_[A-Za-z0-9]{16,}"
+    r"|hf_[A-Za-z0-9]{20,}"
     r"|xox[baprs]-[A-Za-z0-9-]{10,}"
     r"|xapp-[A-Za-z0-9-]{8,}"
     r"|github_pat_[A-Za-z0-9_]{20,}"
