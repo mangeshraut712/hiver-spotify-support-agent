@@ -72,3 +72,44 @@ def test_trim_whitespace_and_length():
     trimmed = _trim(long_text, limit=100)
     assert len(trimmed) == 100
     assert trimmed.endswith("…")
+
+
+def test_compose_reply_family_duo_plan():
+    reply = compose_reply("family_duo_plan", "Invite link expired for my son", [], "escalate")
+    assert "Family/Duo plan issues" in reply
+    assert "plan manager's email/username" in reply
+    assert "DM" in reply
+
+
+def test_compose_reply_other_auto_and_escalate():
+    # other + auto with no history
+    reply_auto = compose_reply("other", "General feedback", [], "auto")
+    assert "Could you share a bit more detail" in reply_auto
+    assert "https://t.co/ldFdZRiNAt" in reply_auto
+
+    # other + auto with usable history
+    usable_example = RetrievedExample(
+        pair_id="ex-1",
+        customer_text="General question",
+        brand_reply_text="We would love to help you with that! Which device are you using?",
+        score=0.88,
+    )
+    reply_hist = compose_reply("other", "General question", [usable_example], "auto")
+    assert "We would love to help you with that" in reply_hist
+
+    # other + escalate
+    reply_esc = compose_reply("other", "Need a representative right now", [], "escalate")
+    assert "Thanks for reaching out" in reply_esc
+
+
+def test_compose_reply_merges_screenshot_ask_from_history():
+    example_with_screenshot = RetrievedExample(
+        pair_id="pair-screenshot",
+        customer_text="Playback error 404",
+        brand_reply_text="Mind sending a screenshot of the error message so we can check?",
+        score=0.85,
+    )
+    reply = compose_reply("playback_bug", "Error when opening tracks", [example_with_screenshot], "escalate")
+    assert "device + OS + Spotify app version" in reply
+    assert "A screenshot helps too." in reply
+
