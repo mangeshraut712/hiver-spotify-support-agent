@@ -42,6 +42,8 @@ _CREDENTIAL_TEXT = re.compile(
     r"|github_pat_[A-Za-z0-9_]{20,}"
     r"|gh[pousr]_[A-Za-z0-9]{16,}"
     r"|https://hooks\.slack\.com/services/[A-Za-z0-9/_-]+"
+    r"|\b(?:AKIA|ASIA)[0-9A-Z]{16}\b"
+    r"|\bAIza[0-9A-Za-z\-_]{32,40}\b"
     r")"
 )
 

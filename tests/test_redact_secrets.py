@@ -11,6 +11,8 @@ def test_redact_secrets_covers_slack_stripe_and_github_tokens() -> None:
         "github_pat_" + "A" * 22: "github_pat_",
         "xoxb-1234567890-abcdefghij": "xoxb-",
         "xapp-1-A-123-xyzxyzxy": "xapp-",
+        "AKIAIOSFODNN7EXAMPLE": "AKIA",
+        "AIzaSyD-1234567890abcdefghijklmnopqrst": "AIzaSyD",
     }
     for raw, needle in samples.items():
         redacted = redact_secrets(f"token {raw} end")
