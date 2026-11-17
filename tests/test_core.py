@@ -29,6 +29,47 @@ def test_escalate_heuristic():
     assert should_escalate_heuristic("how do I make a playlist", "feature_howto") is False
 
 
+def test_rule_based_intent_categories_and_guards():
+    # Gratitude / resolved
+    intent, esc = rule_based_intent("thanks for helping! all good now")
+    assert intent == "other"
+    assert esc is False
+
+    # Billing & refund
+    intent, esc = rule_based_intent("charged twice on my debit card need refund")
+    assert intent == "billing_charge"
+    assert esc is True
+
+    # Account security
+    intent, esc = rule_based_intent("my account was hacked by unknown device")
+    assert intent == "account_security"
+    assert esc is True
+
+    # Family & duo plan
+    intent, esc = rule_based_intent("sent invitation to my family plan member not working")
+    assert intent == "family_duo_plan"
+    assert esc is True
+
+    # Login & lockout
+    intent, esc = rule_based_intent("cannot sign in reset password link broken")
+    assert intent == "login_access"
+    assert esc is True
+
+    # Cancel premium
+    intent, esc = rule_based_intent("cancel my subscription please stop charging")
+    assert intent in ("cancel_premium", "billing_charge")
+
+    # Feature how-to
+    intent, esc = rule_based_intent("how do I sort my playlist by title?")
+    assert intent == "feature_howto"
+    assert esc is False
+
+    # None and empty guard
+    intent_none, esc_none = rule_based_intent(None)
+    assert intent_none == "other"
+    assert esc_none is False
+
+
 def test_agent_output_unknown_intent_maps_other():
     out = AgentOutput(
         intent="not_a_real_intent",
