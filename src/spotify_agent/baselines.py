@@ -22,6 +22,7 @@ class TrivialBaseline:
         customer_text: str,
         exclude_pair_ids: Sequence[str] | None = None,
     ) -> AgentOutput:
+        customer_text = "" if customer_text is None else customer_text
         _ = customer_text, exclude_pair_ids
         return AgentOutput(
             intent="other",
@@ -45,6 +46,7 @@ class SimpleBaseline:
         customer_text: str,
         exclude_pair_ids: Sequence[str] | None = None,
     ) -> AgentOutput:
+        customer_text = "" if customer_text is None else customer_text
         intent = keyword_intent(customer_text)
         hits = self.retriever.search(
             customer_text, k=self.k, exclude_pair_ids=exclude_pair_ids
