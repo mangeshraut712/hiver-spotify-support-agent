@@ -289,6 +289,7 @@ def rule_based_intent(text: str) -> tuple[str, bool]:
     # "Cancel my card" / card update is billing, not Premium cancel.
     if re.search(
         r"change my (credit |debit )?card|card info|update.*(card|payment)|"
+        r"cancel my (original )?(credit |debit )?card|"
         r"cancel my (original )?one.*(fraud|card)",
         t,
     ):
