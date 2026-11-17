@@ -85,6 +85,7 @@ def compose_reply(
     decision: str,
 ) -> str:
     """Build a grounded, issue-aware reply."""
+    customer_text = "" if customer_text is None else customer_text
     base = _TEMPLATES.get(intent, _TEMPLATES["other"])
     top = examples[0] if examples else None
 
