@@ -149,3 +149,21 @@ def test_billing_charge_words_still_match():
     assert intent == "billing_charge"
     intent, _ = rule_based_intent("Spotify is charging me again")
     assert intent == "billing_charge"
+
+
+def test_playback_sound_cut_and_battery_drain():
+    """Sound cut-out and excessive battery drain map to playback_bug."""
+    intent, esc = rule_based_intent("sound cuts out every 30 seconds")
+    assert intent == "playback_bug" and esc is True
+
+    intent, esc = rule_based_intent("the audio is completely silent when playing")
+    assert intent == "playback_bug" and esc is True
+
+    intent, esc = rule_based_intent("Spotify is draining my battery so fast")
+    assert intent == "playback_bug" and esc is True
+
+    intent, esc = rule_based_intent("app is overheating my phone while playing")
+    assert intent == "playback_bug" and esc is True
+
+    assert keyword_intent("sound is cutting out") == "playback_bug"
+    assert keyword_intent("Spotify battery drain issue") == "playback_bug"

@@ -76,6 +76,11 @@ INTENT_KEYWORDS: dict[str, list[str]] = {
         "offline",
         "glitch",
         "bug",
+        "cutting out",
+        "cuts out",
+        "no sound",
+        "battery drain",
+        "draining battery",
     ],
     "family_duo_plan": [
         "family",
@@ -219,10 +224,12 @@ def rule_based_intent(text: str) -> tuple[str, bool]:
         r"won'?t play|not playing|does not want to play|crash|glitch|buffering|freezing|"
         r"undownload|download(s|ed|ing)?|"
         r"songs (delete|disappear|skip)|keeps? (on )?skipp|skipping ahead|(podcast|episode|track)s? .{0,40}\bskipp|app crashes|keeps (on )?glitch|music stop|"
-        r"offline|dispositivos|cancelados|baix",
+        r"offline|dispositivos|cancelados|baix|"
+        r"cuts? out|cutting out|no sound|audio is (completely )?silent|sound (drops?|cutting)|"
+        r"(draining|drain|eats?|eating) (my )?battery|overheating",
         t,
     ) and re.search(
-        r"download|play|crash|glitch|offline|buffer|skip|delet|clear|wipe|dispositivo|cancelad",
+        r"download|play|crash|glitch|offline|buffer|skip|delet|clear|wipe|dispositivo|cancelad|cut|sound|silent|audio|battery|overheat",
         t,
     ):
         if re.search(r"how (do|can|to)|where (do|can|is|are)", t) and not re.search(
