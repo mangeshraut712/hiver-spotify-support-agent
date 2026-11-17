@@ -7,6 +7,8 @@ def test_redact_secrets_covers_slack_stripe_and_github_tokens() -> None:
     samples = {
         "whsec_" + "a" * 32: "whsec_",
         "rk_live_" + "a" * 24: "rk_live_",
+        "sk_live_" + "b" * 24: "sk_live_",
+        "hf_" + "c" * 24: "hf_",
         "https://hooks.slack.com/services/T00/B00/xxx": "hooks.slack.com",
         "github_pat_" + "A" * 22: "github_pat_",
         "xoxb-1234567890-abcdefghij": "xoxb-",
