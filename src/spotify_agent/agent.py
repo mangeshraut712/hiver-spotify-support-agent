@@ -53,11 +53,13 @@ def _format_examples(examples: Sequence[RetrievedExample]) -> str:
 
 
 def build_user_prompt(
-    customer_text: str,
-    examples: Sequence[RetrievedExample],
-    locked_intent: str,
+    customer_text: str | None,
+    examples: Sequence[RetrievedExample] | None,
+    locked_intent: str | None,
 ) -> str:
-    if locked_intent not in INTENTS:
+    customer_text = "" if customer_text is None else str(customer_text)
+    examples = () if examples is None else examples
+    if not locked_intent or locked_intent not in INTENTS:
         locked_intent = "other"
     intent_lines = "\n".join(f"- {name}: {INTENT_DESCRIPTIONS[name]}" for name in INTENTS)
     return (
