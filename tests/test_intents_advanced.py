@@ -1,9 +1,9 @@
 """Advanced unit tests for intent classification and escalation heuristics."""
 
 from spotify_agent.intents import (
-    INTENTS,
     INTENT_DESCRIPTIONS,
     INTENT_KEYWORDS,
+    INTENTS,
     _contains_keyword,
     keyword_intent,
     rule_based_intent,

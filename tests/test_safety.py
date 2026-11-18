@@ -1,7 +1,5 @@
 """Comprehensive tests for safety, prompt containment, and guard utilities."""
 
-import math
-import pytest
 from spotify_agent.safety import (
     asks_for_secret,
     coerce_confidence,

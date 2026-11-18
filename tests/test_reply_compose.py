@@ -1,11 +1,11 @@
-from pathlib import Path
 import sys
+from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "src"))
 
-from spotify_agent.reply_compose import compose_reply, _trim
+from spotify_agent.reply_compose import _trim, compose_reply
 from spotify_agent.retrieve import RetrievedExample
 
 

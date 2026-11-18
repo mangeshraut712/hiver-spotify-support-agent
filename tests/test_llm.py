@@ -5,16 +5,43 @@ from __future__ import annotations
 import os
 from pathlib import Path
 
-import httpx
 import pytest
+
+from spotify_agent import llm
+from spotify_agent.llm import LLMError, LLMResponseError, parse_json_object
 
 try:
     from openai import APITimeoutError, AuthenticationError, RateLimitError
 except ImportError:
     from spotify_agent.llm import APITimeoutError, AuthenticationError, RateLimitError
 
-from spotify_agent import llm
-from spotify_agent.llm import LLMError, LLMResponseError, parse_json_object
+try:
+    import httpx as _http
+except ImportError:
+    try:
+        import httpx2 as _http
+    except ImportError:
+
+        class _DummyRequest:
+            def __init__(self, method: str, url: str) -> None:
+                self.method = method
+                self.url = url
+
+        class _DummyResponse:
+            def __init__(
+                self,
+                status_code: int,
+                *,
+                request: _DummyRequest,
+                headers: dict[str, str] | None = None,
+            ) -> None:
+                self.status_code = status_code
+                self.request = request
+                self.headers = {k.lower(): v for k, v in (headers or {}).items()}
+
+        class _http:
+            Request = _DummyRequest
+            Response = _DummyResponse
 
 
 class _Message:
@@ -55,7 +82,7 @@ class ScriptedClient:
 
 
 def _request():
-    return httpx.Request("POST", "https://api.openai.com/v1/chat/completions")
+    return _http.Request("POST", "https://api.openai.com/v1/chat/completions")
 
 
 def _timeout():
@@ -63,7 +90,7 @@ def _timeout():
 
 
 def _auth():
-    response = httpx.Response(401, request=_request())
+    response = _http.Response(401, request=_request())
     return AuthenticationError(
         "Incorrect API key provided: sk-secretABCDEF123456",
         response=response,
@@ -72,7 +99,7 @@ def _auth():
 
 
 def _rate_limit(retry_after: str):
-    response = httpx.Response(429, request=_request(), headers={"retry-after": retry_after})
+    response = _http.Response(429, request=_request(), headers={"retry-after": retry_after})
     return RateLimitError("rate limited", response=response, body=None)
 
 
