@@ -5,9 +5,13 @@ from __future__ import annotations
 import os
 from pathlib import Path
 
-import httpx2
+import httpx
 import pytest
-from openai import APITimeoutError, AuthenticationError, RateLimitError
+
+try:
+    from openai import APITimeoutError, AuthenticationError, RateLimitError
+except ImportError:
+    from spotify_agent.llm import APITimeoutError, AuthenticationError, RateLimitError
 
 from spotify_agent import llm
 from spotify_agent.llm import LLMError, LLMResponseError, parse_json_object
@@ -51,7 +55,7 @@ class ScriptedClient:
 
 
 def _request():
-    return httpx2.Request("POST", "https://api.openai.com/v1/chat/completions")
+    return httpx.Request("POST", "https://api.openai.com/v1/chat/completions")
 
 
 def _timeout():
@@ -59,7 +63,7 @@ def _timeout():
 
 
 def _auth():
-    response = httpx2.Response(401, request=_request())
+    response = httpx.Response(401, request=_request())
     return AuthenticationError(
         "Incorrect API key provided: sk-secretABCDEF123456",
         response=response,
@@ -68,7 +72,7 @@ def _auth():
 
 
 def _rate_limit(retry_after: str):
-    response = httpx2.Response(429, request=_request(), headers={"retry-after": retry_after})
+    response = httpx.Response(429, request=_request(), headers={"retry-after": retry_after})
     return RateLimitError("rate limited", response=response, body=None)
 
 
