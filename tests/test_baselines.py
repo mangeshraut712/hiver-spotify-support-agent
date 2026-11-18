@@ -1,12 +1,12 @@
+import sys
 from dataclasses import dataclass
 from pathlib import Path
-import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "src"))
 
-from spotify_agent.baselines import SimpleBaseline, TEMPLATE_REPLY, TrivialBaseline
+from spotify_agent.baselines import TEMPLATE_REPLY, SimpleBaseline, TrivialBaseline
 from spotify_agent.schemas import AgentOutput
 
 

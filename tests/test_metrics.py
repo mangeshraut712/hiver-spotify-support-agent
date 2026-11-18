@@ -10,13 +10,14 @@ sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "src"))
 
 import pytest
+
 from eval.harness import (
+    _confusion,
+    _require_score,
     accuracy,
     binary_prf,
     cohens_kappa,
     macro_f1,
-    _confusion,
-    _require_score,
 )
 
 

@@ -9,7 +9,6 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "src"))
 
-import pytest
 from spotify_agent.agent import SupportAgent, _format_examples, build_user_prompt
 from spotify_agent.retrieve import RetrievedExample
 
