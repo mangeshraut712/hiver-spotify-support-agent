@@ -5,8 +5,12 @@ from __future__ import annotations
 import os
 from pathlib import Path
 
-import kagglehub
 import pandas as pd
+
+try:
+    import kagglehub
+except ImportError:  # pragma: no cover - optional when local TWCS CSV is provided
+    kagglehub = None  # type: ignore[assignment]
 
 from spotify_agent.paths import PROCESSED_DIR, RAW_DIR, SAMPLE_DIR, ensure_dirs
 
@@ -34,6 +38,10 @@ def find_twcs_csv(explicit: str | None = None) -> Path:
     if cached:
         return cached[0]
 
+    if kagglehub is None:
+        raise RuntimeError(
+            "kagglehub is required to download twcs.csv when TWCS_CSV_PATH or data/raw/twcs.csv is absent."
+        )
     download_root = Path(
         kagglehub.dataset_download("thoughtvector/customer-support-on-twitter")
     )

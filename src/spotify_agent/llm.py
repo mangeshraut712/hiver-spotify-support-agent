@@ -12,16 +12,90 @@ import urllib.parse
 from pathlib import Path
 from typing import Any, NoReturn
 
-from dotenv import load_dotenv
-from openai import (
-    APIConnectionError,
-    APIStatusError,
-    APITimeoutError,
-    InternalServerError,
-    OpenAI,
-    OpenAIError,
-    RateLimitError,
-)
+try:
+    from dotenv import load_dotenv
+except ImportError:  # pragma: no cover - stdlib fallback for offline test environments
+    def load_dotenv(dotenv_path: Path | None = None) -> bool:
+        if dotenv_path is None or not Path(dotenv_path).is_file():
+            return False
+        for raw_line in Path(dotenv_path).read_text(encoding="utf-8").splitlines():
+            line = raw_line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, _, val = line.partition("=")
+            key = key.strip()
+            val = val.strip().strip("'\"")
+            if key and key not in os.environ:
+                os.environ[key] = val
+        return True
+
+try:
+    from openai import (
+        APIConnectionError,
+        APIStatusError,
+        APITimeoutError,
+        AuthenticationError,
+        InternalServerError,
+        OpenAI,
+        OpenAIError,
+        RateLimitError,
+    )
+except ImportError:  # pragma: no cover - offline deterministic mode without openai SDK
+
+    class OpenAIError(Exception):
+        pass
+
+    class APIConnectionError(OpenAIError):
+        def __init__(self, message: str = "Connection error.", *, request: Any = None) -> None:
+            super().__init__(message)
+            self.request = request
+
+    class APITimeoutError(APIConnectionError):
+        def __init__(self, request: Any = None) -> None:
+            super().__init__("Request timed out.", request=request)
+
+    class APIStatusError(OpenAIError):
+        status_code: int | None = None
+
+        def __init__(
+            self,
+            message: str,
+            *,
+            response: Any = None,
+            body: Any = None,
+        ) -> None:
+            super().__init__(message)
+            self.response = response
+            self.body = body
+            self.status_code = getattr(response, "status_code", self.status_code)
+
+    class AuthenticationError(APIStatusError):
+        status_code = 401
+
+    class RateLimitError(APIStatusError):
+        status_code = 429
+
+    class InternalServerError(APIStatusError):
+        status_code = 500
+
+    class _UnavailableCompletions:
+        def create(self, **_kwargs: Any) -> NoReturn:
+            raise LLMError("The openai package is required for live LLM calls.")
+
+    class OpenAI:  # type: ignore[no-redef]
+        def __init__(
+            self,
+            *,
+            api_key: str,
+            timeout: float = 30.0,
+            max_retries: int = 0,
+            base_url: str | None = None,
+        ) -> None:
+            self.api_key = api_key
+            self.timeout = timeout
+            self.max_retries = max_retries
+            self.base_url = base_url or "https://api.openai.com/v1/"
+            self.chat = type("Chat", (), {"completions": _UnavailableCompletions()})()
 
 from spotify_agent.paths import CACHE_DIR, REPO_ROOT, ensure_dirs
 from spotify_agent.safety import redact_secrets
