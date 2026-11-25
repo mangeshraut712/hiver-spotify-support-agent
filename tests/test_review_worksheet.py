@@ -80,3 +80,17 @@ def test_score_accepts_only_integers_1_to_5():
     for bad in ("0", "6", "3.5", "", None, True):
         with pytest.raises(ValueError):
             review._score(bad)
+
+
+def test_legacy_worksheet_cells_still_match_their_original_text():
+    """Worksheets exported before the escape fix must keep importing."""
+    for text in ["''still broken", "'twas fine", "@SpotifyCares help", "plain"]:
+        legacy_cell = review._legacy_csv_safe(text)
+        assert review.csv_matches(legacy_cell, text)
+        assert review.csv_matches(review.csv_safe(text), text)
+
+
+def test_edited_text_is_still_rejected():
+    assert not review.csv_matches("''still fixed", "''still broken")
+    assert not review.csv_matches("plain edited", "plain")
+    assert not review.csv_matches(None, "plain")
