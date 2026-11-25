@@ -26,18 +26,22 @@ _FORMULA_PREFIXES = ("=", "+", "-", "@", "\t", "\r")
 
 
 def csv_safe(value):
-    """Prefix spreadsheet formula characters so Excel does not execute tweet text."""
+    """Prefix spreadsheet formula characters so Excel does not execute tweet text.
+
+    Text that already starts with an apostrophe is escaped too, so csv_restore()
+    is an exact inverse and the review integrity check sees the original text.
+    """
     if value is None:
         return ""
     text = str(value)
-    if text.startswith(_FORMULA_PREFIXES):
+    if text.startswith(_FORMULA_PREFIXES) or text.startswith("'"):
         return "'" + text
     return text
 
 
 def csv_restore(value):
     text = "" if value is None else str(value)
-    if len(text) > 1 and text.startswith("'") and text[1:].startswith(_FORMULA_PREFIXES):
+    if len(text) > 1 and text.startswith("'") and text[1:].startswith(_FORMULA_PREFIXES + ("'",)):
         return text[1:]
     return text
 
