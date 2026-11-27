@@ -26,20 +26,39 @@ _FORMULA_PREFIXES = ("=", "+", "-", "@", "\t", "\r")
 
 
 def csv_safe(value):
-    """Prefix spreadsheet formula characters so Excel does not execute tweet text."""
+    """Prefix spreadsheet formula characters so Excel does not execute tweet text.
+
+    Text that already starts with an apostrophe is escaped too, so csv_restore()
+    is an exact inverse and the review integrity check sees the original text.
+    """
     if value is None:
         return ""
     text = str(value)
-    if text.startswith(_FORMULA_PREFIXES):
+    if text.startswith(_FORMULA_PREFIXES) or text.startswith("'"):
         return "'" + text
     return text
 
 
 def csv_restore(value):
     text = "" if value is None else str(value)
-    if len(text) > 1 and text.startswith("'") and text[1:].startswith(_FORMULA_PREFIXES):
+    if len(text) > 1 and text.startswith("'") and text[1:].startswith(_FORMULA_PREFIXES + ("'",)):
         return text[1:]
     return text
+
+
+def _legacy_csv_safe(text):
+    """The pre-fix export encoding, which left apostrophe-led text unescaped."""
+    return "'" + text if text.startswith(_FORMULA_PREFIXES) else text
+
+
+def csv_matches(cell, original):
+    """True when a worksheet cell still holds the original text.
+
+    Accepts the current encoding and the legacy one, because export() keeps
+    existing worksheets and older files never escaped apostrophe-led text.
+    """
+    cell = "" if cell is None else str(cell)
+    return csv_restore(cell) == original or cell == _legacy_csv_safe(original)
 
 
 def _cell(row, key):
@@ -145,7 +164,7 @@ def main():
             r = by_id[g["id"]]
             if r["intent"] not in INTENTS or r["escalate"].lower() not in ("true", "false"):
                 raise ValueError(f"Invalid label: {g['id']}")
-            if csv_restore(r["customer_text"]) != g["customer_text"]:
+            if not csv_matches(r["customer_text"], g["customer_text"]):
                 raise ValueError("Customer text changed during review")
             g.update(intent=r["intent"], escalate=r["escalate"].lower() == "true",
                      notes=r["notes"], annotation_source="human", reviewer=r["reviewer"], reviewed_at=r["reviewed_at"])
@@ -159,7 +178,7 @@ def main():
         human, judge = [], []
         for r in rows:
             p = predictions[r["id"]]
-            if r["draft_sha256"] != digest(p["reply"]) or csv_restore(r["draft"]) != p["reply"]:
+            if r["draft_sha256"] != digest(p["reply"]) or not csv_matches(r["draft"], p["reply"]):
                 raise ValueError("Draft changed since human review; export a new worksheet")
             values = [_score(r[key]) for key in ("groundedness", "brand_voice", "helpfulness", "safety")]
             if any(v < 1 or v > 5 for v in values):
